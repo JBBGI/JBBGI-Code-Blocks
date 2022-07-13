@@ -1,0 +1,26 @@
+<!-- Added to Views > Inherit: Wishlist Page - Dynamic Quoted Products -->
+
+<?xml version="1.0"?>
+<data name="Dynamic Quoted Products" inherit_id="website_sale_wishlist.product_wishlist_oe_structure_website_sale_wishlist_product_wishlist_1">
+  <xpath expr="//input[@id='ooby317438w8']" position="replace">
+    <t t-set="wish" t-value="request.env['product.wishlist'].current().mapped('product_id')"/>
+    <t t-set="product_names" t-value="wish.mapped('display_name')"/>
+    <input type="text" class="form-control s_website_form_input" name="x_wishlist_products" required="1" placeholder="" id="ooby317438w8" 
+     t-att-value="'&lt;b&gt;Quoted Products:&lt;/b&gt;&lt;br/&gt;' + '&lt;br/&gt;'.join(product_names)"/>
+  </xpath>
+</data>
+
+<!----------------------------------------------------------------------->
+
+Automated Action configs:
+
+Action Name: Quoted Products
+Model: Contact
+Trigger: On Creation
+Apply on: Match all records
+Action to do: Update th Record
+
+Data to Write:
+  Field: Notes (res.partner)
+  Evaluation Type: Python Expression
+  Value: record.x_wishlist_products

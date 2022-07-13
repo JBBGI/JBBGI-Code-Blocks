@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+
+<head>
+  <style media="screen" type="text/css">
+    .main-container {
+      font-family: "Roboto", Helvetica, sans-serif;
+    }
+
+    .header-container {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.microscope.com/media/wysiwyg/blog/bald-eagle-min.jpg') no-repeat 0 20%;
+      background-size: cover;
+      max-width: 100%;
+      height: 30rem;
+      display: flex !important;
+      text-transform: capitalize;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header {
+      color: white;
+      font-weight: 500;
+      font-size: 3.5rem;
+
+    }
+
+    .subheader {
+      color: white;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-align: center;
+
+    }
+
+    .body-container {
+      margin: auto;
+      padding-top: 1.5em;
+      width: 65%;
+      /* height: 400px;
+      background-color: gray; */
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .text-box,
+    .grid-system {
+      width: 100%;
+    }
+
+    .text-box {
+      margin-bottom: 1.5em;
+    }
+
+    .grid-system {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .grid-system-3 {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+
+
+    .text {
+      grid-column: span 3;
+    }
+
+    .grid-system img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 250px;
+      align-self: start;
+
+    }
+
+    .grid-system-3 img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 300px;
+      align-self: start;
+
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    #snap {
+      grid-column: span 2;
+
+    }
+
+    .custom-textprop {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 10px;
+    }
+
+    .text-align-vmiddle {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    @media screen and (max-width: 1200px) {
+
+      .image,
+      .text,
+      #snap {
+        grid-column: span 4;
+      }
+
+
+      .grid-system img {
+        object-fit: cover;
+        max-height: 350px;
+      }
+
+      .body-container {
+        width: 75%;
+      }
+
+      .custom-textprop {
+
+        justify-content: center;
+      }
+
+      .box {
+        grid-column: span 4;
+
+      }
+
+      .box p {
+        text-align: center;
+
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="banner-container">
+
+    <div class="header-container banner-wrapper-general">
+      <div class="text">
+        <h1 class="header">Top 5 places to spot bald eagles in the USA</h1>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="body-container">
+
+    <div class="text-box">
+      <p>What’s more American than the majestic bald eagle? Seeing them soaring overhead is sure
+        to make your heart stop. </p>
+
+      <h2>Here are the top five places to spot bald eagles in the US:</h2>
+
+    </div>
+    <div class="grid-system">
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/chilkat.jpg">
+      </div>
+      <div class="text">
+        <h3><strong>1. Chilkat Eagle Preserve, Alaska:&nbsp;</strong></h3>
+
+        <p>There&rsquo;s no better place to see our national bird in the wild than this spot, which posts the largest
+          concentration of bald eagles in the state. You&rsquo;ll find 4,000 bald eagles in this 48,000 acre preserve.
+        </p>
+
+      </div>
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/bear.jpg">
+      </div>
+      <div class="text">
+        <h3><strong>2. Bear River Migratory Bird Refuge, Utah:&nbsp;</strong></h3>
+
+        <p>While you can find a tremendous variety of bird species here year round, fall and winter is when the
+          fish-filled river attracts eagles.&nbsp;</p>
+
+      </div>
+
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/skagit.jpg">
+      </div>
+      <div class="text">
+        <h3><strong>3. Skagit River, Washington:</strong></h3>
+
+        <p>Thank spawning salmon (aka easy meals) for the high density of bald eagles here! You may see up to 200 eagles
+          feasting along the river banks on a winter day in the Pacific Northwest.&nbsp;</p>
+
+
+      </div>
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/klamath.jpg">
+      </div>
+      <div class="text">
+        <h3><strong>4. Klamath Basin Refuges, California:</strong></h3>
+
+        <p>Hosting the largest winter concentration of Bald Eagles in the lower 48 states, the birds begin wintering
+          here each November, and are easily spotted by visitors.&nbsp; &nbsp;</p>
+
+      </div>
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/chassa.jpg">
+      </div>
+      <div class="text">
+        <h3><strong>5. Chassahowitzka National Wildlife Refuge, Florida:</strong></h3>
+
+        <p>Just because you&rsquo;re down south doesn&rsquo;t mean you can&rsquo;t spot these beautiful birds of prey.
+          This refuge is home to plenty of eagles, and many are easily spotted by boat or even on hikes.&nbsp;</p>
+
+      </div>
+
+      <br />
+    </div>
+
+    <div class="text-box" style="text-align: center;">
+      <br />
+      <h2><strong>Take your bald eagle spotting and bird watching to the next level.</strong></h2>
+      <br />
+      <p>The early bird may get the worm, but the early birder gets a brand new set of Smithsonian binoculars,
+        monoculars, or spotting scope for a steal!&nbsp;&nbsp;<br />
+      </p>
+    </div>
+
+    <div class="grid-system-3">
+      <div class="box">
+        <div class="image">
+          <img style=" max-height: 400px"
+            src="https://www.microscope.com/media/catalog/product/cache/2/image/1800x/040ec09b1e35df139433887a97daa66f/s/m/smithsonian-binoculars-6.jpg">
+        </div>
+        <div class="text-box"><br />
+          <h3 style="text-align: center;"><a
+              href="https://www.microscope.com/best-binoculars-for-birding-smithsonian-great-outdoors-binoculars-set.html">The
+              Smithsonian Great Outdoors Binoculars Set</a></h3>
+          <p>The perfect choice for bird watching, scientific fieldwork, or just exploring and enjoying nature.&nbsp;
+          </p>
+
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img style=" max-height: 400px"
+            src="https://www.microscope.com/media/catalog/product/cache/2/image/1800x/040ec09b1e35df139433887a97daa66f/s/m/smithsonian-spotting-scope-set.png">
+        </div>
+        <div class="text-box"><br />
+          <h3 style="text-align: center;"><a
+              href="https://www.microscope.com/best-spotting-scope-for-birding-smithsonian-great-outdoors-spotting-scope-set.html">The
+              Smithsonian Great Outdoors Spotting Scope Set</a></h3>
+          <p>Get closer to nature than ever before and see clear, crisp, fine details of birds and wildlife with the
+            20-60x 60mm objective lens, twist-up eyepiece feature, and adjustable views.</p>
+
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img style=" max-height: 400px"
+            src="https://www.microscope.com/media/catalog/product/cache/2/image/1800x/040ec09b1e35df139433887a97daa66f/s/m/smithsonian-monocular-6.jpg">
+        </div>
+        <div class="text-box"><br />
+          <h3 style="text-align: center;"><a
+              href="https://www.microscope.com/best-monocular-for-bird-watching-smithsonian-great-outdoors-monocular-set.html">The
+              Smithsonian Great Outdoors Monocular Set</a></h3>
+          <p>If someone in your life is a bird-watcher, wildlife enthusiast, or nature lover who likes to travel light
+            and multi-task, the Smithsonian birding monocular is the perfect gift!<br />
+            &nbsp;</p>
+        </div>
+      </div>
+      <br />
+    </div>
+
+    <div class="text-box" style="text-align: center;">
+
+      <br />
+      <p>
+        Smithsonian binoculars, monoculars, and spotting scopes are significantly marked down from now until March
+        4th.&nbsp;
+      </p>
+
+      <p><a class="button btn-blue" aria-describedby="tooltip248863" data-original-title=""
+          href="https://www.microscope.com" target="_blank">SHOP NOW</a>
+      </p>
+      <br />
+    </div>
+
+
+
+  </section>
+
+</body>
+
+</html>

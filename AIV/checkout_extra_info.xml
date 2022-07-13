@@ -1,0 +1,257 @@
+<!-- 
+- Mapped the form fields to a model field to store data
+- Added an Automated Action to show the stored data to the "Quotation" 
+- Automated Action Configs:
+    Model:  Sales Order
+    Trigger: On Update
+    Trigger Fields: Credit Card Number (sale.order)
+    Action To Do: Send Email
+    Email Template: Payment Details [Sale.Order]
+                    
+-->
+
+<!-- Checkout Extra Info View.xml -->
+<t name="Checkout Extra Info" t-name="website_sale.extra_info">
+  <t t-call="website.layout">
+    <t t-set="no_footer" t-value="1"/>
+    <div id="wrap">
+      <div class="container oe_website_sale py-2">
+        <div class="row">
+          <div class="col-12">
+            <t t-call="website_sale.wizard_checkout">
+              <t t-set="step" t-value="30"/>
+            </t>
+          </div>
+          <div class="col-12 col-xl-auto order-xl-2 d-none d-xl-block">
+            <t t-call="website_sale.cart_summary">
+              <t t-set="redirect" t-valuef="/shop/extra_info"/>
+            </t>
+          </div>
+          <div class="col-12 col-xl order-xl-1 oe_cart">
+            <div class="s_text_highlight my-3 text-center w-100 o_colored_level o_cc o_cc5" data-snippet="s_text_highlight" data-name="Text Highlight" style="">
+              <div class="container">
+                <h3>
+                  <span style="font-size: 24px;">Enter Payment Details</span>
+                </h3>
+                <p>If paying by Credit Card, your card will not be charged until your order has been shipped.&amp;nbsp;2% convenience fee will be applied to all credit card orders, and the final charge on the card will vary from the total displayed on the order.</p>
+              </div>
+            </div>
+            <section class="s_website_form o_colored_level" data-vcss="001" data-snippet="s_website_form" data-name="Form" style="background-image: none;">
+              <div class="container">
+                <form action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required s_website_form_no_recaptcha" data-mark="*" data-force_action="shop.sale.order" data-model_name="sale.order" data-success-mode="redirect" data-success-page="/shop/payment" hide-change-model="true" _lpchecked="1">
+                  <div class="s_website_form_rows row s_col_no_bgcolor">
+                    <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_field_hidden" data-type="selection" data-name="Field" data-visibility-condition="" data-visibility-between="">
+                      <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-sm-auto s_website_form_label" style="width: 200px" for="o6jcww20h7i8">
+                          <span class="s_website_form_label_content">Payment Type:</span>
+                        </label>
+                        <div class="col-sm">
+                          <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="Payment Type:" data-display="horizontal">
+                            <div class="radio col-12 col-lg-4 col-md-6">
+                              <div class="form-check">
+                                <input type="radio" class="s_website_form_input form-check-input" id="o6jcww20h7i80" name="Payment Type:" value="Visa"/>
+                                <label class="form-check-label s_website_form_check_label" for="o6jcww20h7i80">
+                    Visa
+                </label>
+                              </div>
+                            </div>
+                            <div class="radio col-12 col-lg-4 col-md-6">
+                              <div class="form-check">
+                                <input type="radio" class="s_website_form_input form-check-input" id="o6jcww20h7i81" name="Payment Type:" value="Mastercard"/>
+                                <label class="form-check-label s_website_form_check_label" for="o6jcww20h7i81">
+                    Mastercard
+                </label>
+                              </div>
+                            </div>
+                            <div class="radio col-12 col-lg-4 col-md-6">
+                              <div class="form-check">
+                                <input type="radio" class="s_website_form_input form-check-input" id="o6jcww20h7i82" name="Payment Type:" value="Discover"/>
+                                <label class="form-check-label s_website_form_check_label" for="o6jcww20h7i82">
+                    Discover
+                </label>
+                              </div>
+                            </div>
+                            <div class="radio col-12 col-lg-4 col-md-6">
+                              <div class="form-check">
+                                <input type="radio" class="s_website_form_input form-check-input" id="o6jcww20h7i83" name="Payment Type:" value="Purchase Order"/>
+                                <label class="form-check-label s_website_form_check_label" for="o6jcww20h7i83">
+                    Purchase Order
+                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12" data-type="selection" data-name="Field">
+                      <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="ob1dlbfdgfcv">
+                          <span class="s_website_form_label_content">Payment Type:</span>
+                        </label>
+                        <div class="col-sm">
+                          <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="x_payment_type" data-display="horizontal">
+                            <div class="radio col-12 col-lg-4 col-md-6">
+                              <div class="form-check">
+                                <input type="radio" class="s_website_form_input form-check-input" id="ob1dlbfdgfcv0" name="x_payment_type" value="Visa"/>
+                                <label class="form-check-label s_website_form_check_label" for="ob1dlbfdgfcv0">
+                    Visa
+                </label>
+                              </div>
+                            </div>
+                            <div class="radio col-12 col-lg-4 col-md-6">
+                              <div class="form-check">
+                                <input type="radio" class="s_website_form_input form-check-input" id="ob1dlbfdgfcv1" name="x_payment_type" value="Mastercard"/>
+                                <label class="form-check-label s_website_form_check_label" for="ob1dlbfdgfcv1">
+                    Mastercard
+                </label>
+                              </div>
+                            </div>
+                            <div class="radio col-12 col-lg-4 col-md-6">
+                              <div class="form-check">
+                                <input type="radio" class="s_website_form_input form-check-input" id="ob1dlbfdgfcv2" name="x_payment_type" value="Discover"/>
+                                <label class="form-check-label s_website_form_check_label" for="ob1dlbfdgfcv2">
+                    Discover
+                </label>
+                              </div>
+                            </div>
+                            <div class="radio col-12 col-lg-4 col-md-6">
+                              <div class="form-check">
+                                <input type="radio" class="s_website_form_input form-check-input" id="ob1dlbfdgfcv3" name="x_payment_type" value="Purchase Order"/>
+                                <label class="form-check-label s_website_form_check_label" for="ob1dlbfdgfcv3">
+                    Purchase Order
+                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12" data-type="char" data-name="Field">
+                      <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="o0wz3yi49fgfo">
+                          <span class="s_website_form_label_content">Name on Card:</span>
+                        </label>
+                        <div class="col-sm">
+                          <input type="text" class="form-control s_website_form_input" name="x_card_owner_name" placeholder="" id="o0wz3yi49fgfo" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12" data-type="char" data-name="Field">
+                      <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ov6589rr36dq">
+                          <span class="s_website_form_label_content">Credit Card Number:</span>
+                        </label>
+                        <div class="col-sm">
+
+                          <input type="text" class="form-control s_website_form_input" name="x_credit_card_number" value="" placeholder="" id="ov6589rr36dq"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12" data-type="char" data-name="Field">
+                      <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="oxza8qg8hifa">
+                          <span class="s_website_form_label_content">Expiration Date:</span>
+                        </label>
+                        <div class="col-sm">
+                          <input type="text" class="form-control s_website_form_input" name="x_exp_date" value="" placeholder="" id="oxza8qg8hifa"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12" data-type="char" data-name="Field">
+                      <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="o1qo02ymsfrm">
+                          <span class="s_website_form_label_content">CVV Code:</span>
+                        </label>
+                        <div class="col-sm">
+                          <input type="text" class="form-control s_website_form_input" name="x_cvv_code" placeholder="" id="o1qo02ymsfrm"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12" data-type="char" data-name="Field">
+                      <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="oxvf7ny7hq5s">
+                          <span class="s_website_form_label_content">PO # (optional):</span>
+                        </label>
+                        <div class="col-sm">
+                          <input type="text" class="form-control s_website_form_input" name="x_po_number" placeholder="" id="oxvf7ny7hq5s"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12" data-type="char" data-name="Field">
+                      <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="odnwk5trwtzw">
+                          <span class="s_website_form_label_content">Account # (optional):</span>
+                        </label>
+                        <div class="col-sm">
+                          <input type="text" class="form-control s_website_form_input" name="x_account_number" placeholder="" id="odnwk5trwtzw"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 s_website_form_custom" data-type="binary" data-name="Field">
+                      <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="opxg9nvpfn6c">
+                          <span class="s_website_form_label_content">Upload PO (optional) :</span>
+                        </label>
+                        <div class="col-sm">
+                          <input type="file" class="form-control-file s_website_form_input" name="Upload PO (optional) :" id="opxg9nvpfn6c"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-12 s_website_form_submit s_website_form_no_submit_options">
+                      <div style="width: 200px;" class="s_website_form_label"/>
+                      <a role="button" href="/shop/checkout" class="btn btn-secondary float-left"><span class="fa fa-chevron-left"/> Previous</a>
+                      <a role="button" class="btn btn-primary float-right s_website_form_send" href="/shop/confirm_order">Next <span class="fa fa-chevron-right"/></a>
+                      <span id="s_website_form_result"/>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="oe_structure" id="oe_structure_website_sale_extra_info_1"/>
+  </t>
+</t>
+
+
+<!-- Email Template -->
+<p style="margin:0px;box-sizing:border-box;font-size:13px;"><span style="font-weight: bolder; ">PAYMENT DETAILS:</span></p>
+
+<table border="0" cellpadding="3" cellspacing="0" style="box-sizing:border-box;border-collapse:collapse; margin: 10px;">
+    <tbody>
+        <tr>
+            <td style="width: 151px;"><strong style="box-sizing:border-box;font-weight:500;">Payment Type:</strong></td>
+            <td><t t-out="object.x_payment_type or '---'" data-oe-t-inline="true" contenteditable="false" oe-keep-contenteditable=""></t></td>
+        </tr>
+        <tr>
+            <td style="width: 151px;"><strong style="box-sizing:border-box;font-weight:500;">Name on Card:</strong></td>
+            <td><t t-out="object.x_card_owner_name or '---'" data-oe-t-inline="true" contenteditable="false" oe-keep-contenteditable=""></t></td>
+        </tr>
+        <tr>
+            <td style="width: 151px;"><strong style="box-sizing:border-box;font-weight:500;">Credit Card Number:</strong></td>
+            <td><t t-out="object.x_credit_card_number or '---'" data-oe-t-inline="true" contenteditable="false" oe-keep-contenteditable=""></t></td>
+        </tr>
+        <tr>
+            <td style="width: 151px;"><strong style="box-sizing:border-box;font-weight:500;">Expiration Date:</strong></td>
+            <td> <t t-out="object.x_exp_date or '---'" data-oe-t-inline="true" contenteditable="false" oe-keep-contenteditable=""></t></td>
+        </tr>
+        <tr>
+            <td style="width: 151px;"><strong style="box-sizing:border-box;font-weight:500;">CVV Code:</strong></td>
+            <td><t t-out="object.x_cvv_code or '---'" data-oe-t-inline="true" contenteditable="false" oe-keep-contenteditable=""></t></td>
+        </tr>
+        <tr>
+            <td style="width: 151px;"><strong style="box-sizing:border-box;font-weight:500;">PO # (optional):</strong></td>
+            <td><t t-out="object.x_po_number or '---'" data-oe-t-inline="true" contenteditable="false" oe-keep-contenteditable=""></t></td>
+        </tr>
+        <tr>
+            <td style="width: 151px;"><strong style="box-sizing:border-box;font-weight:500;">Account # (optional):</strong></td>
+            <td><t t-out="object.x_account_number or '---'" data-oe-t-inline="true" contenteditable="false" oe-keep-contenteditable=""></t></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+

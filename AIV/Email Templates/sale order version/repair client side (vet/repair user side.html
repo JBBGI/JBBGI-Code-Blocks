@@ -1,0 +1,172 @@
+
+    <t t-foreach="request.env['res.partner'].search([('id', '=',object.partner_id.id)])" t-as="customer">
+        <div style="background-color: #F1F1F1;">
+            <br><table cellspacing="0" cellpadding="0" align="center" style="box-sizing:border-box;border-collapse:collapse;background-color: #fff;max-width: 700px; width:100%" width="100%">
+                <tbody>
+                <tr>
+                    <td>
+                        <div style="width:80%; margin: auto; padding: 33.6px 0;">
+                            <img t-attf-src="/web/image/website/{{object.company_id.id}}/logo/" style="border-style:none;box-sizing:border-box;vertical-align:middle;height: 5em;">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="100%" cellpadding="0" cellspacing="0" align="center" style="box-sizing:border-box;border-collapse:collapse;max-width: 700px;">
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 33.6px auto ;">
+                                        <table width="100%" align="center"
+                                            style="box-sizing:border-box;border-collapse:collapse;text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <h2 align="left"
+                                                            style="box-sizing:border-box;caret-color:#37352f;position:relative;font-size:19.5px;color:#091124;line-height:1.2;font-weight:500;margin: 0 auto 18px;width:80%"
+                                                             width="80%"
+                                                            contenteditable="false" placeholder="Heading 2" class="oe-hint"
+                                                            oe-keep-contenteditable="">Thank You for Choosing <span t-esc="object.company_id.name"></span>!</h2>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h4 align="left"
+                                                            style="box-sizing:border-box;font-size:15.6px;color:#091124;line-height:1.2;font-weight:500;margin: 0 auto;width:80%"
+                                                            width="80%">
+                                                            All AIV Repairs are performed in our ISO 13485:2016 certified facility
+                                                            to strict quality standards.
+                                                        </h4>
+                                                        <br>
+                                                        <div style="margin:auto;width:80%; font-style: italic;">
+                                                            <p>All infusion pump repairs include a 6 month warranty.</p>
+                                                            <p>Average turnaround time of 7 to 10 business days.</p>
+                                                            <p>Service agreements and rentals are available.</p>
+                                                        </div>
+                                                        <hr style="border-top-color:#00529f;border-top-style:dashed;border-top-width:1px;border-left-width:0px;border-bottom-width:0px;border-right-width:0px;overflow-y:visible;overflow-x:visible;height:0px;box-sizing:content-box;width:80%;border-width: 0;margin:24px auto 12px ;border-top: 1px dashed #00529f"
+                                                            width="80%" contenteditable="false" oe-keep-contenteditable="">
+                
+                                                    </td>
+                                                </tr>
+                
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                
+                                <tr>
+                                    <td>
+                                        <div style="box-sizing:border-box;font-size:13px;width:80%;margin: auto;padding-bottom: 33.6px;"
+                                            width="80%">
+                                            <p style="margin:0px;box-sizing:border-box;font-size:13px;">Hi
+                                                <t t-esc="customer.name"
+                                                    data-oe-t-inline="true" contenteditable="false" oe-keep-contenteditable=""></t>,
+                                            </p><br>
+                                            <p style="margin:0px;box-sizing:border-box;font-size:13px;">Our technicians have
+                                                received your service request details and are awaiting your items.
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 12px;">
+                                        <h3 style="box-sizing:border-box;font-size:16.9px;color:#091124;line-height:1.2;font-weight:500;margin: auto; width:80%" width="80%">Products for Repair: </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style=" padding-bottom: 2.8rem;">
+                                        <table width="70%" align="center" style="text-align: left;">
+                                            <tbody>
+                                                <t t-set="items" t-value="customer.x_pump.split(',')" data-oe-t-inline="true"></t>
+                                                <t t-foreach="items" t-as="item" data-oe-t-inline="true">
+                                                    <tr style="height: 20px;">
+                                                        <t t-set="i" t-value="item.split(': ')" data-oe-t-inline="true"></t>
+                                                        <t t-foreach="i" t-as="val" >
+                                                            <td t-if="val_index == 0" style="width:30%">
+                                                                <t t-out="val"/>
+                                                            </td>
+                                                            <td t-if="val_index == 1" style="width:70%">
+                                                                <t t-out="val"/>
+                                                            </td>
+                                                        </t>
+                                                    </tr>
+                                                </t>
+                                
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="padding-bottom: 1rem;">
+                                        <h3 style="margin: auto; width:80%">Shipping to: </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style=" padding-bottom: 2.8rem;">
+                                        <t t-set="contact_details" t-value="[
+                                            {'l': 'Name:', 'r': customer.name},
+                                            {'l': 'Phone:', 'r': customer.phone},
+                                            {'l': 'Email:', 'r': customer.email},
+                                            {'l': 'Address:', 'r': customer.street},
+                                            {'l': 'City:', 'r': customer.city},
+                                            {'l': 'State:', 'r': customer.state_id.name},
+                                            {'l': 'ZIP', 'r': customer.zip},
+                                            {'l': 'Country', 'r': customer.country_id.name},
+                                            ]" data-oe-t-inline="true"></t><table width="70%" align="center" style="text-align: left;">
+                                            
+                                            <tbody><tr t-foreach="contact_details" t-as="contact">
+                                                <td style="width: 30%;" t-esc="contact.get('l')" contenteditable="false" oe-keep-contenteditable=""></td>
+                                                <td style="width: 70%;" t-esc="contact.get('r')" contenteditable="false" oe-keep-contenteditable=""></td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 1rem;">
+                                        <h3 style="margin: auto; width:80%">Billing to: </h3>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    
+
+                                        <td style=" padding-bottom: 2.8rem;">
+                                            <table width="70%" align="center" style="text-align: left;">
+                                                <t t-set="contact_details" t-value="[
+                                            {'l': 'Name:', 'r': object.partner_invoice_id.name},
+                                            {'l': 'Phone:', 'r': object.partner_invoice_id.phone},
+                                            {'l': 'Email:', 'r': object.partner_invoice_id.email},
+                                            {'l': 'Address:', 'r': object.partner_invoice_id.street},
+                                            {'l': 'City:', 'r': object.partner_invoice_id.city},
+                                            {'l': 'State:', 'r': object.partner_invoice_id.state_id.name},
+                                            {'l': 'ZIP', 'r': object.partner_invoice_id.zip},
+                                            {'l': 'Country', 'r': object.partner_invoice_id.country_id.name},
+                                            ]" />
+                                                <tr t-foreach="contact_details" t-as="contact">
+                                                    <td style="width: 30%;" t-esc="contact.get('l')" />
+                                                    <td style="width: 70%;" t-esc="contact.get('r')" />
+                                                </tr>
+                                            </table>
+                                        </td>
+                                </tr>
+
+
+                                
+                                <tr align="center" style="background-color: #444444;max-width: 700px;">
+                                    <td style="width: 100%; color: #fff; text-align: center;">
+                                        <p style="box-sizing:border-box;margin-top: 12px; margin-bottom: 12px;">Copyright © 2022 <t t-out="object.company_id.name" data-oe-t-inline="true" contenteditable="false" oe-keep-contenteditable="">
+                                            </t>. All rights reserved.
+                                        </p>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        
+                        </td>
+
+        
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+    </t>

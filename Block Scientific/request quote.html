@@ -1,0 +1,679 @@
+<html>
+    <head></head>
+    <body>
+        <div style="width:30%;border: 1px solid;padding: 30px; margin: auto; font-size: 20px;">
+            <p>nano = n</p>
+            <p>micro = &micro;</p>
+            <p>trademark = &#8482;</p>
+            <p>registered  = &reg;</p>
+            <p>copy = &copy;</p>
+            <p>less than = &lt; </p>
+            <p>greater than = &gt;</p>
+            <p>(most of the time, normal < or > will work)</p>
+
+            <p>Bulleted List</p>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>
+            <br><p>Use &lt;br&gt; for break </p>
+            <p>Numbered List</p>
+            <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ol>
+        </div>
+
+    </body>
+</html>
+
+
+
+<t t-name="website.request-a-quote">
+    <t t-call="website.layout">
+      <t t-value="request.params.get('id')" t-set="product_code"/>
+      <t t-if="product_code" t-value="request.env['product.product'].search([('default_code', '=', product_code)])" t-set="product"/>
+  
+      <div id="wrap" class="oe_structure oe_empty">
+        <form action="/website_form/" method="post" class="s_website_form container-fluid mt32 o_fake_not_editable" enctype="multipart/form-data" data-name="Form Builder" data-model_name="crm.lead" data-success_page="/thank-you-for-contacting-us" _lpchecked="1">
+          <div class="container">
+            <h1 class="o_form_heading o_fake_editable" ><font style="color:#1e6e83;font-size:36px">Request a Quote <span t-if="product">for </span><span style="font-weight: bold;" t-if="product" t-esc="product.name"></span></font> </h1>
+            
+            <div class="row form-group form-field d-none">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="team_id"></label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="team_id" value="1" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"/>
+              </div>
+            </div>
+            
+            <div class="row form-group form-field d-none">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="user_id"></label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="user_id" value="75788"/>
+              </div>
+            </div>
+            
+            
+              <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable" style="display: flex;">
+                <!--<div class="col-lg-3 col-md-4">-->
+                <!--  <label class="col-form-label o_fake_editable" for="contact_name">Name</label>-->
+                <!--</div>-->
+                <div class="">
+                  <input type="text" class="form-control o_website_form_input" name="contact_name" required="" placeholder="Name"/>
+    
+                </div>
+                <div class="">
+                    <input type="text" class="form-control o_website_form_input" name="partner_name" required="" placeholder="Company Name"/>
+                </div>
+              </div>
+  
+              
+              
+              <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable">
+                <!--<div class="col-lg-3 col-md-4">-->
+                <!--  <label class="col-form-label o_fake_editable" for="partner_name">Company Name</label>-->
+                <!--</div>-->
+  
+              </div>
+            
+            <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable o_website_form_field_hidden">
+              <!--<div class="col-lg-3 col-md-4">-->
+              <!--  <label class="col-form-label o_fake_editable" for="name">Subject</label>-->
+              <!--</div>-->
+              <div t-if="product" class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="name" t-attf-value="Quote Request for #{product.name}" required=""/>
+              </div>
+              <div t-if="not product_code or not product" class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="name" value="" required=""/>
+              </div>
+            </div>
+            <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable">
+              <!--<div class="col-lg-3 col-md-4">-->
+              <!--  <label class="col-form-label o_fake_editable" for="email_from">Email</label>-->
+              <!--</div>-->
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="email_from" required="" placeholder="Email"/>
+              </div>
+            </div>
+            <div class="form-group row form-field o_fake_not_editable o_website_form_required_custom">
+              <!--<div class="col-lg-3 col-md-4">-->
+              <!--  <label class="col-form-label o_fake_editable" for="phone">Phone Number</label>-->
+              <!--</div>-->
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="phone" required="" placeholder="Phone Number"/>
+              </div>
+            </div>
+            <div class="row form-group form-field o_website_form_required_custom">
+              <!--<div class="col-lg-3 col-md-4">-->
+                <!--<label class="col-form-label" for="state_id">-->
+                <!--      State-->
+                <!--  </label>-->
+              <!--</div>-->
+              <div class="col-lg-7 col-md-8">
+                <select class="form-control o_website_form_input" name="state_id" required="" placeholder="State">
+                  <option value="10">Alaska (US)</option>
+                  <option value="9">Alabama (US)</option>
+                  <option value="70">Armed Forces Pacific (US)</option>
+                  <option value="12">Arkansas (US)</option>
+                  <option value="60">American Samoa (US)</option>
+                  <option value="11">Arizona (US)</option>
+                  <option value="13">California (US)</option>
+                  <option value="14">Colorado (US)</option>
+                  <option value="15">Connecticut (US)</option>
+                  <option value="17">District of Columbia (US)</option>
+                  <option value="16">Delaware (US)</option>
+                  <option value="18">Florida (US)</option>
+                  <option value="61">Federated States of Micronesia (US)</option>
+                  <option value="19">Georgia (US)</option>
+                  <option value="62">Guam (US)</option>
+                  <option value="20">Hawaii (US)</option>
+                  <option value="24">Iowa (US)</option>
+                  <option value="21">Idaho (US)</option>
+                  <option value="22">Illinois (US)</option>
+                  <option value="23">Indiana (US)</option>
+                  <option value="25">Kansas (US)</option>
+                  <option value="26">Kentucky (US)</option>
+                  <option value="27">Louisiana (US)</option>
+                  <option value="42">Massachusetts (US)</option>
+                  <option value="41">Maryland (US)</option>
+                  <option value="28">Maine (US)</option>
+                  <option value="63">Marshall Islands (US)</option>
+                  <option value="43">Michigan (US)</option>
+                  <option value="44">Minnesota (US)</option>
+                  <option value="46">Missouri (US)</option>
+                  <option value="64">Northern Mariana Islands (US)</option>
+                  <option value="45">Mississippi (US)</option>
+                  <option value="29">Montana (US)</option>
+                  <option value="36">North Carolina (US)</option>
+                  <option value="37">North Dakota (US)</option>
+                  <option value="30">Nebraska (US)</option>
+                  <option value="32">New Hampshire (US)</option>
+                  <option value="33">New Jersey (US)</option>
+                  <option value="34">New Mexico (US)</option>
+                  <option value="31">Nevada (US)</option>
+                  <option value="35">New York (US)</option>
+                  <option value="38">Ohio (US)</option>
+                  <option value="39">Oklahoma (US)</option>
+                  <option value="40">Oregon (US)</option>
+                  <option value="47">Pennsylvania (US)</option>
+                  <option value="66">Puerto Rico (US)</option>
+                  <option value="65">Palau (US)</option>
+                  <option value="48">Rhode Island (US)</option>
+                  <option value="49">South Carolina (US)</option>
+                  <option value="50">South Dakota (US)</option>
+                  <option value="51">Tennessee (US)</option>
+                  <option value="52">Texas (US)</option>
+                  <option value="53">Utah (US)</option>
+                  <option value="55">Virginia (US)</option>
+                  <option value="67">Virgin Islands (US)</option>
+                  <option value="54">Vermont (US)</option>
+                  <option value="56">Washington (US)</option>
+                  <option value="58">Wisconsin (US)</option>
+                  <option value="57">West Virginia (US)</option>
+                  <option value="59">Wyoming (US)</option>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group form-field o_website_form_required_custom">
+              <!--<div class="col-lg-3 col-md-4">-->
+                <!--<label class="col-form-label" for="country_id">-->
+                <!--      Country-->
+                <!--  </label>-->
+              <!--</div>-->
+              <div class="col-lg-7 col-md-8">
+                <select class="form-control o_website_form_input" name="country_id" required="" placeholder="Country">
+                  <option value="233">United States</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable">
+              <!--<div class="col-lg-3 col-md-4">-->
+              <!--  <label class="col-form-label o_fake_editable" for="description">Additional Info</label>-->
+              <!--</div>-->
+              <div class="col-lg-7 col-md-8">
+                <textarea class="form-control o_website_form_input" name="description" required="" placeholder="Additional Information"/>
+              </div>
+            </div>
+            
+            <div class="form-group row">
+              <div t-if="product" class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                <button class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text">Send</button>
+                <span id="o_website_form_result"/>
+              </div>
+              <div t-if="not product" class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                <button class="btn btn-primary btn-lg o_default_snippet_text" disabled="True">Send</button>
+                <span class="text-danger ml8"><em>(Product not found.)</em></span>
+              </div>
+  
+            </div>
+          </div>
+        </form>
+      </div>
+    </t>
+  </t>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  6/9/22
+
+
+
+  <t t-name="website.request-a-quote">
+    <t t-call="website.layout">
+      <t t-value="request.params.get('id')" t-set="product_code"/>
+      <t t-if="product_code" t-value="request.env['product.product'].search([('default_code', '=', product_code)])" t-set="product"/>
+  
+      <div id="wrap" class="oe_structure oe_empty">
+        <form action="/website_form/" method="post" class="s_website_form container-fluid mt32 o_fake_not_editable" enctype="multipart/form-data" data-name="Form Builder" data-model_name="crm.lead" data-success_page="/thank-you-for-contacting-us" _lpchecked="1">
+          <div class="container">
+            <h1 class="o_form_heading o_fake_editable" style="width:60%; line-height: 1; margin-bottom: 1.5rem"><font style="color:#1e6e83;font-size:36px">Request a Quote <span t-if="product">for </span><span style="font-weight: bold;" t-if="product" t-esc="product.name"></span></font> </h1>
+            
+            <div class="row form-group form-field d-none">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="team_id">
+  </label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="team_id" value="1" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"/>
+              </div>
+            </div>
+            
+            <div class="row form-group form-field d-none">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="user_id">
+  </label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="user_id" value="75788"/>
+              </div>
+            </div>
+            
+            <div>
+                <p style="color:#1e6e83;margin-bottom: 1rem !important;">Fill out the form below:</p>
+                <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable" style="display: flex;">
+                  <!--<div class="col-lg-3 col-md-4">-->
+                  <!--  <label class="col-form-label o_fake_editable" for="contact_name">Name</label>-->
+                  <!--</div>-->
+                  <div class="col-lg-6">
+                    <input type="text" class="form-control o_website_form_input" name="contact_name" required="" placeholder="Name"/>
+                  </div>
+                  <div class="col-lg-6">
+                      <input type="text" class="form-control o_website_form_input" name="partner_name" required="" placeholder="Company Name"/>
+                  </div>
+                </div>
+                
+                <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable" style="display: flex;">
+                  <!--<div class="col-lg-3 col-md-4">-->
+                  <!--  <label class="col-form-label o_fake_editable" for="contact_name">Name</label>-->
+                  <!--</div>-->
+                  <div class="col-lg-6">
+                    <input type="text" class="form-control o_website_form_input" name="email_from" required="" placeholder="Email"/>
+                  </div>
+                  <div class="col-lg-6">
+                    <input type="text" class="form-control o_website_form_input" name="phone" required="" placeholder="Phone Number"/>
+                  </div>
+                </div>
+  
+                <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable" style="display: flex;">
+                  <!--<div class="col-lg-3 col-md-4">-->
+                  <!--  <label class="col-form-label o_fake_editable" for="contact_name">Name</label>-->
+                  <!--</div>-->
+                  <div class="col-lg-6">
+                    <select class="form-control o_website_form_input" name="state_id" required="" placeholder="State">
+                    <option value="10">Alaska (US)</option>
+                    <option value="9">Alabama (US)</option>
+                    <option value="70">Armed Forces Pacific (US)</option>
+                    <option value="12">Arkansas (US)</option>
+                    <option value="60">American Samoa (US)</option>
+                    <option value="11">Arizona (US)</option>
+                    <option value="13">California (US)</option>
+                    <option value="14">Colorado (US)</option>
+                    <option value="15">Connecticut (US)</option>
+                    <option value="17">District of Columbia (US)</option>
+                    <option value="16">Delaware (US)</option>
+                    <option value="18">Florida (US)</option>
+                    <option value="61">Federated States of Micronesia (US)</option>
+                    <option value="19">Georgia (US)</option>
+                    <option value="62">Guam (US)</option>
+                    <option value="20">Hawaii (US)</option>
+                    <option value="24">Iowa (US)</option>
+                    <option value="21">Idaho (US)</option>
+                    <option value="22">Illinois (US)</option>
+                    <option value="23">Indiana (US)</option>
+                    <option value="25">Kansas (US)</option>
+                    <option value="26">Kentucky (US)</option>
+                    <option value="27">Louisiana (US)</option>
+                    <option value="42">Massachusetts (US)</option>
+                    <option value="41">Maryland (US)</option>
+                    <option value="28">Maine (US)</option>
+                    <option value="63">Marshall Islands (US)</option>
+                    <option value="43">Michigan (US)</option>
+                    <option value="44">Minnesota (US)</option>
+                    <option value="46">Missouri (US)</option>
+                    <option value="64">Northern Mariana Islands (US)</option>
+                    <option value="45">Mississippi (US)</option>
+                    <option value="29">Montana (US)</option>
+                    <option value="36">North Carolina (US)</option>
+                    <option value="37">North Dakota (US)</option>
+                    <option value="30">Nebraska (US)</option>
+                    <option value="32">New Hampshire (US)</option>
+                    <option value="33">New Jersey (US)</option>
+                    <option value="34">New Mexico (US)</option>
+                    <option value="31">Nevada (US)</option>
+                    <option value="35">New York (US)</option>
+                    <option value="38">Ohio (US)</option>
+                    <option value="39">Oklahoma (US)</option>
+                    <option value="40">Oregon (US)</option>
+                    <option value="47">Pennsylvania (US)</option>
+                    <option value="66">Puerto Rico (US)</option>
+                    <option value="65">Palau (US)</option>
+                    <option value="48">Rhode Island (US)</option>
+                    <option value="49">South Carolina (US)</option>
+                    <option value="50">South Dakota (US)</option>
+                    <option value="51">Tennessee (US)</option>
+                    <option value="52">Texas (US)</option>
+                    <option value="53">Utah (US)</option>
+                    <option value="55">Virginia (US)</option>
+                    <option value="67">Virgin Islands (US)</option>
+                    <option value="54">Vermont (US)</option>
+                    <option value="56">Washington (US)</option>
+                    <option value="58">Wisconsin (US)</option>
+                    <option value="57">West Virginia (US)</option>
+                    <option value="59">Wyoming (US)</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-6">
+                    <select class="form-control o_website_form_input" name="country_id" required="" placeholder="Country">
+                      <option value="233">United States</option>
+                    </select>                
+                  </div>
+                </div> 
+                
+                <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable" style="display: flex;">
+                  <!--<div class="col-lg-3 col-md-4">-->
+                  <!--  <label class="col-form-label o_fake_editable" for="contact_name">Name</label>-->
+                  <!--</div>-->
+                  <div class="col-lg-12">
+                    <textarea class="form-control o_website_form_input" name="description" required="" placeholder="Additional Information"/>
+                  </div>
+                  
+                </div>
+                
+                <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable o_website_form_field_hidden">
+                  <!--<div class="col-lg-3 col-md-4">-->
+                  <!--  <label class="col-form-label o_fake_editable" for="name">Subject</label>-->
+                  <!--</div>-->
+                  <div t-if="product" class="col-lg-12">
+                    <input type="text" class="form-control o_website_form_input" name="name" t-attf-value="Quote Request for #{product.name}" required=""/>
+                  </div>
+                  <div t-if="not product_code or not product" class="col-lg-7 col-md-8">
+                    <input type="text" class="form-control o_website_form_input" name="name" value="" required=""/>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div t-if="product" class="col-lg-12">
+                    <button class="btn btn-success o_website_form_send o_default_snippet_text"><strong>SUBMIT</strong></button>
+                    <span style="color:#1e6e83;margin-left: 1rem"> For more information, please call us at <span class="text-orange"><strong>631-589-1118</strong></span> or <span class="text-orange"><strong>1-886-203-5777</strong></span> (Toll Free)</span>
+                    <span id="o_website_form_result"/>
+                  </div>
+                  <div t-if="not product" class="col-lg-12">
+                    <button class="btn btn-success  o_default_snippet_text" disabled="True">Submit</button>
+                    <span class="text-danger ml8"><em>(Product not found.)</em></span>
+                  </div>
+  
+                </div>
+                
+                
+                
+                
+                
+                
+              </div>
+              
+  
+            
+            <!--btn-primary-->
+            <!--<div class="form-group row form-field o_website_form_required_custom o_fake_not_editable">-->
+              <!--<div class="col-lg-3 col-md-4">-->
+              <!--  <label class="col-form-label o_fake_editable" for="email_from">Email</label>-->
+              <!--</div>-->
+            <!--  <div class="col-lg-7 col-md-8">-->
+            <!--  </div>-->
+            <!--</div>-->
+            <!--<div class="form-group row form-field o_fake_not_editable o_website_form_required_custom">-->
+              <!--<div class="col-lg-3 col-md-4">-->
+              <!--  <label class="col-form-label o_fake_editable" for="phone">Phone Number</label>-->
+              <!--</div>-->
+            <!--  <div class="col-lg-7 col-md-8">-->
+            <!--  </div>-->
+            <!--</div>-->
+            <!--<div class="row form-group form-field o_website_form_required_custom">-->
+              <!--<div class="col-lg-3 col-md-4">-->
+                <!--<label class="col-form-label" for="state_id">-->
+                <!--      State-->
+                <!--  </label>-->
+              <!--</div>-->
+            <!--  <div class="col-lg-7 col-md-8">-->
+                
+            <!--  </div>-->
+            <!--</div>-->
+            <!--<div class="row form-group form-field o_website_form_required_custom">-->
+              <!--<div class="col-lg-3 col-md-4">-->
+                <!--<label class="col-form-label" for="country_id">-->
+                <!--      Country-->
+                <!--  </label>-->
+              <!--</div>-->
+            <!--  <div class="col-lg-7 col-md-8">-->
+  
+            <!--  </div>-->
+            <!--</div>-->
+            <!--<div class="form-group row form-field o_website_form_required_custom o_fake_not_editable">-->
+              <!--<div class="col-lg-3 col-md-4">-->
+              <!--  <label class="col-form-label o_fake_editable" for="description">Additional Info</label>-->
+              <!--</div>-->
+            <!--  <div class="col-lg-7 col-md-8">-->
+            <!--  </div>-->
+            <!--</div>-->
+            
+  
+          </div>
+        </form>
+      </div>
+    </t>
+  </t>
+  
+
+
+  /////////////////////////
+
+
+  <t t-name="website.request-a-quote">
+    <t t-call="website.layout">
+      <t t-value="request.params.get('id')" t-set="product_code"/>
+      <t t-if="product_code" t-value="request.env['product.product'].search([('default_code', '=', product_code)])" t-set="product"/>
+  
+      <div id="wrap" class="oe_structure oe_empty">
+        <form action="/website_form/" method="post" class="s_website_form container-fluid mt32 o_fake_not_editable" enctype="multipart/form-data" data-name="Form Builder" data-model_name="crm.lead" data-success_page="/thank-you-for-contacting-us" _lpchecked="1">
+          <div class="container">
+            <h1 class="o_form_heading o_fake_editable" style="width:60%; line-height: 1; margin-bottom: 1.5rem"><font style="color:#1e6e83;font-size:36px">Request a Quote <span t-if="product">for </span><span style="font-weight: bold;" t-if="product" t-esc="product.name"></span></font> </h1>
+            
+            <div class="row form-group form-field d-none">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="team_id">
+  </label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="team_id" value="1" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"/>
+              </div>
+            </div>
+            
+            <div class="row form-group form-field d-none">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="user_id">
+  </label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="user_id" value="75788"/>
+              </div>
+            </div>
+            
+            <div>
+                <p style="color:#1e6e83;margin-bottom: 1rem !important;">Fill out the form below:</p>
+                <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable" style="display: flex;">
+                  <!--<div class="col-lg-3 col-md-4">-->
+                  <!--  <label class="col-form-label o_fake_editable" for="contact_name">Name</label>-->
+                  <!--</div>-->
+                  <div class="col-lg-6">
+                    <input type="text" class="form-control o_website_form_input" name="contact_name" required="" placeholder="Name"/>
+                  </div>
+                  <div class="col-lg-6">
+                      <input type="text" class="form-control o_website_form_input" name="partner_name" required="" placeholder="Company Name"/>
+                  </div>
+                  <div class="col-lg-6">
+                    <input type="text" class="form-control o_website_form_input" name="email_from" required="" placeholder="Email"/>
+                  </div>
+                  <div class="col-lg-6">
+                    <input type="text" class="form-control o_website_form_input" name="phone" required="" placeholder="Phone Number"/>
+                  </div>
+                  <div class="col-lg-6">
+                    <select class="form-control o_website_form_input" name="state_id" required="" placeholder="State">
+                    <option value="10">Alaska (US)</option>
+                    <option value="9">Alabama (US)</option>
+                    <option value="70">Armed Forces Pacific (US)</option>
+                    <option value="12">Arkansas (US)</option>
+                    <option value="60">American Samoa (US)</option>
+                    <option value="11">Arizona (US)</option>
+                    <option value="13">California (US)</option>
+                    <option value="14">Colorado (US)</option>
+                    <option value="15">Connecticut (US)</option>
+                    <option value="17">District of Columbia (US)</option>
+                    <option value="16">Delaware (US)</option>
+                    <option value="18">Florida (US)</option>
+                    <option value="61">Federated States of Micronesia (US)</option>
+                    <option value="19">Georgia (US)</option>
+                    <option value="62">Guam (US)</option>
+                    <option value="20">Hawaii (US)</option>
+                    <option value="24">Iowa (US)</option>
+                    <option value="21">Idaho (US)</option>
+                    <option value="22">Illinois (US)</option>
+                    <option value="23">Indiana (US)</option>
+                    <option value="25">Kansas (US)</option>
+                    <option value="26">Kentucky (US)</option>
+                    <option value="27">Louisiana (US)</option>
+                    <option value="42">Massachusetts (US)</option>
+                    <option value="41">Maryland (US)</option>
+                    <option value="28">Maine (US)</option>
+                    <option value="63">Marshall Islands (US)</option>
+                    <option value="43">Michigan (US)</option>
+                    <option value="44">Minnesota (US)</option>
+                    <option value="46">Missouri (US)</option>
+                    <option value="64">Northern Mariana Islands (US)</option>
+                    <option value="45">Mississippi (US)</option>
+                    <option value="29">Montana (US)</option>
+                    <option value="36">North Carolina (US)</option>
+                    <option value="37">North Dakota (US)</option>
+                    <option value="30">Nebraska (US)</option>
+                    <option value="32">New Hampshire (US)</option>
+                    <option value="33">New Jersey (US)</option>
+                    <option value="34">New Mexico (US)</option>
+                    <option value="31">Nevada (US)</option>
+                    <option value="35">New York (US)</option>
+                    <option value="38">Ohio (US)</option>
+                    <option value="39">Oklahoma (US)</option>
+                    <option value="40">Oregon (US)</option>
+                    <option value="47">Pennsylvania (US)</option>
+                    <option value="66">Puerto Rico (US)</option>
+                    <option value="65">Palau (US)</option>
+                    <option value="48">Rhode Island (US)</option>
+                    <option value="49">South Carolina (US)</option>
+                    <option value="50">South Dakota (US)</option>
+                    <option value="51">Tennessee (US)</option>
+                    <option value="52">Texas (US)</option>
+                    <option value="53">Utah (US)</option>
+                    <option value="55">Virginia (US)</option>
+                    <option value="67">Virgin Islands (US)</option>
+                    <option value="54">Vermont (US)</option>
+                    <option value="56">Washington (US)</option>
+                    <option value="58">Wisconsin (US)</option>
+                    <option value="57">West Virginia (US)</option>
+                    <option value="59">Wyoming (US)</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-6">
+                    <select class="form-control o_website_form_input" name="country_id" required="" placeholder="Country">
+                      <option value="233">United States</option>
+                    </select>                
+                  </div>
+                  <div class="col-lg-12">
+                    <textarea class="form-control o_website_form_input" name="description" required="" placeholder="Additional Information"/>
+                  </div>
+
+                </div>
+                
+
+                
+                <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable o_website_form_field_hidden">
+                  <!--<div class="col-lg-3 col-md-4">-->
+                  <!--  <label class="col-form-label o_fake_editable" for="name">Subject</label>-->
+                  <!--</div>-->
+                  <div t-if="product" class="col-lg-12">
+                    <input type="text" class="form-control o_website_form_input" name="name" t-attf-value="Quote Request for #{product.name}" required=""/>
+                  </div>
+                  <div t-if="not product_code or not product" class="col-lg-12">
+                    <input type="text" class="form-control o_website_form_input" name="name" value="" required=""/>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div t-if="product" class="col-lg-12">
+                    <button class="btn btn-success o_website_form_send o_default_snippet_text"><strong>SUBMIT</strong></button>
+                    <span style="color:#1e6e83;margin-left: 1rem"> For more information, please call us at <span class="text-orange"><strong>631-589-1118</strong></span> or <span class="text-orange"><strong>1-886-203-5777</strong></span> (Toll Free)</span>
+                    <span id="o_website_form_result"/>
+                  </div>
+                  <div t-if="not product" class="col-lg-12">
+                    <button class="btn btn-success  o_default_snippet_text" disabled="True">Submit</button>
+                    <span class="text-danger ml8"><em>(Product not found.)</em></span>
+                  </div>
+  
+                </div>
+                
+                
+                
+                
+                
+                
+              </div>
+              
+  
+            
+            <!--btn-primary-->
+            <!--<div class="form-group row form-field o_website_form_required_custom o_fake_not_editable">-->
+              <!--<div class="col-lg-3 col-md-4">-->
+              <!--  <label class="col-form-label o_fake_editable" for="email_from">Email</label>-->
+              <!--</div>-->
+            <!--  <div class="col-lg-7 col-md-8">-->
+            <!--  </div>-->
+            <!--</div>-->
+            <!--<div class="form-group row form-field o_fake_not_editable o_website_form_required_custom">-->
+              <!--<div class="col-lg-3 col-md-4">-->
+              <!--  <label class="col-form-label o_fake_editable" for="phone">Phone Number</label>-->
+              <!--</div>-->
+            <!--  <div class="col-lg-7 col-md-8">-->
+            <!--  </div>-->
+            <!--</div>-->
+            <!--<div class="row form-group form-field o_website_form_required_custom">-->
+              <!--<div class="col-lg-3 col-md-4">-->
+                <!--<label class="col-form-label" for="state_id">-->
+                <!--      State-->
+                <!--  </label>-->
+              <!--</div>-->
+            <!--  <div class="col-lg-7 col-md-8">-->
+                
+            <!--  </div>-->
+            <!--</div>-->
+            <!--<div class="row form-group form-field o_website_form_required_custom">-->
+              <!--<div class="col-lg-3 col-md-4">-->
+                <!--<label class="col-form-label" for="country_id">-->
+                <!--      Country-->
+                <!--  </label>-->
+              <!--</div>-->
+            <!--  <div class="col-lg-7 col-md-8">-->
+  
+            <!--  </div>-->
+            <!--</div>-->
+            <!--<div class="form-group row form-field o_website_form_required_custom o_fake_not_editable">-->
+              <!--<div class="col-lg-3 col-md-4">-->
+              <!--  <label class="col-form-label o_fake_editable" for="description">Additional Info</label>-->
+              <!--</div>-->
+            <!--  <div class="col-lg-7 col-md-8">-->
+            <!--  </div>-->
+            <!--</div>-->
+            
+  
+          </div>
+        </form>
+      </div>
+    </t>
+  </t>
+  

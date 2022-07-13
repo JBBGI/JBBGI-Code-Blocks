@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+
+<head>
+  <style media="screen" type="text/css">
+    .main-container {
+      font-family: "Roboto", Helvetica, sans-serif;
+    }
+
+    .header-container {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.microscope.com/media/wysiwyg/blog/bg_5_.jpg') no-repeat center;
+      background-size: cover;
+      max-width: 100%;
+      height: 30rem;
+      display: flex !important;
+      text-transform: capitalize;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header {
+      color: white;
+      font-weight: 500;
+      font-size: 3.5rem;
+
+    }
+
+    .subheader {
+      color: white;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-align: center;
+
+    }
+
+    .body-container {
+      margin: auto;
+      padding-top: 1.5em;
+      width: 65%;
+      /* height: 400px;
+      background-color: gray; */
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .text-box,
+    .grid-system {
+      width: 100%;
+    }
+
+    .text-box {
+      margin-bottom: 1.5em;
+    }
+
+    .grid-system {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .grid-system-3 {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .text {
+      grid-column: span 3;
+    }
+
+    .grid-system img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 250px;
+      align-self: start;
+
+    }
+
+    .grid-system-3 img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 300px;
+      align-self: start;
+
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    #snap {
+      grid-column: span 2;
+
+    }
+
+    .custom-textprop {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 10px;
+    }
+
+    .text-align-vmiddle {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    @media screen and (max-width: 1200px) {
+
+      .image,
+      .text,
+      #snap {
+        grid-column: span 4;
+      }
+
+
+      .grid-system img {
+        object-fit: cover;
+        max-height: 350px;
+      }
+
+      .body-container {
+        width: 75%;
+      }
+
+      .custom-textprop {
+
+        justify-content: center;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="banner-container">
+
+    <div class="header-container banner-wrapper-general">
+      <div class="text">
+        <h1 class="header">4 discoveries that started as school assignments</h1>
+        <h4 class="subheader">A little inspiration kids head back to the classroom</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="body-container">
+    <div class="text-box">
+      <h2>Sometimes, school assignments are about more than the grade.</h2>
+
+      <p>As kids and teachers get ready to head back to class, here are four school projects that ended up having an
+        impact far beyond the classroom!</p>
+    </div>
+
+    <div class="grid-system">
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/fossil.png">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><span style="color:#2980b9;"><strong>Uncovering a baby dinosaur fossil&nbsp;</strong></span></h3>
+
+          <p>17-year-old Kevin Terris was on a school field trip at Grand Staircase-Escalante National Monument in Utah,
+            when he spotted something poking out of the dirt.</p>
+
+          <p>Upon investigation, he realized it was a small dinosaur skull!</p>
+
+          <p>Paleontologists helped uncover the rest of the remains, and determined they belonged to the youngest
+            duck-billed Parasaurolophus ever recorded.</p>
+
+          <p>They nicknamed the fossil &ldquo;Joe,&rdquo; and have Kevin&rsquo;s keen eye to thank for finding it!</p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/fly.png">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong><span style="color:#2980b9;">A nontoxic insecticide&nbsp;</span></strong></h3>
+
+          <p>Simon Kaschock-Marenda went above and beyond for his middle school science project!</p>
+
+          <p>With the help from his dad, he discovered that a common sweetener we use in our tea could double as an
+            insecticide that&rsquo;s non-toxic to humans!</p>
+
+          <p>Simon set up an experiment that fed artificial sweeteners to fruit flies, and studied which had the
+            shortest lifespan. Flies given &lsquo;Truvia&rsquo; had a far shorter lifespan than the rest (5.8 days,
+            compared to 38 - 51 days!).&nbsp;</p>
+
+          <p>They moved their investigation from the home to a lab, where they determined that erythritol was the
+            ingredient responsible, and could be a safer alternative to insecticides in the future.&nbsp;</p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/aid.png">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong><span style="color:#2980b9;">Extending the battery life for hearing aids</span></strong></h3>
+
+          <p>Most of us didn&rsquo;t make a medical breakthrough with our eight grade high school science fair
+            projects.&nbsp;</p>
+
+          <p>But Ethan Manuell is not your average student!</p>
+
+          <p>Using old battery-operated toys at home, he discovered a way to extend the lifespan of zinc hearing aid
+            batteries by a whopping 85%!</p>
+
+          <p>Ethan noticed that many hearing aid battery packages instruct users to remove the plastic tab on the back
+            of the battery, and let it sit for one minute. So Ethan began investigating the suggestion, allowing them to
+            sit for various lengths of time before testing them.</p>
+
+          <p>He discovered that 5 minutes was the perfect length of time to let the batteries sit to achieve maximum
+            battery life. &nbsp;Today, this information is shared in doctor&rsquo;s offices, and can save you up to $70
+            on batteries each year!&nbsp;</p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/math.png">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><span style="color:#2980b9;">New solutions to math problems</span></h3>
+
+          <p>When Brock Brown was doing his high school math homework, he could easily have used Pascal&rsquo;s
+            Triangle like his teacher had taught him.</p>
+
+          <p>But instead, he invented a brand new theorem that helped him get his homework done much faster.</p>
+
+          <p>Soon, his innovative problem-solving caught the eye of a math professor at Utah Valley University, who
+            helped Brock develop a proof that they later submitted to the American Mathematical Association.
+            Brock&rsquo;s Theorem is a simple alternative to more common theorems, AND helped Brock get his homework
+            done faster!&nbsp;</p>
+        </div>
+      </div>
+      <br />
+    </div>
+
+    <div class="text-box">
+      <h2>Celebrating Young Scientists during the Back to School Sale</h2>
+
+      <p><a href="http://microscope.com/" style="text-decoration:none;" target="_blank">Microscope.com</a>&nbsp;is
+        committed to making science exciting and accessible to students (and their teachers!), to encourage more
+        innovative discoveries like these! That&rsquo;s why we&rsquo;re always looking for ways to help bring the tools
+        for good science into classrooms across the USA.&nbsp;</p>
+
+      <p>Tools like the&nbsp;<a aria-describedby="tooltip108120" data-original-title=""
+          href="https://www.microscope.com/compound-microscopes/schools-students/omano-om118-m3-microscope.html"
+          style="text-decoration:none;" target="_blank">OM118-M3 40X-400X Monocular Student Compound
+          Microscope</a>&nbsp;are on sale now. They&rsquo;re the best value for classrooms today.</p>
+
+    </div>
+
+    <div class="grid-system">
+
+      <div class="image">
+        <img style=" max-height: 300px" src="https://www.microscope.com/media/wysiwyg/blog/Mask_Group_21.png">
+      </div>
+      <div class="text custom-textprop">
+        <div style="width: 70%">
+          <p>This best-selling rechargeable LED student stereo microscope, with 10x, 20x and 40x magnification and
+            rechargeable LED illumination for &lsquo;wireless&rsquo; operation.&nbsp;</p>
+
+          <p>It&rsquo;s also got a lifetime limited warranty, so it can withstand the wear and tear of the &lsquo;mad
+            scientists&rsquo; in your classroom.</p>
+
+          <p><a aria-describedby="tooltip7766" data-original-title=""
+              href="https://www.microscope.com/compound-microscopes/schools-students/omano-om118-m3-microscope.html"
+              style="text-decoration:none;" target="_blank">Best of all, it&rsquo;s on sale now</a></p>
+
+        </div>
+
+
+      </div>
+    </div>
+    <div class="text-box" style="text-align: center;">
+      <p><a class="button btn-blue" aria-describedby="tooltip248863" data-original-title=""
+          href="https://www.microscope.com" target="_blank">Check out all the Student Microscopes & Accessories on
+          Sale</a>
+      </p>
+      <p>Out Back to School Sale ends on September 17th</p>
+      <br />
+    </div>
+
+
+
+
+
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,945 @@
+<table border="0">
+    <tbody>
+        <t t-set="items" t-value="object.x_sell_pump.split(',')" data-oe-t-inline="true"></t>
+        <t t-foreach="items" t-as="item" data-oe-t-inline="true">
+            <tr>
+                <t t-set="i" t-value="item.split(': ')" data-oe-t-inline="true"></t>
+                <td style="min-width:100px; padding-bottom:5px" t-foreach="i" t-as="val">
+                    <t t-out="val" data-oe-t-inline="true" contenteditable="false" oe-keep-contenteditable=""></t>
+                </td>
+            </tr>
+        </t>
+
+    </tbody>
+</table>
+
+
+
+
+<!-- Email to User -->
+
+<t name="Sell Equipment Email" t-name="website_aiv.email_layout">
+    <t t-foreach="request.env['res.company'].search([('partner_id', '=', 'AIV Inc')])" t-as="company">
+        <div style="background-color: #F1F1F1;"><br>
+            <table cellspacing="0" cellpadding="0" align="center"
+                style="background-color: #fff;max-width: 700px; width:100%">
+                <tr>
+                    <td>
+                        <div style="width:80%; margin: auto; padding: 2.8rem 0;">
+                            <img src="/web/image/9367/aiv-logo.png" style="height:4rem" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 2.8rem auto ;">
+                        <table width="100%" align="center" style="text-align: center;">
+                            <tr>
+                                <td>
+                                    <h2 align="left" style="margin: 0 auto 1.5rem;width:80%"
+                                        t-out="'Thank You for Contacting AIV, Inc!'" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4 align="left" style="margin: 0 auto;width:80%">
+                                        AIV is an ISO 13485:2016 certified facility. AIV strives to
+                                        provide you cost effective options to service equipment and
+                                        flexible solutions to best suit your needs.
+                                    </h4>
+                                    <br>
+                                    <hr
+                                        style="width:80%;border-width: 0;margin:2rem auto 1rem ;border-top: 1px dashed #00529f">
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div style="width:80%;margin: auto;padding-bottom: 2.8rem;">
+                            <p>Hi
+                                <t t-esc="object.name and object.name.title().split()[0] or There" />,
+                            </p><br />
+                            <p>We have received your request to sell your IV pump. Our sales
+                                representatives
+                                will contact you with a quote once your request has been reviewed.</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div style="width:80%;margin: auto;padding-top:2.8rem">
+                            <p>For more information, please contact us at:</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" style="padding: 1rem;">
+                        <div style="width: 80%;margin: auto;">
+                            <img src="/web/image/9388/phone.png" width="20px" />
+                            <a t-attf-href="tel:{{ company.phone }}" target="_blank"
+                                style="color: #1fa2d6; text-decoration: none; " t-esc="company.phone" />
+                            <br>
+                            <img src="/web/image/9387/mail.jpg" width="20px"" />
+                                                    <a t-attf-href=" mailto:{{ company.email }}" target="_blank"
+                                style="color: #1fa2d6; text-decoration: none; " t-esc="company.email " />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; font-style: italic; color: #1D53A0;padding: 1rem 0;">
+                        <p align="center">We thank you for your business and look forward to serving your needs in the
+                            future.</p>
+                    </td>
+                </tr>
+                <tr align="center" style="background-color: #444444;max-width: 700px;">
+                    <td style="width: 100%; color: #fff; text-align: center;">
+                        <p style="margin-top: 1rem; margin-bottom: 1rem;">Copyright © 2022 <t t-out="company.name">
+                            </t>. All rights reserved.
+                        </p>
+                    </td>
+                </tr>
+            </table><br>
+        </div>
+    </t>
+</t>
+
+.
+
+<!-- Email to Client -->
+
+<t name="Sell Equipment Notification" t-name="website_aiv.sell_equipment_notification">
+    <t t-foreach="request.env['res.company'].search([('partner_id', '=', 'AIV Inc')])" t-as="company">
+        <div style="background-color: #F1F1F1;"><br>
+            <table cellspacing="0" cellpadding="0" align="center"
+                style="background-color: #fff;max-width: 700px; width:100%">
+                <tr>
+                    <td>
+                        <div style="width:80%; margin: auto; padding: 2.8rem 0;">
+                            <img src="/web/image/9367/aiv-logo.png" style="height:4rem" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="100%" cellpadding="0" cellspacing="0" align="center" style="max-width: 700px;">
+                            <tbody>
+                                <tr>
+                                    <td style=" padding-top: 2.8rem; padding-bottom: 2.8rem;">
+                                        <table width="100%" align="center" style="text-align: center;">
+                                            <tr>
+                                                <td>
+                                                    <h2 style="margin-top:0;">
+                                                        <t t-out="object.name" /> wants to sell their Old IV Pump/s
+                                                    </h2>
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 1rem;">
+                                        <h3 style="margin: auto; width:80%">Customer Details: </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style=" padding-bottom: 2.8rem;">
+                                        <table width="70%" align="center" style="text-align: left;">
+                                            <t t-set="contact_details" t-value="[
+                                                {'l': 'Name:', 'r': object.name},
+                                                {'l': 'Phone:', 'r': object.phone},
+                                                {'l': 'Email:', 'r': object.email},
+                                                {'l': 'Address:', 'r': object.street},
+                                                {'l': 'City:', 'r': object.city},
+                                                {'l': 'State:', 'r': object.state_id.name},
+                                                {'l': 'ZIP', 'r': object.zip},
+                                                {'l': 'Country', 'r': object.country_id.name},
+                                                ]" />
+                                            <tr t-foreach="contact_details" t-as="contact">
+                                                <td style="width: 35%;" t-esc="contact.get('l')" />
+                                                <td style="width: 65%;" t-esc="contact.get('r')" />
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 1rem;">
+                                        <h3 style="margin: auto; width:80%">Pumps for Selling: </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style=" padding-bottom: 2.8rem;">
+                                        <table width="70%" align="center" style="text-align: left;">
+                                            <tbody>
+                                                <t t-set="items" t-value="object.x_sell_pump.split(',')"
+                                                    data-oe-t-inline="true"></t>
+                                                <t t-foreach="items" t-as="item" data-oe-t-inline="true">
+                                                    <tr style="height: 20px;">
+                                                        <t t-set="i" t-value="item.split(': ')" data-oe-t-inline="true">
+                                                        </t>
+                                                        <td t-foreach="i" t-as="val">
+                                                            <t t-out="val" data-oe-t-inline="true"
+                                                                contenteditable="false" oe-keep-contenteditable="">
+                                                            </t>
+                                                        </td>
+                                                    </tr>
+                                                </t>
+
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr align="center" style="background-color: #444444;max-width: 700px;">
+                    <td style="width: 100%; color: #fff; text-align: center;">
+                        <p style="margin-top: 1rem; margin-bottom: 1rem;">Copyright © 2022 <t t-out="company.name">
+                            </t>. All rights reserved.
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table><br>
+        </div>
+
+
+
+    </t>
+
+</t>
+
+
+
+<!-- Email to client Test -->
+
+<t name="Sell Equipment Notification" t-name="website_aiv.sell_equipment_notification">
+    <xml version="1.0">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+            1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <html style="margin-top: 0px !important; padding-top: 0px !important">
+
+        <body>
+            <t t-foreach="request.env['res.company'].search([('partner_id', '=', 'AIV Inc')])" t-as="company">
+                <table width="100%" cellspacing="0" cellpadding="0" align="center" style="max-width: 700px;">
+                    <tr>
+                        <td t-if="not no_runners" style="background-color: #1D53A0;">
+                            <table cellspacing="0" cellpadding="0" align="center">
+                                <tr>
+                                    <td style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+                                        <img src="/web/image/9074/aiv-logo.jpg" width="120" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- @formatter:off -->
+                            <table width="100%" cellpadding="0" cellspacing="0" align="center"
+                                style="max-width: 700px;">
+                                <tbody>
+                                    <tr>
+                                        <td
+                                            style="background-color: #f9f9f9; padding-top: 2.8rem; padding-bottom: 2.8rem;">
+                                            <table width="100%" align="center" style="text-align: center;">
+                                                <tr>
+                                                    <td>
+                                                        <h2 style="margin-top:0;">
+                                                            <t t-out="object.name" /> wants to sell their Old IV Pump/s
+                                                        </h2>
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color: #f9f9f9; padding-bottom: 2.8rem;">
+                                            <table width="70%" align="center" style="text-align: left;">
+                                                <tr>
+                                                    <td style="padding-bottom: 1rem;">
+                                                        <h3>Customer Details: </h3>
+                                                    </td>
+                                                </tr>
+
+                                                <t t-set="contact_details" t-value="[
+                                                {'l': 'Name:', 'r': object.name},
+                                                {'l': 'Phone:', 'r': object.phone},
+                                                {'l': 'Email:', 'r': object.email},
+                                                {'l': 'Address:', 'r': object.street},
+                                                {'l': 'City:', 'r': object.city},
+                                                {'l': 'State:', 'r': object.state_id.name},
+                                                {'l': 'ZIP', 'r': object.zip},
+                                                {'l': 'Country', 'r': object.country_id.name},
+                                                ]" />
+                                                <tr t-foreach="contact_details" t-as="contact">
+                                                    <td width="30%" t-esc="contact.get('l')" />
+                                                    <td width="70%" t-esc="contact.get('r')" />
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            style="background-color: #f9f9f9; padding-top: 2.8rem; padding-bottom: 2.8rem;">
+                                            <table width="70%" align="center" style="text-align: center;">
+                                                <tbody>
+                                                    <t t-set="items" t-value="object.x_pump.split(' ^ ')"
+                                                        data-oe-t-inline="true"></t>
+                                                    <t t-foreach="items" t-as="item" data-oe-t-inline="true">
+                                                        <t t-set="i" t-value="item.split(',')" data-oe-t-inline="true">
+                                                        </t>
+                                                        <tr t-foreach="i" t-as="p">
+
+                                                            <td t-esc="p" />
+                                                        </tr>
+                                                    </t>
+
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </td>
+                        </tbody>
+                </table>
+                <!-- @formatter:on -->
+
+                <table width="100%" align="center" style="background-color: #444444;max-width: 700px;">
+                    <tr>
+                        <td style="width: 100%; color: #fff; text-align: center;">
+                            <p style="margin-top: 1rem; margin-bottom: 1rem;">Copyright © 2022 <t t-out="company.name">
+                                </t>. All rights reserved.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                </td>
+                </tr>
+                </table>
+            </t>
+        </body>
+</t>
+
+
+
+
+
+
+<p style="margin:0px;box-sizing:border-box;font-size:13px;">object: <span t-out="object" contenteditable="false"></span>
+</p>
+<p style="margin:0px;box-sizing:border-box;font-size:13px;">object.x_sell_pump: <span t-out="object.x_sell_pump"
+        contenteditable="false"></span></p>
+
+<t t-set="company" t-value="object.env.ref('base.main_company')" data-oe-t-inline="true"></t>
+<p style="margin:0px;box-sizing:border-box;font-size:13px;">company: <span t-out="company"
+        contenteditable="false"></span></p>
+
+<t t-if="object.x_sell_pump" data-oe-t-group-active="true" data-oe-t-group="0">
+    <p t-out="object.x_sell_pump.split(', : ,')" style="margin:0px;box-sizing:border-box;font-size:13px;"
+        contenteditable="false"></p>
+</t>
+
+
+
+
+
+[{"model":"267","serial":"serial1","qty":"2","des":"Problem 1"},{"model":"315","serial":"serial2","qty":"5","des":"Problem 2"}]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<t name="Repair Notification" t-name="website_aiv.repair_notification">
+    <t t-foreach="request.env['res.company'].search([('partner_id', '=', 'AIV Inc')])" t-as="company">
+        <div style="background-color: #F1F1F1;"><br>
+            <table cellspacing="0" cellpadding="0" align="center" style="background-color: #fff;max-width: 700px; width:100%">
+                <tbody><tr>
+                    <td>
+                        <div style="width:80%; margin: auto; padding: 2.8rem 0 0;">
+                            <img src="/web/image/9367/aiv-logo.png" style="height:5em">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="100%" cellpadding="0" cellspacing="0" align="center" style="max-width: 700px;">
+                            <t t-foreach="request.env['res.partner'].search([('id', '=', record.id)])" t-as="object">
+                            <tbody>
+                                <tr>
+                                    <td style=" padding-top: 2.8rem; ">
+                                       
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 1rem;">
+                                        <h3 style="margin: auto; width:80%">Customer Details: </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style=" padding-bottom: 2.8rem;">
+                                        <t t-set="contact_details" t-value="[
+                                                {'l': 'Name:', 'r': object.name},
+                                                {'l': 'Phone:', 'r': object.phone},
+                                                {'l': 'Email:', 'r': object.email},
+                                                {'l': 'Address:', 'r': object.street},
+                                                {'l': 'City:', 'r': object.city},
+                                                {'l': 'State:', 'r': object.state_id.name},
+                                                {'l': 'ZIP', 'r': object.zip},
+                                                {'l': 'Country', 'r': object.country_id.name},
+                                                ]" data-oe-t-inline="true"></t><table width="70%" align="center" style="text-align: left;">
+                                            
+                                            <tbody><tr t-foreach="contact_details" t-as="contact">
+                                                <td style="width: 35%;" t-esc="contact.get('l')" contenteditable="false" oe-keep-contenteditable=""></td>
+                                                <td style="width: 65%;" t-esc="contact.get('r')" contenteditable="false" oe-keep-contenteditable=""></td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 1rem;">
+                                        <h3 style="margin: auto; width:80%">Equipment for Repair: </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style=" padding-bottom: 2.8rem;">
+                                        <t t-set="items" t-value="object.x_pump.split(',')" data-oe-t-inline="true">
+                                            <t t-foreach="items" t-as="item" data-oe-t-inline="true">
+                                                    </t><t t-set="i" t-value="item.split(': ')" data-oe-t-inline="true">
+                                                        </t><table width="70%" align="center" style="text-align: left;">
+                                            <tbody>
+                                                
+                                                <tr style="height: 20px;">
+                                                        
+                                                        <td t-foreach="i" t-as="val">
+                                                            <t t-out="val" data-oe-t-inline="true" contenteditable="false" oe-keep-contenteditable="">
+                                                            </t>
+                                                        </td>
+                                                    </tr>
+                                                
+
+                                            </tbody>
+                                        </table>
+                                    </td></t>
+                                </tr>
+                            </tbody>
+                        </t>
+                        </table>
+                    </td>
+                </tr>
+                <tr align="center" style="background-color: #444444;max-width: 700px;">
+                    <td style="width: 100%; color: #fff; text-align: center;">
+                        <p style="margin-top: 1rem; margin-bottom: 1rem;">Copyright Â© 2022 <t t-out="company.name" contenteditable="false" data-oe-t-inline="true" oe-keep-contenteditable="">
+                            </t>. All rights reserved.
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table><br>
+        </div>
+
+
+
+</t>
+
+</t>
+
+<!-- Updated for client  -->
+<t name="Sell Equipment Notification" t-name="website_aiv.sell_equipment_notification">
+    <t t-foreach="request.env['res.company'].search([('partner_id', '=', 'AIV Inc')])" t-as="company">
+        <div style="background-color: #F1F1F1;"><br>
+            <table cellspacing="0" cellpadding="0" align="center"
+                style="background-color: #fff;max-width: 700px; width:100%">
+                <tr>
+                    <td>
+                        <div style="width:80%; margin: auto; padding: 2.8rem 0;">
+                            <img src="/web/image/9367/aiv-logo.png" style="height:5em" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="100%" cellpadding="0" cellspacing="0" align="center" style="max-width: 700px;">
+                            <tbody>
+                                <tr>
+                                    <td style=" padding-top: 2.8rem; padding-bottom: 2.8rem;">
+                                        <table width="100%" align="center" style="text-align: center;">
+                                            <tr>
+                                                <td>
+                                                    <h2 style="margin-top:0;">
+                                                        <t t-out="object.name" /> wants to sell their Old IV Pump/s
+                                                    </h2>
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 1rem;">
+                                        <h3 style="margin: auto; width:80%">Customer Details: </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style=" padding-bottom: 2.8rem;">
+                                        <table width="70%" align="center" style="text-align: left;">
+                                            <t t-set="contact_details" t-value="[
+                                                {'l': 'Name:', 'r': object.name},
+                                                {'l': 'Phone:', 'r': object.phone},
+                                                {'l': 'Email:', 'r': object.email},
+                                                {'l': 'Address:', 'r': object.street},
+                                                {'l': 'City:', 'r': object.city},
+                                                {'l': 'State:', 'r': object.state_id.name},
+                                                {'l': 'ZIP', 'r': object.zip},
+                                                {'l': 'Country', 'r': object.country_id.name},
+                                                ]" />
+                                            <tr t-foreach="contact_details" t-as="contact">
+                                                <td style="width: 35%;" t-esc="contact.get('l')" />
+                                                <td style="width: 65%;" t-esc="contact.get('r')" />
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 1rem;">
+                                        <h3 style="margin: auto; width:80%">Pumps for Selling: </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style=" padding-bottom: 2.8rem;">
+                                        <table width="70%" align="center" style="text-align: left;">
+                                            <tbody>
+                                                <t t-set="items" t-value="object.x_pump.split(',')"
+                                                    data-oe-t-inline="true"></t>
+                                                <t t-foreach="items" t-as="item" data-oe-t-inline="true">
+                                                    <tr style="height: 20px;">
+                                                        <t t-set="i" t-value="item.split(': ')" data-oe-t-inline="true">
+                                                        </t>
+                                                        <td t-foreach="i" t-as="val">
+                                                            <t t-out="val" data-oe-t-inline="true"
+                                                                contenteditable="false" oe-keep-contenteditable="">
+                                                            </t>
+                                                        </td>
+                                                    </tr>
+                                                </t>
+
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr align="center" style="background-color: #444444;max-width: 700px;">
+                    <td style="width: 100%; color: #fff; text-align: center;">
+                        <p style="margin-top: 1rem; margin-bottom: 1rem;">Copyright © 2022 <t t-out="company.name">
+                            </t>. All rights reserved.
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table><br>
+        </div>
+
+
+
+    </t>
+
+</t>
+
+
+
+<!-- For Repair form -->
+
+<t name="Sell Equipment Notification" t-name="website_aiv.sell_equipment_notification">
+    <t t-foreach="request.env['res.company'].search([('partner_id', '=', 'AIV Inc')])" t-as="company">
+        <div style="background-color: #F1F1F1;"><br>
+            <table cellspacing="0" cellpadding="0" align="center"
+                style="background-color: #fff;max-width: 700px; width:100%">
+                <tr>
+                    <td>
+                        <div style="width:80%; margin: auto; padding: 2.8rem 0;">
+                            <img src="/web/image/9367/aiv-logo.png" style="height:4rem" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="100%" cellpadding="0" cellspacing="0" align="center" style="max-width: 700px;">
+                            <tbody>
+                                <tr>
+                                    <td style=" padding-top: 2.8rem;">
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 1rem;">
+                                        <h3 style="margin: auto; width:80%">Customer Details: </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style=" padding-bottom: 2.8rem;">
+                                        <table width="70%" align="center" style="text-align: left;">
+                                            <t t-set="contact_details" t-value="[
+                                                {'l': 'Name:', 'r': object.name},
+                                                {'l': 'Phone:', 'r': object.phone},
+                                                {'l': 'Email:', 'r': object.email},
+                                                {'l': 'Address:', 'r': object.street},
+                                                {'l': 'City:', 'r': object.city},
+                                                {'l': 'State:', 'r': object.state_id.name},
+                                                {'l': 'ZIP', 'r': object.zip},
+                                                {'l': 'Country', 'r': object.country_id.name},
+                                                ]" />
+                                            <tr t-foreach="contact_details" t-as="contact">
+                                                <td style="width: 35%;" t-esc="contact.get('l')" />
+                                                <td style="width: 65%;" t-esc="contact.get('r')" />
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 1rem;">
+                                        <h3 style="margin: auto; width:80%">Equipment for Repair: </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style=" padding-bottom: 2.8rem;">
+                                        <table width="70%" align="center" style="text-align: left;">
+                                            <tbody>
+                                                <t t-set="items" t-value="object.x_pump.split(',')"
+                                                    data-oe-t-inline="true"></t>
+                                                <t t-foreach="items" t-as="item" data-oe-t-inline="true">
+                                                    <tr style="height: 20px;">
+                                                        <t t-set="i" t-value="item.split(': ')" data-oe-t-inline="true">
+                                                        </t>
+                                                        <td t-foreach="i" t-as="val">
+                                                            <t t-out="val" data-oe-t-inline="true"
+                                                                contenteditable="false" oe-keep-contenteditable="">
+                                                            </t>
+                                                        </td>
+                                                    </tr>
+                                                </t>
+
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr align="center" style="background-color: #444444;max-width: 700px;">
+                    <td style="width: 100%; color: #fff; text-align: center;">
+                        <p style="margin-top: 1rem; margin-bottom: 1rem;">Copyright © 2022 <t t-out="company.name">
+                            </t>. All rights reserved.
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table><br>
+        </div>
+
+
+
+    </t>
+
+</t>
+
+
+
+
+
+<?xml version="1.0"?>
+<t t-name="web.external_layout_bold">
+        <div t-attf-class="header o_company_#{company.id}_layout" t-att-style="report_header_style">
+            <div class="o_clean_header">
+            <div class="row">
+                <div class="col-6">
+                    <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo"/>
+                </div>
+                <div class="col-5 offset-1" name="company_address">
+                    <ul class="list-unstyled">
+                        <strong><li t-if="company.name"><span t-field="company.name"/></li></strong>
+                        <li t-if="forced_vat or company.vat">
+                            <t t-esc="company.country_id.vat_label or 'Tax ID'"/>:
+                            <span t-if="forced_vat" t-esc="forced_vat"/>
+                            <span t-else="" t-field="company.vat"/>
+                        </li>
+                        <li t-if="company.phone">Tel: <span class="o_force_ltr" t-field="company.phone"/></li>
+                        <li t-if="company.email"><span t-field="company.email"/></li>
+                        <li t-if="company.website"><span t-field="company.website"/></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div t-attf-class="article o_report_layout_bold o_company_#{company.id}_layout {{  'o_layout_background' if company.layout_background in ['Geometric', 'Custom']  else  '' }}" t-attf-style="background-image: url({{ 'data:image/png;base64,%s' % company.layout_background_image.decode('utf-8') if company.layout_background_image and company.layout_background == 'Custom' else '/base/static/img/bg_background_template.jpg' }});" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+            <t t-call="web.address_layout"/>
+            <t t-out="0"/>
+        </div>
+
+        <div t-attf-class="footer o_clean_footer o_company_#{company.id}_layout">
+            <div class="row">
+                <div class="col-4">
+                    <span t-field="company.report_footer"/>
+                </div>
+                <div class="col-4">
+                    <span t-if="company.company_details" t-field="company.company_details"/>
+                </div>
+                <div class="col-3">
+                    <h5 class="mt0 mb0" t-field="company.report_header"/>
+                </div>
+                <div class="col-1">
+                    <ul t-if="report_type == 'pdf'" class="list-inline pagenumber float-right text-center">
+                        <li class="list-inline-item"><strong><span class="page"/></strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</t>
+
+
+
+
+
+
+<?xml version="1.0"?>
+<t t-name="sale.report_saleorder_document">
+    <t t-call="web.external_layout">
+        <t t-set="doc" t-value="doc.with_context(lang=doc.partner_id.lang)"/>
+        <t t-set="forced_vat" t-value="doc.fiscal_position_id.foreign_vat"/> <!-- So that it appears in the footer of the report instead of the company VAT if it's set -->
+        <t t-set="address">
+            <div t-field="doc.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}"/>
+            <p t-if="doc.partner_id.vat"><t t-esc="doc.company_id.account_fiscal_country_id.vat_label or 'Tax ID'"/>: <span t-field="doc.partner_id.vat"/></p>
+        </t>
+        <t t-if="doc.partner_shipping_id == doc.partner_invoice_id                              and doc.partner_invoice_id != doc.partner_id                              or doc.partner_shipping_id != doc.partner_invoice_id">
+            <t t-set="information_block">
+                <strong t-if="doc.partner_shipping_id == doc.partner_invoice_id">Invoicing and Shipping Address:</strong>
+                <strong t-if="doc.partner_shipping_id != doc.partner_invoice_id">Invoicing Address:</strong>
+                <div t-field="doc.partner_invoice_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+                <t t-if="doc.partner_shipping_id != doc.partner_invoice_id">
+                    <strong>Shipping Address:</strong>
+                    <div t-field="doc.partner_shipping_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+                </t>
+            </t>
+        </t>
+        <div class="page">
+            <div class="oe_structure"/>
+
+            <h2 class="mt16">
+                <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
+                    <span t-if="doc.state not in ['draft','sent']">Order # </span>
+                    <span t-if="doc.state in ['draft','sent']">Quotation # </span>
+                </t>
+                <t t-if="env.context.get('proforma', False) or is_pro_forma">
+                    <span>Pro-Forma Invoice # </span>
+                </t>
+                <span t-field="doc.name"/>
+            </h2>
+
+            <div class="row mt32 mb32" id="informations">
+                <div t-if="doc.client_order_ref" class="col-auto col-3 mw-100 mb-2">
+                    <strong>Your Reference:</strong>
+                    <p class="m-0" t-field="doc.client_order_ref"/>
+                </div>
+                <div t-if="doc.date_order and doc.state not in ['draft','sent']" class="col-auto col-3 mw-100 mb-2">
+                    <strong>Order Date:</strong>
+                    <p class="m-0" t-field="doc.date_order"/>
+                </div>
+                <div t-if="doc.date_order and doc.state in ['draft','sent']" class="col-auto col-3 mw-100 mb-2">
+                    <strong>Quotation Date:</strong>
+                    <p class="m-0" t-field="doc.date_order" t-options="{&quot;widget&quot;: &quot;date&quot;}"/>
+                </div>
+                <div t-if="doc.validity_date and doc.state in ['draft', 'sent']" class="col-auto col-3 mw-100 mb-2" name="expiration_date">
+                    <strong>Expiration:</strong>
+                    <p class="m-0" t-field="doc.validity_date"/>
+                </div>
+                <div t-if="doc.user_id.name" class="col-auto col-3 mw-100 mb-2">
+                    <strong>Salesperson:</strong>
+                    <p class="m-0" t-field="doc.user_id"/>
+                </div>
+            </div>
+
+            <!-- Is there a discount on at least one line? -->
+            <t t-set="display_discount" t-value="any(l.discount for l in doc.order_line)"/>
+
+            <table class="table table-sm o_main_table">
+                <!-- In case we want to repeat the header, remove "display: table-row-group" -->
+                <thead style="display: table-row-group">
+                    <tr>
+                        <th name="th_description" class="text-left">Description</th>
+                        <th name="th_quantity" class="text-right">Quantity</th>
+                        <th name="th_priceunit" class="text-right">Unit Price</th>
+                        <th name="th_discount" t-if="display_discount" class="text-right" groups="product.group_discount_per_so_line">
+                            <span>Disc.%</span>
+                        </th>
+                        <th name="th_taxes" class="text-right">Taxes</th>
+                        <th name="th_subtotal" class="text-right">
+                            <span groups="account.group_show_line_subtotals_tax_excluded">Amount</span>
+                            <span groups="account.group_show_line_subtotals_tax_included">Total Price</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="sale_tbody">
+
+                    <t t-set="current_subtotal" t-value="0"/>
+
+                    <t t-foreach="doc.order_line" t-as="line">
+
+                        <t t-set="current_subtotal" t-value="current_subtotal + line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
+                        <t t-set="current_subtotal" t-value="current_subtotal + line.price_total" groups="account.group_show_line_subtotals_tax_included"/>
+
+                        <tr t-att-class="'bg-200 font-weight-bold o_line_section' if line.display_type == 'line_section' else 'font-italic o_line_note' if line.display_type == 'line_note' else ''">
+                            <t t-if="not line.display_type">
+                                <td name="td_name"><span t-field="line.name"/></td>
+                                <td name="td_quantity" class="text-right">
+                                    <span t-field="line.product_uom_qty"/>
+                                    <span t-field="line.product_uom"/>
+                                </td>
+                                <td name="td_priceunit" class="text-right">
+                                    <span t-field="line.price_unit"/>
+                                </td>
+                                <td t-if="display_discount" class="text-right" groups="product.group_discount_per_so_line">
+                                    <span t-field="line.discount"/>
+                                </td>
+                                <td name="td_taxes" class="text-right">
+                                    <span t-esc="', '.join(map(lambda x: (x.description or x.name), line.tax_id))"/>
+                                </td>
+                                <td name="td_subtotal" class="text-right o_price_total">
+                                    <span t-field="line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
+                                    <span t-field="line.price_total" groups="account.group_show_line_subtotals_tax_included"/>
+                                </td>
+                            </t>
+                            <t t-if="line.display_type == 'line_section'">
+                                <td name="td_section_line" colspan="99">
+                                    <span t-field="line.name"/>
+                                </td>
+                                <t t-set="current_section" t-value="line"/>
+                                <t t-set="current_subtotal" t-value="0"/>
+                            </t>
+                            <t t-if="line.display_type == 'line_note'">
+                                <td name="td_note_line" colspan="99">
+                                    <span t-field="line.name"/>
+                                </td>
+                            </t>
+                        </tr>
+
+                        <t t-if="current_section and (line_last or doc.order_line[line_index+1].display_type == 'line_section')">
+                            <tr class="is-subtotal text-right">
+                                <td name="td_section_subtotal" colspan="99">
+                                    <strong class="mr16">Subtotal</strong>
+                                    <span t-esc="current_subtotal" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.pricelist_id.currency_id}"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </t>
+                </tbody>
+            </table>
+
+            <div class="clearfix" name="so_total_summary">
+                <div id="total" class="row" name="total">
+                    <div t-attf-class="#{'col-4' if report_type != 'html' else 'col-sm-7 col-md-5'} ml-auto">
+                        <table class="table table-sm">
+                            <!-- Tax totals -->
+                            <t t-set="tax_totals" t-value="json.loads(doc.tax_totals_json)"/>
+                            <t t-call="account.document_tax_totals"/>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div t-if="doc.signature" class="mt32 ml64 mr4" name="signature">
+                <div class="offset-8">
+                    <strong>Signature</strong>
+                </div>
+                <div class="offset-8">
+                    <img t-att-src="image_data_uri(doc.signature)" style="max-height: 4cm; max-width: 8cm;"/>
+                </div>
+                <div class="offset-8 text-center">
+                    <p t-field="doc.signed_by"/>
+                </div>
+            </div>
+
+            <div class="oe_structure"/>
+
+            <p t-field="doc.note"/>
+            <p t-if="not is_html_empty(doc.payment_term_id.note)">
+                <span t-field="doc.payment_term_id.note"/>
+            </p>
+            <p id="fiscal_position_remark" t-if="doc.fiscal_position_id and not is_html_empty(doc.fiscal_position_id.sudo().note)">
+                <strong>Fiscal Position Remark:</strong>
+                <span t-field="doc.fiscal_position_id.sudo().note"/>
+            </p>
+        </div>
+    </t>
+</t>
+
+
+
+<xpath expr="//p[@id='fiscal_position_remark']" position="after">
+<t t-foreach="doc.order_line" t-as="line">
+<t t-if="line.name == 'Repair Service [AIV INC]'" style="page-break-before:always">
+
+<table cellspacing="0" cellpadding="0" align="center"
+    style="background-color: #fff;max-width: 700px; width:100%">
+    <tr>
+        <td>
+            <table width="100%" cellpadding="0" cellspacing="0" align="center" style="max-width: 700px;">
+                <t t-foreach="request.env['res.partner'].search([('id', '=', partner_id )])" t-as="object">
+                <tbody>
+                    <tr>
+                        <td style="padding-bottom: 1rem;">
+                            <h3 style="margin: auto; width:80%">Equipment for Repair: </h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style=" padding-bottom: 2.8rem;">
+                            <table width="70%" align="center" style="text-align: left;">
+                                <tbody>
+                                    <t t-set="items" t-value="object.x_pump.split(',')"
+                                        data-oe-t-inline="true"></t>
+                                    <t t-foreach="items" t-as="item" data-oe-t-inline="true">
+                                        <tr style="height: 20px;">
+                                            <t t-set="i" t-value="item.split(': ')" data-oe-t-inline="true">
+                                            </t>
+                                            <td t-foreach="i" t-as="val">
+                                                <t t-out="val" data-oe-t-inline="true"
+                                                    contenteditable="false" oe-keep-contenteditable="">
+                                                </t>
+                                            </td>
+                                        </tr>
+                                    </t>
+
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
+
+</t>
+</t>
+</xpath>

@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+
+<head>
+  <style media="screen" type="text/css">
+    .main-container {
+      font-family: "Roboto", Helvetica, sans-serif;
+    }
+
+    .header-container {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.microscope.com/media/wysiwyg/blog/beautiful-family-of-sea-birds-on-beach-during-suns-2022-03-10-02-21-40-utc-min.jpg') no-repeat 0 63%;
+      background-size: cover;
+      max-width: 100%;
+      height: 30rem;
+      display: flex !important;
+      text-transform: capitalize;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header {
+      color: white;
+      font-weight: 500;
+      font-size: 3.5rem;
+
+    }
+
+    .subheader {
+      color: white;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-align: center;
+
+    }
+
+    .body-container {
+      margin: auto;
+      padding-top: 1.5em;
+      width: 65%;
+      /* height: 400px;
+      background-color: gray; */
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .text-box,
+    .grid-system {
+      width: 100%;
+    }
+
+    .text-box {
+      margin-bottom: 1.5em;
+    }
+
+    .grid-system {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .grid-system-3 {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .grid-system-2 {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+
+
+    .text {
+      grid-column: span 3;
+    }
+
+    .grid-system img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 250px;
+      align-self: start;
+
+    }
+
+    .grid-system-3 img,
+    .grid-system-2 img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 300px;
+      align-self: start;
+
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .image img {
+      border-radius: 20px;
+    }
+
+    #snap {
+      grid-column: span 2;
+
+    }
+
+    .custom-textprop {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 10px;
+    }
+
+    .text-align-vmiddle {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    @media screen and (max-width: 1200px) {
+
+      .image,
+      .text,
+      #snap {
+        grid-column: span 4;
+      }
+
+
+      .grid-system img {
+        object-fit: cover;
+        max-height: 350px;
+      }
+
+      .body-container {
+        width: 75%;
+      }
+
+      .custom-textprop {
+
+        justify-content: center;
+      }
+
+      .box {
+        grid-column: span 4;
+
+      }
+
+      .box p {
+        text-align: center;
+
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="banner-container">
+
+    <div class="header-container banner-wrapper-general">
+      <div class="text">
+        <h1 class="header">6 Favorite Birdwatching Locations in the USA
+        </h1>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="body-container">
+
+    <div class="text-box">
+      <p>Every birder has their bucket list.&nbsp;</p>
+
+      <p>Maybe it&rsquo;s catching a glimpse of a California Condor soaring overhead, or an Atlantic Puffin along the
+        coast. Maybe it&rsquo;s a visit to the Everglades, or getting lost in Cave Creek Canyon in Arizona.&nbsp;</p>
+
+      <h2><strong>You&rsquo;re going to want to add these top locations to your list:</strong></h2>
+
+
+    </div>
+
+
+    <div class="grid-system-3">
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/forest-in-everglades-2022-02-01-23-41-54-utc-min.jpg">
+      </div>
+      <div class="text text-align-vmiddle" id="snap">
+        <div>
+          <h3><strong>Everglades National Park, Florida:</strong></h3>
+
+          <p>The Everglades are home to more than just gators. Wading birds also call this world famous wetland
+            ecosystem home. For egrets, ibis, roseate spoonbills and much more, make your way to the Everglades.</p>
+
+
+        </div>
+      </div>
+      <div class="image">
+        <img
+          src="https://www.microscope.com/media/wysiwyg/blog/sunset-beach-groupies-at-cape-may-point-nj-2021-09-01-03-47-32-utc-min.jpg">
+      </div>
+      <div class="text text-align-vmiddle" id="snap">
+        <div>
+          <h3><strong>Cape May, New Jersey:</strong></h3>
+
+          <p>From hawks, to warblers to shorebirds, there’s not much you can’t find along the southern tip of New
+            Jersey. Visit between September and October for raptor migration, or May and early June for shorebirds. </p>
+
+
+        </div>
+      </div>
+
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/cactus-2021-08-28-19-02-31-utc-min.jpg">
+      </div>
+      <div class="text text-align-vmiddle" id="snap">
+        <div>
+          <h3><strong>Tucson, Arizona:</strong></h3>
+
+          <p>The area around Tucson is home to species that can’t be found anywhere else in the country! From Saguaro
+            National Park to the Chiricahua Mountains, this is a community birders flock to (especially for
+            hummingbirds!).</p>
+
+
+        </div>
+      </div>
+
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/rio-grande-river-2021-08-26-16-22-24-utc.jpg">
+      </div>
+      <div class="text text-align-vmiddle" id="snap">
+        <div>
+          <h3><strong>Harlingen, Texas:</strong></h3>
+
+          <p>Homeplace of the Rio Grande Valley Birding Festival during the fall’s migration season, you’ll see a
+            combination of breeding birds making their way back south, and occasional species from Central America and
+            Mexico, with birds that can’t be spotted anywhere else in the country (think the green jays and the
+            chachalaca).</p>
+
+
+        </div>
+      </div>
+
+      <div class="image">
+        <img
+          src="https://www.microscope.com/media/wysiwyg/blog/portland-maine-usa-at-portland-head-light-2021-08-29-04-53-37-utc-min.jpg">
+      </div>
+      <div class="text text-align-vmiddle" id="snap">
+        <div>
+          <h3><strong>Coastal Maine:</strong></h3>
+
+          <p>Go for some of the country’s best bird watching (and grab some lobster while you’re there). At least 338
+            bird species are known to dwell Acadia National Park, including colonies of Atlantic puffin that nest just
+            offshore, bald eagles, and even the occasional peregrine falcon. </p>
+
+
+        </div>
+      </div>
+
+      <div class="image">
+        <img
+          src="https://www.microscope.com/media/wysiwyg/blog/big-pines-on-shore-of-calm-northern-minnesota-lake-2021-08-26-18-19-21-utc-min.jpg">
+      </div>
+      <div class="text text-align-vmiddle" id="snap">
+        <div>
+          <h3><strong>Northeastern Minnesota:</strong></h3>
+
+          <p>Picture this -- a quiet, early morning paddle across a woodland lake, with loon calls echoing in the
+            background. This can be your reality in Northeastern Minnesota, a go-to spot for boreal species. If you can
+            brave the cold, winter is an especially rewarding time to see the rare great gray owl or smaller northern
+            hawk owl. In May and June, you can also spot songbirds like the Connecticut Warbler. </p>
+
+
+        </div>
+      </div>
+
+
+      <br />
+    </div>
+
+    <div class="text-box">
+      <h3>Take your birdwatching to new heights just in time for National Bird Day!</h3>
+
+      <p>The Bird Day Sale includes hot deals on best-selling, premium binoculars, monoculars and spotting scopes.
+        You&rsquo;ll have no &hellip; egrets (too much?) about your next birding adventure with these quality products
+        and unbeatable prices.&nbsp;</p>
+
+      <p>Save on tools like the Smithsonian birding binoculars...</p>
+    </div>
+
+
+
+    <div class="text-box">
+      <h3>Want even more to get egg-cited about? Your next set will also come with...</h3>
+
+      <p style="margin-left: 40px;"><strong>&bull;</strong> A special phone adaptor, that allows you to take photos
+        &amp; videos of your binocular view</p>
+
+      <p style="margin-left: 40px;"><strong>&bull;</strong> The authorized Smithsonian Bird-Watching Guide, full of
+        birding tips and information</p>
+      <br />
+      <h3>For more binoculars, monoculars and spotting scopes on sale, check out the Bird Day Sale deals now!</h3>
+
+    </div>
+
+
+    <div class="text-box" style="text-align: center;">
+
+      <p><a class="button btn-blue" aria-describedby="tooltip248863" data-original-title=""
+          href="https://www.microscope.com" target="_blank" style="text-transform: initial;">Yes, I want to take my
+          birding to new heights</a>
+      </p>
+      <p>Sale pricing while supplies last. Deals end January 21st</p>
+      <br />
+    </div>
+
+
+  </section>
+
+</body>
+
+</html>

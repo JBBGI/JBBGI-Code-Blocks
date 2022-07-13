@@ -1,0 +1,127 @@
+    <t t-foreach="request.env['res.company'].search([('partner_id', '=', 'AIV Vet')])" t-as="company">
+        <div style="background-color: #F1F1F1;"><br>
+            <br><table cellspacing="0" cellpadding="0" align="center" style="background-color: #fff;max-width: 700px; width:100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <div style="width:80%; margin: auto; padding: 2.8rem 0;">
+                            <img t-attf-src="/web/image/website/{{company.id}}/logo/" style="height:5em">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="100%" cellpadding="0" cellspacing="0" align="center" style="max-width: 700px;">
+                            <tbody>
+                                <tr>
+                                    <td style="  padding-bottom: 2.8rem;">
+                                        <table width="100%" align="center" style="text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <h2 style="margin-top:0;">
+                                                            <t t-out="object.name" contenteditable="false" data-oe-t-inline="true" oe-keep-contenteditable=""></t> requests for a Repair Service
+                                                        </h2>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 1rem;">
+                                        <h3 style="margin: auto; width:80%">Products for Repair: </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style=" padding-bottom: 2.8rem;">
+                                        <table width="70%" align="center" style="text-align: left;">
+                                            <tbody>
+                                                <t t-set="items" t-value="object.x_pump.split(',')" data-oe-t-inline="true"></t>
+                                                <t t-foreach="items" t-as="item" data-oe-t-inline="true">
+                                                    <tr style="height: 20px;">
+                                                        <t t-set="i" t-value="item.split(': ')" data-oe-t-inline="true"></t>
+                                                        <t t-foreach="i" t-as="val" >
+                                                            <td t-if="val_index == 0" style="width:30%">
+                                                                <t t-out="val"/>
+                                                            </td>
+                                                            <td t-if="val_index == 1" style="width:70%">
+                                                                <t t-out="val"/>
+                                                            </td>
+                                                        </t>
+                                                    </tr>
+                                                </t>
+                                
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 1rem;">
+                                        <h3 style="margin: auto; width:80%">Shipping to: </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style=" padding-bottom: 2.8rem;">
+                                        <t t-set="contact_details" t-value="[
+                                            {'l': 'Name:', 'r': object.name},
+                                            {'l': 'Phone:', 'r': object.phone},
+                                            {'l': 'Email:', 'r': object.email},
+                                            {'l': 'Address:', 'r': object.street},
+                                            {'l': 'City:', 'r': object.city},
+                                            {'l': 'State:', 'r': object.state_id.name},
+                                            {'l': 'ZIP', 'r': object.zip},
+                                            {'l': 'Country', 'r': object.country_id.name},
+                                            ]" data-oe-t-inline="true"></t><table width="70%" align="center" style="text-align: left;">
+                                            
+                                            <tbody><tr t-foreach="contact_details" t-as="contact">
+                                                <td style="width: 30%;" t-esc="contact.get('l')" contenteditable="false" oe-keep-contenteditable=""></td>
+                                                <td style="width: 70%;" t-esc="contact.get('r')" contenteditable="false" oe-keep-contenteditable=""></td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 1rem;">
+                                        <h3 style="margin: auto; width:80%">Billing to: </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    
+                                        <td style=" padding-bottom: 2.8rem;">
+                                            <t t-foreach="request.env['res.partner'].search([('parent_id.id', '=', object.id)])" t-as="billing">
+                                            <t t-set="contact_details" t-value="[
+                                            {'l': 'Name:', 'r': billing.name},
+                                            {'l': 'Phone:', 'r': billing.phone},
+                                            {'l': 'Email:', 'r': billing.email},
+                                            {'l': 'Address:', 'r': billing.street},
+                                            {'l': 'City:', 'r': billing.city},
+                                            {'l': 'State:', 'r': billing.state_id.name},
+                                            {'l': 'ZIP', 'r': billing.zip},
+                                            {'l': 'Country', 'r': billing.country_id.name},
+                                            ]" data-oe-t-inline="true"></t><table width="70%" align="center" style="text-align: left;">
+                                                
+                                                <tbody><tr t-foreach="contact_details" t-as="contact">
+                                                    <td style="width: 30%;" t-esc="contact.get('l')" contenteditable="false" oe-keep-contenteditable=""></td>
+                                                    <td style="width: 70%;" t-esc="contact.get('r')" contenteditable="false" oe-keep-contenteditable=""></td>
+                                                </tr>
+                                            </tbody></table>
+                                        </t>
+
+                                        </td>
+                                </tr>
+                                <tr align="center" style="background-color: #444444;max-width: 700px;">
+                                    <td style="width: 100%; color: #fff; text-align: center;">
+                                        <p style="margin-top: 1rem; margin-bottom: 1rem;">Copyright © 2022 <t t-out="company.name" contenteditable="false" data-oe-t-inline="true" oe-keep-contenteditable="">
+                                            </t>. All rights reserved.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>   
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </t>

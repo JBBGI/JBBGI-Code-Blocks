@@ -1,0 +1,41 @@
+<script type="text/javascript">
+
+    const custom_optin_links =
+        [
+            "https://www.daigger.com/beakers",
+            "https://www.daigger.com/bottles-and-carboys",
+            "https://www.daigger.com/cryogenic-equipment",
+            "https://www.daigger.com/electrochemistry",
+            "https://www.daigger.com/flasks",
+            "https://www.daigger.com/gloves",
+            "https://www.daigger.com/graduated-cylinders",
+            "https://www.daigger.com/hot-plates-and-stirrers",
+            "https://www.daigger.com/hydrometers",
+            "https://www.daigger.com/plates-and-plate-systems",
+            "https://www.daigger.com/safety-safety-cabinets",
+            "https://www.daigger.com/tubes",
+            "https://www.daigger.com/ultrasonic",
+            "https://www.daigger.com/pyrex-boiling-flasks"
+        ];
+    const exception_links =
+        [
+            "https://www.daigger.com/flasks-boiling-flasks",
+        ];
+
+
+
+    var links = [];
+    Array.from(document.querySelectorAll("ul.breadcrumb a[href]")).forEach(link => links.push(link.href))
+
+    links.forEach(link => {
+        if (custom_optin_links.includes(link)) {
+            document.querySelector('#page-body').classList.add('custom_optin')
+
+        }
+        else if (exception_links.includes(link)) {
+            document.querySelector('#page-body').classList.remove('custom_optin')
+        }
+    })
+
+
+</script>

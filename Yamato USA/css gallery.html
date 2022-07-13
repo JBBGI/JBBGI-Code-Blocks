@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Title of the document</title>
+    <style>
+        #gallery {
+            width: 500px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+
+        #full-picture {
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+            float: left;
+        }
+
+        #full-picture img {
+            width: 100%;
+            margin: 0;
+        }
+
+        #full-picture div {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        #navigation a {
+            text-decoration: none;
+        }
+
+        #navigation img {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="gallery">
+
+        <div id="full-picture">
+            <div id="picture1">
+                <img src="https://yamato-usa.com/wp-content/uploads/2021/08/MA300-1.jpg" />
+                <img alt="category-badge-image" class="badge-image"
+                    src="https://yamato-usa.com/wp-content/uploads/2022/03/MA300-LP.png" />
+            </div>
+            <div id="picture2">
+                <img src="https://yamato-usa.com/wp-content/uploads/2022/03/MA300-1.jpg" />
+                <img alt="category-badge-image" class="badge-image"
+                    src="https://yamato-usa.com/wp-content/uploads/2022/03/MA300-LP.png" />
+            </div>
+
+        </div>
+    </div>
+
+    <div id="navigation">
+
+        <a href="#picture1">
+            <img src="https://yamato-usa.com/wp-content/uploads/2021/08/MA300-1.jpg" height='100px' width='100px' />
+        </a>
+        <a href="#picture2">
+            <img src="https://yamato-usa.com/wp-content/uploads/2022/03/MA300-1.jpg" height='100px' width='100px' />
+        </a>
+
+    </div>
+</body>
+
+</html>
+
+
+
+
+<div class="main-image-holder">
+    <img alt="category-main-image" class="primary-image"
+        src="https://yamato-usa.com/wp-content/uploads/2021/08/MA300-1.jpg" />
+
+    <img alt="category-badge-image" class="badge-image"
+        src="https://yamato-usa.com/wp-content/uploads/2022/03/MA300-LP.png" />
+</div>
+
+
+<!-- LIVE -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <div id="gallery">
+
+        <div id="full-picture"
+            style="background-image: url('https://yamato-usa.com/wp-content/uploads/2021/08/MA300-1.jpg');width:500px;height:500px;">
+            <img style="width: 45%;position: absolute;right: -15px;top: 0;" alt="category-badge-image"
+                class="badge-image" src="https://yamato-usa.com/wp-content/uploads/2022/03/MA300-LP.png" />
+        </div>
+    </div>
+
+    <div id="navigation">
+        <img style="border-radius:5px;" onclick="pic1()"
+            src="https://yamato-usa.com/wp-content/uploads/2021/08/MA300-1.jpg" height='100px' width='100px' />
+        <img style="border-radius:5px;" onclick="pic2()"
+            src="https://yamato-usa.com/wp-content/uploads/2022/03/MA300-1.jpg" height='100px' width='100px' />
+    </div>
+
+    <script>
+        function pic1() {
+            var element = document.getElementById("full-picture");
+            element.style.backgroundImage = "url(https://yamato-usa.com/wp-content/uploads/2021/08/MA300-1.jpg)";
+        }
+        function pic2() {
+            var element = document.getElementById("full-picture");
+            element.style.backgroundImage = "url(https://yamato-usa.com/wp-content/uploads/2022/03/MA300-1.jpg)";
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- ----------------------- -->
+
+
+
+
+<body>
+
+
+    <div id="gallery">
+
+        <div id="full-picture">
+            <div id="picture1">
+                <img src="https://yamato-usa.com/wp-content/uploads/2021/08/MA300-1.jpg" />
+                <img alt="category-badge-image" class="badge-image"
+                    src="https://yamato-usa.com/wp-content/uploads/2022/03/MA300-LP.png" />
+            </div>
+            <div id="picture2">
+                <img src="https://yamato-usa.com/wp-content/uploads/2022/03/MA300-1.jpg" />
+                <img alt="category-badge-image" class="badge-image"
+                    src="https://yamato-usa.com/wp-content/uploads/2022/03/MA300-LP.png" />
+            </div>
+
+        </div>
+    </div>
+
+    <div id="navigation">
+
+        <a href="#picture1">
+            <img src="https://yamato-usa.com/wp-content/uploads/2021/08/MA300-1.jpg" height='100px' width='100px' />
+        </a>
+        <a href="#picture2">
+            <img src="https://yamato-usa.com/wp-content/uploads/2022/03/MA300-1.jpg" height='100px' width='100px' />
+        </a>
+
+    </div>
+</body>
+
+
+
+Default MA300-1
+<!-- Custom Code for Image -->
+<div class="main-image-holder">
+    <img alt="category-main-image" class="primary-image"
+        src="https://yamato-usa.com/wp-content/uploads/2021/08/MA300-1.jpg" />
+
+    <img alt="category-badge-image" class="badge-image"
+        src="https://yamato-usa.com/wp-content/uploads/2022/03/MA300-LP.png" />
+</div>
+<!-- Text -->
+
+<h2><strong><a class="in-cell-link" href="https://www.yamato-scientific.com/product/show/ma300_2/" target="_blank"
+            rel="noopener">MA300 Magnetic Stirrer</a></strong></h2>
+<p><span data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Specifications:\n\nStirring capacity: 100 ~ 3000 ml\nStirring stage material: stainless plate\nStage size: W175 x D165 mm\nExternal dimension: 181 x 197 x 83 mm WxDxH\nPower source: 115V\nComes with a transformer\n&quot;}"
+        data-sheets-userformat="{&quot;2&quot;:9091,&quot;3&quot;:{&quot;1&quot;:0},&quot;4&quot;:{&quot;1&quot;:2,&quot;2&quot;:11982760},&quot;10&quot;:0,&quot;11&quot;:3,&quot;12&quot;:0,&quot;16&quot;:12}"
+        data-sheets-textstyleruns="{&quot;1&quot;:0,&quot;2&quot;:{&quot;5&quot;:1}}{&quot;1&quot;:16}{&quot;1&quot;:17,&quot;2&quot;:{&quot;5&quot;:1}}{&quot;1&quot;:36}{&quot;1&quot;:50,&quot;2&quot;:{&quot;5&quot;:1}}{&quot;1&quot;:74}{&quot;1&quot;:91,&quot;2&quot;:{&quot;5&quot;:1}}{&quot;1&quot;:102}{&quot;1&quot;:118,&quot;2&quot;:{&quot;5&quot;:1}}{&quot;1&quot;:137}{&quot;1&quot;:162,&quot;2&quot;:{&quot;5&quot;:1}}{&quot;1&quot;:175}"><span
+            style="text-decoration: underline;"><span
+                style="font-size: 12pt;"><strong>Specifications</strong></span></span></span></p>
+<p><strong>Stirring capacity:</strong> 100 ~ 3000 ml<br /><strong>Stirring stage material:</strong> stainless
+    plate<br /><strong>Stage size:</strong> W175 x D165 mm<br /><strong>External dimension:</strong> 181 x 197 x 83 mm
+    WxDxH<br /><strong>Power source:</strong> 115V<br />Comes with a transformer</p>
+<p>&nbsp;</p>
+<p>Click <a class="waffle-rich-text-link" href="https://www.yamato-scientific.com/product/show/ma300_2/">MA300</a> for
+    additional product information.</p>

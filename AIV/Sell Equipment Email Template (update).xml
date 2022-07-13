@@ -1,0 +1,219 @@
+<!-- Old Version -->
+
+<t name="_Sell Equipment Email (website_aiv)" t-name="website_aiv.email_sell_equipment">
+  <t t-call="website_aiv.email_layout">
+    <!-- @formatter:off -->
+    <table width="100%" cellpadding="0" cellspacing="0" align="center" style="max-width: 700px;">
+      <tr>
+        <td style="background-color: #f9f9f9; padding-top: 2.8rem; padding-bottom: 2.8rem;">
+          <table width="100%" align="center" style="text-align: center;">
+            <tr>
+              <td>
+                <h2 t-esc="'Thank You for Choosing AIV, Inc!'"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h4 style="margin: 0 80px;">
+                                            All new infusion pump replacement parts have been designed by AIV in our ISO 13485:2016 certified facility following strict quality control standards.
+                </h4>
+              </td>
+            </tr>
+            <t t-set="bundle" t-value="['All new replacement parts include a 120-day warranty.', 'Recertified parts include a 60-day warranty.',]"/>
+            <tr>
+              <td>
+                <table width="100%" cellpadding="0" cellspacing="0" align="left" style="max-width:700px;">
+                  <tr>
+                    <td>
+                      <table width="100%" cellpadding="0" cellspacing="0" align="left" style="width:200px;"/>
+                    </td>
+
+                    <td>
+                      <table width="100%" cellpadding="0" cellspacing="0" align="left" style="width:350px; text-align: left !important;">
+                        <t t-foreach="bundle" t-as="b">
+                          <tr>
+                            <td>•                              <t t-esc="b"/>
+                            </td>
+                          </tr>
+                        </t>
+                      </table>
+                    </td>
+
+                    <td>
+                      <table width="100%" cellpadding="0" cellspacing="0" align="left" style="width:150px;"/>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <table width="80%" align="center">
+          <tbody>
+            <tr>
+              <td colspan="2">
+                <p style="margin-top: 32px;">Hi <t t-esc="object.contact_name and object.contact_name.title().split()[0] or There"/>
+,</p>
+                <p>Our technicians have received your IV pump to sell request details and are awaiting your items.</p>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td style="padding-top: 3rem; font-weight: bold; width: 180px;">IV Pump to Sell</td>
+              <td/>
+            </tr>
+            <tr>
+              <td/>
+              <td/>
+            </tr>
+          </tbody>
+          <tbody t-foreach="object.sell_line" t-as="line" style="border-bottom: 1px solid #6c757d;">
+            <tr>
+              <td style="padding-top: 1rem;"/>
+            </tr>
+            <t t-set="model_name" t-value="line.category_id.name if line.category_id else 'Others'"/>
+            <t t-set="bundle" t-value="[{'l': 'Model', 'r': model_name.replace('Parts', '')},{'l': 'IV Pump Name', 'r': line.name},{'l': 'Quantity', 'r': '%12.0f' % line.qty},{'l': 'Description', 'r': line.description},]"/>
+            <tr t-foreach="bundle" t-as="b">
+              <td>
+                <span t-esc="b.get('l')"/>
+              </td>
+              <td>
+                <span t-esc="b.get('r')"/>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 1rem;"/>
+              <td/>
+            </tr>
+          </tbody>
+          <tbody style="border-bottom: 1px solid #6c757d;">
+            <tr>
+              <td style="padding-top: 1rem;"/>
+            </tr>
+            <tr>
+              <td style="font-weight: bold;">Contact Information</td>
+            </tr>
+            <t t-set="bundle" t-value="[{'l': 'Full Name', 'r': object.contact_name},{'l': 'Phone no.', 'r': object.phone},{'l': 'Email', 'r': object.email_from},{'l': 'Address', 'r': object.street},{'l': 'City', 'r': object.city},{'l': 'State', 'r': object.state_id.name},{'l': 'Zip', 'r': object.zip},]"/>
+            <tr t-foreach="bundle" t-as="b">
+              <td>
+                <span t-esc="b.get('l')"/>
+              </td>
+              <td>
+                <span t-esc="b.get('r')"/>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 1rem;"/>
+              <td/>
+            </tr>
+          </tbody>
+        </table>
+      </tr>
+    </table>
+    <!-- @formatter:on -->
+  </t>
+</t>
+
+
+<!-- end -->
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- New Version 3/26/2022 -->
+
+<t name="_Sell Equipment Email (website_aiv)" t-name="website_aiv.email_sell_equipment">
+  <t t-call="website_aiv.email_layout">
+    <!-- @formatter:off -->
+    <table width="100%" cellpadding="0" cellspacing="0" align="center" style="max-width: 700px;">
+      <tr>
+        <td style="background-color: #f9f9f9; padding-top: 2.8rem; padding-bottom: 2.8rem;">
+          <table width="100%" align="center" style="text-align: center;">
+            <tr>
+              <td>
+                <h2 style="margin-top: 0;" t-esc="'Thank You for Contacting AIV, Inc!'"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h4 style="margin: 0 80px;">
+                                            AIV is an ISO 13485:2016 certified facility. AIV strives to provide you cost effective options to service equipment and flexible solutions to best suit your needs.
+                </h4>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <table width="80%" align="center">
+          <tbody>
+            <tr>
+              <td colspan="2">
+                <p style="margin-top: 32px;">Hi <t t-esc="object.contact_name and object.contact_name.title().split()[0] or There"/>
+,</p>
+                <p>We have received your request to sell your IV pump. Our sales representatives will contact you with a quote once your request has been reviewed. </p>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td style="padding-top: 3rem; font-weight: bold; width: 180px;">IV Pump to Sell</td>
+              <td/>
+            </tr>
+            <tr>
+              <td/>
+              <td/>
+            </tr>
+          </tbody>
+          <tbody t-foreach="object.sell_line" t-as="line" style="border-bottom: 1px solid #6c757d;">
+            <tr>
+              <td style="padding-top: 1rem;"/>
+            </tr>
+            <t t-set="model_name" t-value="line.category_id.name if line.category_id else 'Others'"/>
+            <t t-set="bundle" t-value="[{'l': 'Model', 'r': model_name.replace('Parts', '')},{'l': 'IV Pump Name', 'r': line.name},{'l': 'Quantity', 'r': '%12.0f' % line.qty},{'l': 'Description', 'r': line.description},]"/>
+            <tr t-foreach="bundle" t-as="b">
+              <td>
+                <span t-esc="b.get('l')"/>
+              </td>
+              <td>
+                <span t-esc="b.get('r')"/>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 1rem;"/>
+              <td/>
+            </tr>
+          </tbody>
+          <tbody style="border-bottom: 1px solid #6c757d;">
+            <tr>
+              <td style="padding-top: 1rem;"/>
+            </tr>
+            <tr>
+              <td style="font-weight: bold;">Contact Information</td>
+            </tr>
+            <t t-set="bundle" t-value="[{'l': 'Full Name', 'r': object.contact_name},{'l': 'Phone no.', 'r': object.phone},{'l': 'Email', 'r': object.email_from},{'l': 'Address', 'r': object.street},{'l': 'City', 'r': object.city},{'l': 'State', 'r': object.state_id.name},{'l': 'Zip', 'r': object.zip},]"/>
+            <tr t-foreach="bundle" t-as="b">
+              <td>
+                <span t-esc="b.get('l')"/>
+              </td>
+              <td>
+                <span t-esc="b.get('r')"/>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 1rem;"/>
+              <td/>
+            </tr>
+          </tbody>
+        </table>
+      </tr>
+    </table>
+    <!-- @formatter:on -->
+  </t>
+</t>
+
+
+<!-- end -->

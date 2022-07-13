@@ -1,0 +1,315 @@
+<!doctype html>
+<html>
+
+<head>
+  <style media="screen" type="text/css">
+    .main-container {
+      font-family: "Roboto", Helvetica, sans-serif;
+    }
+
+    .header-container {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.microscope.com/media/wysiwyg/blog/positive-min.jpg') no-repeat 0 20%;
+      background-size: cover;
+      max-width: 100%;
+      height: 30rem;
+      display: flex !important;
+      text-transform: capitalize;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header {
+      color: white;
+      font-weight: 500;
+      font-size: 3.5rem;
+
+    }
+
+    .subheader {
+      color: white;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-align: center;
+
+    }
+
+    .body-container {
+      margin: auto;
+      padding-top: 1.5em;
+      width: 65%;
+      /* height: 400px;
+      background-color: gray; */
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .text-box,
+    .grid-system {
+      width: 100%;
+    }
+
+    .text-box {
+      margin-bottom: 1.5em;
+    }
+
+    .grid-system {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .grid-system-3 {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+
+
+    .text {
+      grid-column: span 3;
+    }
+
+    .grid-system img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 250px;
+      align-self: start;
+
+    }
+
+    .grid-system-3 img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 300px;
+      align-self: start;
+
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .image img {
+      border-radius: 20px;
+    }
+
+    #snap {
+      grid-column: span 2;
+
+    }
+
+    .custom-textprop {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 10px;
+    }
+
+    .text-align-vmiddle {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    @media screen and (max-width: 1200px) {
+
+      .image,
+      .text,
+      #snap {
+        grid-column: span 4;
+      }
+
+
+      .grid-system img {
+        object-fit: cover;
+        max-height: 350px;
+      }
+
+      .body-container {
+        width: 75%;
+      }
+
+      .custom-textprop {
+
+        justify-content: center;
+      }
+
+      .box {
+        grid-column: span 4;
+
+      }
+
+      .box p {
+        text-align: center;
+
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="banner-container">
+
+    <div class="header-container banner-wrapper-general">
+      <div class="text">
+        <h1 class="header">Close that laptop and get OUTSIDE!</h1>
+        <h4 class="subheader">7 easy ways to celebrate National Get Outdoors Day
+        </h4>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="body-container">
+
+    <div class="text-box">
+      <p>Put down that phone.&nbsp;</p>
+
+      <p>Turn off that tv.&nbsp;</p>
+
+      <p>Shut that laptop down.</p>
+
+      <h2>It&rsquo;s National Get Outdoors Day, and these 7 great ideas are bound to make your day outside!</h2>
+
+
+    </div>
+
+    <div class="grid-system">
+      <div class="image">
+        <img
+          src="https://www.microscope.com/media/wysiwyg/blog/a-young-girl-with-bird-watching-binoculars-2022-03-04-02-07-25-utc-min.jpg">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong>1. Become a birder for the day!</strong></h3>
+
+          <p>It&rsquo;s a bird. It&rsquo;s a plane. It&rsquo;s&hellip;. Definitely a bird!</p>
+
+          <p>Fun, feathery and totally free! Birdwatching makes every day feel like a great safari! Just grab a pair of
+            your Smithsonian&rsquo;s Best Binoculars for Birding (and your exclusive Birdwatching Guide that comes with
+            them!), and you&rsquo;re ready to go.</p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/hiking-boots-2021-08-26-15-26-59-utc-min.jpg">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong>2. Take a hike</strong></h3>
+
+          <p>Head out to your favorite trail, or better yet, take the road less traveled. Find a brand new path you
+            haven&rsquo;t explored before, and see where it leads!&nbsp;</p>
+        </div>
+      </div>
+
+      <div class="image">
+        <img
+          src="https://www.microscope.com/media/wysiwyg/blog/businessman-and-businesswoman-eating-lunch-outside-2021-08-26-16-13-55-utc-min.jpg">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong>3. Take your lunch break in the park</strong></h3>
+
+          <p>Pack a picnic if you have the time, or just find a park bench, and spend your lunch hour in the warm
+            sunshine, with the smell of fresh grass and the sound of birds chirping in the background.&nbsp;</p>
+
+        </div>
+      </div>
+      <div class="image">
+        <img
+          src="https://www.microscope.com/media/wysiwyg/blog/couple-grilling-at-a-black-multi-generation-family-2021-08-26-16-15-16-utc-min.jpg">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong>4. Fire up the barbecue&nbsp;</strong></h3>
+
+          <p>Like you needed an excuse? Invite some friends or neighbors, and enjoy a good meal, with good company in
+            the great outdoors!</p>
+
+        </div>
+      </div>
+      <div class="image">
+        <img
+          src="https://www.microscope.com/media/wysiwyg/blog/senior-couple-in-garden-2021-08-26-15-29-13-utc-min.jpg">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong>5. Spend some quality thyme with your garden</strong></h3>
+
+          <p>A little garden therapy goes a long way!</p>
+
+          <p>Whether you&rsquo;re tending to your peonies in your backyard, or growing tomatoes in a community vegetable
+            garden, we encourage you to spend some quality time tending to your garden this week.&nbsp;&nbsp;</p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/campfire-fun-2021-08-30-19-17-37-utc-min.jpg">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong>6. Camp in your own backyard</strong></h3>
+
+          <p>Forget backcountry camping. Give backyard camping a try! You don&rsquo;t have to go far to enjoy a good
+            smore and an evening under the stars. Set up a private campsite in your very own backyard.&nbsp;</p>
+        </div>
+      </div>
+      <div class="image">
+        <img
+          src="https://www.microscope.com/media/catalog/product/cache/2/image/1800x/040ec09b1e35df139433887a97daa66f/s/m/smithsonian-binoculars-6.jpg">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong>7. Treat yo&rsquo;self to some new gear (at an all-time low price!)&nbsp;</strong></h3>
+
+          <p>Right now, the best-selling Smithsonian monoculars, binoculars and spotting scopes are on sale while
+            supplies last.&nbsp;</p>
+
+          <p>This includes the&nbsp;<a
+              href="https://www.microscope.com/best-binoculars-for-birding-smithsonian-great-outdoors-binoculars-set.html"
+              style="text-decoration:none;" target="_blank">Smithsonian Great Outdoors Binoculars Set</a>&nbsp;(the
+            perfect choice for bird watching or scientific field work) and the&nbsp;<a
+              href="https://www.microscope.com/best-monocular-for-bird-watching-smithsonian-great-outdoors-monocular-set.html"
+              style="text-decoration:none;" target="_blank">Best Bird Watching Monocular set</a>&nbsp;(for the
+            enthusiast who likes to travel light and is looking for an even more affordable option)</p>
+
+          <p>If you&rsquo;ve been meaning to upgrade with some new gear, this is your sign!</p>
+
+        </div>
+      </div>
+      <br />
+    </div>
+
+
+
+
+    <div class="text-box" style="text-align: center;">
+
+
+      <p><a class="button btn-blue" aria-describedby="tooltip248863" data-original-title=""
+          href="https://www.microscope.com" target="_blank">Check out our Great Outdoors Sale</a>
+      </p>
+      <p>Sale ends June 29th</p>
+      <p>We&rsquo;d love to know how you&rsquo;re spending time outside today! Comment or tag us on&nbsp;<a
+          href="https://www.facebook.com/MicroscopeDotCom/" style="text-decoration:none;"
+          target="_blank">Facebook</a>&nbsp;to let us know.</p>
+      <br />
+    </div>
+
+
+
+  </section>
+
+</body>
+
+</html>

@@ -1,0 +1,365 @@
+<!doctype html>
+<html>
+
+<head>
+  <style media="screen" type="text/css">
+    .main-container {
+      font-family: "Roboto", Helvetica, sans-serif;
+    }
+
+    .header-container {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.microscope.com/media/wysiwyg/blog/interior-of-chemistry-classroom-2021-08-26-19-52-10-utc-min') no-repeat 0 63%;
+      background-size: cover;
+      max-width: 100%;
+      height: 30rem;
+      display: flex !important;
+      text-transform: capitalize;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header {
+      color: white;
+      font-weight: 500;
+      font-size: 3.5rem;
+
+    }
+
+    .subheader {
+      color: white;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-align: center;
+
+    }
+
+    .body-container {
+      margin: auto;
+      padding-top: 1.5em;
+      width: 65%;
+      /* height: 400px;
+      background-color: gray; */
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .text-box,
+    .grid-system {
+      width: 100%;
+    }
+
+    .text-box {
+      margin-bottom: 1.5em;
+    }
+
+    .grid-system {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .grid-system-3 {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .grid-system-2 {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+
+    .text {
+      grid-column: span 3;
+    }
+
+    .grid-system img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 250px;
+      align-self: start;
+
+    }
+
+    .grid-system-3 img,
+    .grid-system-2 img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 300px;
+      align-self: start;
+
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .image img {
+      border-radius: 0px;
+      box-shadow: 10px 10px 6px -6px #777;
+
+    }
+
+    #snap {
+      grid-column: span 2;
+
+    }
+
+    .custom-textprop {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 10px;
+    }
+
+    .text-align-vmiddle {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    @media screen and (max-width: 1200px) {
+
+      .image,
+      .text,
+      #snap {
+        grid-column: span 4;
+      }
+
+
+      .grid-system img {
+        object-fit: cover;
+        max-height: 350px;
+      }
+
+      .body-container {
+        width: 75%;
+      }
+
+      .custom-textprop {
+
+        justify-content: center;
+      }
+
+      .box {
+        grid-column: span 4;
+
+      }
+
+      .box p {
+        text-align: center;
+
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="banner-container">
+
+    <div class="header-container banner-wrapper-general">
+      <div class="text">
+        <h1 class="header">The best microscopes for chemists</h1>
+        <h4 class="subheader">Find the microscopes and accessories other chemists are already using</h4>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="body-container">
+
+    <div class="text-box">
+      <p><em>Don’t you want a microscope that you have chemistry with?</em></p>
+
+
+      <p>For over two decades, <a href="http://www.microscope.com" style="text-decoration: none;"
+          target="_blank">Microscope.com</a> has been working with research institutions,
+        labs, private
+        businesses and universities across the USA to push the boundaries of their research with value-priced,
+        packed-with-features microscopes and accessories.&nbsp;</p>
+
+      <h3 style="text-align: center;"><a href="https://microscope.com/shop/category/compound-microscope-1"
+          style="text-decoration: none;" target="_blank">Chemists across the country are spending up to 90% less on
+          microscopy equipment by ordering from Microscope.com.</a></h3><br />
+
+      <p><strong>Institutions like:</strong></p>
+
+      <p style="margin-left: 40px;"><strong>&bull; </strong>The F.D.A</p>
+
+      <p style="margin-left: 40px;"><strong>&bull; </strong>U.S. Naval Research Laboratory</p>
+      <p style="margin-left: 40px;"><strong>&bull; </strong>And even NASA</p>
+
+      <p>... already get their microscopes and microscope accessories from Microscope.com. Do they know something you
+        don&rsquo;t?&nbsp;</p>
+
+
+      <h3>They&rsquo;re using these microscopes at different stages of their research:</h3>
+    </div>
+
+
+    <div class="grid-system-3">
+      <div class="image">
+        <img
+          src="https://www.microscope.com/media/wysiwyg/blog/unrecognizable-high-school-students-with-microscop-2021-08-26-12-07-34-utc-min.jpg">
+      </div>
+      <div class="text text-align-vmiddle" id="snap">
+        <div>
+          <h3>The best microscope for your chemistry students:</h3>
+
+          <p>More than 400 universities spanning every corner of the U.S. trust Microscope.com to deliver value to their
+            programs, so students can learn and professors can push the boundaries of their research.</p>
+
+          <p>After two decades, the best-rated option for students and professors is the <a
+              href="https://www.microscope.com/compound-microscopes/omano-om36-compound-microscope.html"
+              style="text-decoration: none;" target="_blank">OM36 40X-1000X Compound Student Microscope</a>. This
+            low-cost, rugged microscope stands up to hard use in the lab and the field (and hard use from inexperienced
+            users&hellip; like your enthusiastic biology students).&nbsp;</p>
+
+
+          <p style="text-align: center;"><a class="button btn-blue" aria-describedby="tooltip248863"
+              data-original-title=""
+              href="https://www.microscope.com/compound-microscopes/omano-om36-compound-microscope.html" target="_blank"
+              style="text-transform: initial;">Show me this microscope</a>
+          </p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/young-chemist-at-work-2021-09-24-04-01-54-utc-min.jpg">
+      </div>
+      <div class="text text-align-vmiddle" id="snap">
+        <div>
+          <h3>The reliable option for the budget-conscious chemist:</h3>
+
+          <p>After two decades of working with chemists across the country, the most popular choice among your
+            colleagues is resoundingly the <a
+              href="https://microscope.com/shop/1000x-microscope-om139-compound-laboratory-microscope-with-infinity-plan-optics-71?category=1#attr=270,272,2168,2170,2169,1227,2171"
+              style="text-decoration: none;" target="_blank">1000x Microscope - OM139 Compound Laboratory Microscope
+              with Infinity Plan Optics</a>.</p>
+
+          <p>The reason other chemists love it? It has a trinocular port option, so you can capture images and document
+            findings in real time - a much smoother workflow than you use now. And it&rsquo;s as versatile as your role
+            - it packs down and travels easily in <a href="https://www.microscope.com/shop/category/microscope-cases-35"
+              style="text-decoration: none;" target="_blank">one of these microscope cases</a>, so you can easily move
+            it from the lab to the classroom to your desk and back.</p>
+
+
+          <p style="text-align: center;"><a class="button btn-blue" aria-describedby="tooltip248863"
+              data-original-title=""
+              href="https://microscope.com/shop/1000x-microscope-om139-compound-laboratory-microscope-with-infinity-plan-optics-71?category=1#attr=270,272,2168,2170,2169,1227,2171"
+              target="_blank" style="text-transform: initial;">Show me this microscope</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="image">
+        <img
+          src="https://www.microscope.com/media/wysiwyg/blog/close-up-of-microscope-lens-science-tools-microsc-2021-09-01-00-19-51-utc-min.jpg">
+      </div>
+      <div class="text text-align-vmiddle" id="snap">
+        <div>
+          <h3>The premium option for lab work and research:</h3>
+
+          <p>A microscope designed with you in mind. The <a
+              href="https://www.microscope.com/ba410etph-elite-premium-trinocular-phase-contrast-microscope.html"
+              style="text-decoration: none;" target="_blank">BA410E-TPH Elite Trinocular Phase Contrast Microscope</a>
+            is the flagship of Motics upright compound series and the perfect choice for your work or research.</p>
+
+          <p>You&rsquo;re guaranteed the best viewing experience of your samples, with a fully rotating head and phase
+            contrast. The trinocular port allows you to capture images and document findings in real time - a much
+            smoother workflow than you use now. And it&rsquo;s as versatile as your role - it packs down and travels
+            easily in <a href="https://www.microscope.com/shop/category/microscope-cases-35"
+              style="text-decoration: none;" target="_blank">one of these microscope cases</a>, so you can easily move
+            it around your workspace if needed.&nbsp;</p>
+
+
+          <p style="text-align: center;"><a class="button btn-blue" aria-describedby="tooltip248863"
+              data-original-title=""
+              href="https://www.microscope.com/ba410etph-elite-premium-trinocular-phase-contrast-microscope.html"
+              target="_blank" style="text-transform: initial;">Show me this microscope</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="image">
+        <img
+          src="https://www.microscope.com/media/wysiwyg/blog/cropped-image-of-male-scientist-in-latex-gloves-ta-2021-10-14-20-48-59-utc-min.jpg">
+      </div>
+      <div class="text text-align-vmiddle" id="snap">
+        <div>
+          <h3>The best portable research microscope for a chemist on the go:</h3>
+
+          <p>The pocket-sized <a
+              href="https://www.microscope.com/edge-am5218mztw-10x-50x-hdmi-720p-polarizing-metal-handheld-digital-microscope.html"
+              style="text-decoration: none;" target="_blank">Dino-Lite Edge Series AM5218MZTW handheld digital
+              microscope</a> is ready to accompany you wherever your work takes you. The aluminum alloy casing stands up
+            to the elements, so sand and moisture don&rsquo;t reduce its working life. Even in the hands of
+            inexperienced students and new users, this digital microscope is built to last!</p>
+
+          <p>It&rsquo;s designed to smooth out your workflow and makes capturing, annotating, and storing images of your
+            specimens quicker and easier than ever. And with application-specific lighting, you can highlight exactly
+            what you need to see on your sample.</p>
+
+          <p style="text-align: center;"><a class="button btn-blue" aria-describedby="tooltip248863"
+              data-original-title=""
+              href="https://www.microscope.com/edge-am5218mztw-10x-50x-hdmi-720p-polarizing-metal-handheld-digital-microscope.html"
+              target="_blank" style="text-transform: initial;">Show me this microscope</a>
+          </p>
+        </div>
+      </div>
+
+
+      <br />
+    </div>
+
+    <div class="text-box">
+
+      <p>In every state, chemists and their students are pushing the boundaries
+        of their work, and saving money on digital and compound microscopes, without losing any of the features or
+        quality.&nbsp;</p>
+
+      <h3>Every chemistry microscope comes with:</h3>
+
+      <p style="margin-left: 40px;"><strong>&bull;</strong>&nbsp;<strong>A Limited Lifetime Warranty</strong>. If
+        something goes wrong 10 weeks from now or 10 years from now, we&rsquo;ll fix it.</p>
+
+      <p style="margin-left: 40px;"><strong>&bull;</strong>&nbsp;<strong>A 30-day Satisfaction Guarantee</strong>. If
+        you don&rsquo;t love yours right away, just send it back. We&rsquo;ll take it, no questions asked.&nbsp;</p>
+
+      <p style="margin-left: 40px;"><strong>&bull;</strong>&nbsp;<strong>Built-in Confidence</strong>. More than 400
+        colleges across the country work with Microscope.com.</p>
+
+
+      <p>Don&rsquo;t settle for second best. Find a microscope that you have real <em>chemistry</em> with.</p>
+
+
+    </div>
+
+
+    <div class="text-box" style="text-align: center;">
+
+      <p><a class="button btn-blue" aria-describedby="tooltip248863" data-original-title=""
+          href="https://microscope.com/shop/category/compound-microscope-1" target="_blank"
+          style="text-transform: initial;">Show me more</a>
+      </p>
+      <br />
+    </div>
+
+
+  </section>
+
+</body>
+
+</html>

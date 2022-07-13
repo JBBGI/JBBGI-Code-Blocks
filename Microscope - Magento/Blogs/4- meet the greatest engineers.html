@@ -1,0 +1,340 @@
+<!doctype html>
+<html>
+
+<head>
+  <style media="screen" type="text/css">
+    .main-container {
+      font-family: "Roboto", Helvetica, sans-serif;
+    }
+
+    .header-container {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.microscope.com/media/wysiwyg/blog/14.jpg') no-repeat center;
+      background-size: cover;
+      max-width: 100%;
+      height: 15rem;
+      display: flex !important;
+      text-transform: capitalize;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header {
+      color: white;
+      font-weight: 500;
+      font-size: 3.5rem;
+
+    }
+
+    .subheader {
+      color: white;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-align: center;
+
+    }
+
+    .body-container {
+      margin: auto;
+      padding-top: 1.5em;
+      width: 65%;
+      /* height: 400px;
+      background-color: gray; */
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .text-box,
+    .grid-system {
+      width: 100%;
+    }
+
+    .text-box {
+      margin-bottom: 1.5em;
+    }
+
+    .grid-system {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .grid-system-3 {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .text {
+      grid-column: span 3;
+    }
+
+    .grid-system img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 250px;
+      align-self: start;
+
+    }
+
+    .grid-system-3 img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 300px;
+      align-self: start;
+
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    #snap {
+      grid-column: span 2;
+
+    }
+
+    .custom-textprop {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 10px;
+    }
+
+    .text-align-vmiddle {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    @media screen and (max-width: 1200px) {
+
+      .image,
+      .text,
+      #snap {
+        grid-column: span 4;
+      }
+
+
+      .grid-system img {
+        object-fit: cover;
+        max-height: 350px;
+      }
+
+      .body-container {
+        width: 75%;
+      }
+
+      .custom-textprop {
+
+        justify-content: center;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="banner-container">
+
+    <div class="header-container banner-wrapper-general">
+      <div class="text">
+        <h1 class="header">Meet the greatest engineers of all!</h1>
+        <h4 class="subheader">What better way to celebrate National Engineers Week?</h4>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="body-container">
+    <div class="text-box">
+      <p>From the light bulb above you, to the computer you&rsquo;re typing on, you&#39;ve got an engineer to thank for
+        that.</p>
+
+      <p>February 21 - 27 is National Engineers Week. If you&rsquo;re anything like us, you want to use this week to
+        help students and aspiring engineers think back to the giants who helped build the world we live in today. So
+        let&rsquo;s celebrate the greatest engineers of all time, and teach them about:</p>
+
+
+    </div>
+
+    <div class="grid-system">
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/archimedes.png">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong>Archimedes: The Legend</strong></h3>
+
+          <p>Often called the greatest of all classical engineers, Archimedes influenced mathematics, physics,
+            astronomy,
+            and engineering as we know them today. The list of his discoveries is long but includes his formulation of a
+            hydrostatic principle (Archimedes&rsquo; principle) to develop the Archimedes Screw or screw pump;
+            discovering
+            the relationship between the surface and volume of a sphere and its circumscribing cylinder; the Claw of
+            Archimedes, an ancient weapon created to defend Syracuse against assault from the Roman Navy.&nbsp;</p>
+
+        </div>
+      </div>
+
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/davinci.png">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong>Leonardo Da Vinci: Years ahead of his time</strong></h3>
+
+          <p>Whether he was pursuing art, architecture, music, maths or engineering, Da Vinci&rsquo;s discoveries were
+            unimaginable to his contemporaries. His sketchbooks contain outlines for inventions like flying machines,
+            armored vehicles, concentrated solar power, and a double hull.&nbsp;</p>
+        </div>
+      </div>
+
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/wright.png">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong>The Wright Brothers: Helping humankind soar to new heights</strong></h3>
+
+          <p>No list would be complete without Orville and Wilbur Wright, who (like many of us!) were fascinated with
+            flying in childhood. The passion followed them into adulthood, and would ultimately change the world
+            forever.&nbsp;</p>
+
+          <p>Whereas others focused on the propulsion of flying, the Wright Brothers shifted their thinking to
+            aerodynamics and design, which eventually led to developing the modern airplane wing. They&rsquo;re also
+            responsible for developing the three-axis control system for steering in flight.</p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/satya.png">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong>Satya Nadella: Engineer &amp; Microsoft CEO</strong></h3>
+
+          <p>Nadella is an Indian American engineer, business executive, and the ultimate example of hard work and
+            determination paying off. &nbsp;Upon graduating as an electrical engineer in India, he moved to the United
+            States to pursue a higher education, with an M.S. and an MBA. In 1992, his Silicon Valley career got
+            started,
+            when he joined Microsoft. He was one of the first employees to propose cloud computing, and began to impress
+            colleagues and superiors alike, until eventually being named Microsoft&rsquo;s CEO.</p>
+        </div>
+      </div>
+      <br />
+    </div>
+
+    <div class="text-box">
+      <p>Enjoy these features? Follow Microscope.com on&nbsp;<a aria-describedby="tooltip360398" data-original-title=""
+          href="https://www.facebook.com/MicroscopeDotCom" title="">Facebook</a>&nbsp;and&nbsp;<a
+          aria-describedby="tooltip5806" data-original-title="" href="https://www.linkedin.com/company/microscope.com/"
+          title="">LinkedIn</a>&nbsp; for more ways to
+        celebrate National Chemistry Week, and the incredible scientists who are changing our world.&nbsp;</p>
+
+      <p>Your big breakthrough might be just around the corner! We&rsquo;ll get you one step closer with these
+        incredible discounts available until October 29th.&nbsp;</p>
+
+      <h2>Keep your Ion the Savings</h2>
+    </div>
+
+
+    <div class="grid-system">
+
+      <div class="image">
+        <img style=" max-height: 300px" src="https://www.microscope.com/media/wysiwyg/blog/Mask_Group_1.png">
+      </div>
+      <div class="text custom-textprop">
+        <div>
+          <p>The&nbsp;<a aria-describedby="tooltip131862" data-original-title=""
+              href="https://www.microscope.com/omano-om139-infinity-corrected-plan-optics.html" title="">OM139 Compound
+              Laboratory Microscope</a>&nbsp;with infinity plan optics has the features - and the price - your lab
+            needs.&nbsp;</p>
+
+          <p>You&rsquo;ll have superior images and premium Kohler illumination at an unbeatable price.</p>
+
+          <p>Check out our National Chemistry Week sale now to October 29th!&nbsp;</p>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="text-box" style="text-align: center;">
+      <p><a class="button btn-blue" aria-describedby="tooltip248863" data-original-title=""
+          href="https://www.microscope.com/compound-microscopes" target="_blank">Show me more compound microscopes</a>
+      </p>
+      <p>Sale ends October 29th</p>
+      <br />
+    </div>
+    <div class="text-box">
+      <h3><strong>Who is our list missing? Let us know on <a href="https://www.facebook.com/MicroscopeDotCom/"
+            style="text-decoration: none;" target="_blank">Facebook</a>.</strong></h3>
+
+      <p>With the right microscope, brilliant engineers can evaluate even the smallest gear, machine parts and products
+        for flaws and fractures. We want to make sure you&rsquo;re set up, which is why we&rsquo;re engineering big
+        savings for your workspace. From now until March 4th, we&rsquo;re offering major savings on products
+        like&hellip;</p>
+
+    </div>
+
+    <div class="grid-system-3">
+      <div class="box">
+        <div class="image">
+          <img style=" max-height: 400px" src="https://www.microscope.com/media/wysiwyg/blog/Mask_Group_12.png">
+        </div>
+        <div class="text-box">
+          <h3 style="text-align: center;"><a
+              href="https://www.microscope.com/compound-microscopes/omano-om136-monocular-compound-microscope.html">OM136C
+              40X-400X Student Compound Microscope</a></h3>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img style=" max-height: 400px" src="https://www.microscope.com/media/wysiwyg/blog/Mask_Group_11.png">
+        </div>
+        <div class="text-box">
+          <h3 style="text-align: center;"><a
+              href="https://www.microscope.com/omano-om2344-zoom-stereo-microscope.html">OM2344 7X - 45X Zoom Stereo
+              Microscope</a></h3>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img style=" max-height: 400px" src="https://www.microscope.com/media/wysiwyg/blog/Mask_Group_13.png">
+        </div>
+        <div class="text-box">
+          <h3 style="text-align: center;"><a
+              href="https://www.microscope.com/compound-microscopes/omano-omfl600-inverted-fluorescence-compound-microscope.html">OMFL600
+              Inverted Fluorescence Compound Microscope</a></h3>
+        </div>
+      </div>
+      <br />
+    </div>
+
+    <div class="text-box" style="text-align: center;">
+      <p><a class="button btn-blue" aria-describedby="tooltip248863" data-original-title=""
+          href="https://www.microscope.com/compound-microscopes" target="_blank">Check out our Engineering Week Sale
+          now!</a>
+      </p>
+      <p>Sale ends March 4th </p>
+      <br />
+    </div>
+
+
+
+
+
+
+
+  </section>
+</body>
+
+</html>

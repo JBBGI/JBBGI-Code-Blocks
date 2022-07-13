@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+
+<head>
+  <style media="screen" type="text/css">
+    .main-container {
+      font-family: "Roboto", Helvetica, sans-serif;
+    }
+
+    .header-container {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.microscope.com/media/wysiwyg/blog/bg_4_.jpg') no-repeat center;
+      background-size: cover;
+      max-width: 100%;
+      height: 30rem;
+      display: flex !important;
+      text-transform: capitalize;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header {
+      color: white;
+      font-weight: 500;
+      font-size: 3.5rem;
+
+    }
+
+    .subheader {
+      color: white;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-align: center;
+
+    }
+
+    .body-container {
+      margin: auto;
+      padding-top: 1.5em;
+      width: 65%;
+      /* height: 400px;
+      background-color: gray; */
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .text-box,
+    .grid-system {
+      width: 100%;
+    }
+
+    .text-box {
+      margin-bottom: 1.5em;
+    }
+
+    .grid-system {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .grid-system-3 {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .text {
+      grid-column: span 3;
+    }
+
+    .grid-system img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 250px;
+      align-self: start;
+
+    }
+
+    .grid-system-3 img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 300px;
+      align-self: start;
+
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    #snap {
+      grid-column: span 2;
+
+    }
+
+    .custom-textprop {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 10px;
+    }
+
+    .text-align-vmiddle {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    @media screen and (max-width: 1200px) {
+
+      .image,
+      .text,
+      #snap {
+        grid-column: span 4;
+      }
+
+
+      .grid-system img {
+        object-fit: cover;
+        max-height: 350px;
+      }
+
+      .body-container {
+        width: 75%;
+      }
+
+      .custom-textprop {
+
+        justify-content: center;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="banner-container">
+
+    <div class="header-container banner-wrapper-general">
+      <div class="text">
+        <h1 class="header">6 Women Who are Leading the Way in Engineering</h1>
+        <h4 class="subheader">These engineers prove that women belong in engineering, in leadership roles, and even in
+          space!</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="body-container">
+    <div class="text-box">
+      <p>It&rsquo;s no secret that engineering continues to be a male dominated field. But slowly, this is changing, and
+        more and more women are choosing to study and pursue the field.</p>
+
+      <p>Today, we celebrate some of these trailblazers who are paving the way for the next generation of girls.</p>
+
+    </div>
+
+    <div class="grid-system">
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/emily.png">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong>Emily Warren Roebling:&nbsp;</strong></h3>
+
+          <p>You may have heard about the Brooklyn Bridge, but we bet you haven&rsquo;t heard about the woman behind it.
+            Even though she never held a degree in engineering, that didn&rsquo;t stop her from leaving her mark!
+            She&rsquo;s one of the most famous women in engineering of her time, and played a role in the famous bridge
+            so many of us have seen (in life or on the big screen).&nbsp;</p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/ellen.png">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong>Ellen Ochoa:</strong></h3>
+
+          <p>Ellen Ochoa is an American engineer and former astronaut. In 1993, she became the first Hispanic woman to
+            go to space, serving aboard the Space Shuttle Discovery.</p>
+
+          <p>In 2013, she was appointed the Director of the Johnson Space Centre, becoming the first Hispanic and second
+            female director of the Centre.&nbsp;</p>
+
+          <p>Her career has shown that women and girls belong everywhere: in engineering, in leadership positions, and
+            even in space.&nbsp;</p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/beatrix.png">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong>Beatrix Shilling:</strong></h3>
+
+          <p>Beatrix Shilling was as fearless as she was brilliant. She was the fastest female racecar driver of her
+            time, and also helped revolutionize World War II airplane engines!</p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/blodgett.png">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong>Katharine Burr Blodgett:</strong></h3>
+
+          <p>This renowned inventor made major contributions to molecular engineering through her work with
+            monomolecular coatings.&nbsp;</p>
+
+          <p>She was the first woman to receive a Ph.D. in physics from Cambridge University.</p>
+
+          <p>Her contributions advanced lens technology, revolutionizing everything from the glasses you wear, to the
+            microscopes and cameras you use. &nbsp;&nbsp;</p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/hedy.png">
+      </div>
+      <div class="text text-align-vmiddle">
+        <div>
+          <h3><strong>Hedy Lamarr:</strong></h3>
+
+          <p>While the name might be familiar, it likely isn&rsquo;t one you associate with engineering. This
+            Austrian-born actress was also an accomplished inventor.&nbsp;</p>
+
+          <p>Lamarr helped develop an early technique for spread spectrum communications, still valuable in the wireless
+            communications we use today.&nbsp;</p>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+    <div class="text-box">
+      <p>We believe in making STEM accessible for everyone - levelling the playing field. You and your colleagues can
+        get one step closer to the big breakthrough when you have the right tools. So&nbsp; during the Women in
+        Engineering Sale,&nbsp;<b>everything in stock at Microscope.com is on sale.</b></p>
+
+      <h2>Keep inspring</h2>
+    </div>
+
+    <div class="grid-system">
+
+      <div class="image">
+        <img style=" max-height: 300px" src="https://www.microscope.com/media/wysiwyg/blog/Mask_Group_20.png">
+      </div>
+      <div class="text custom-textprop">
+        <div style="width: 70%">
+          <p><a aria-describedby="tooltip147263" data-original-title=""
+              href="https://www.microscope.com/compound-microscopes/omano-om139-infinity-corrected-plan-optics.html"
+              style="text-decoration:none;" target="_blank">The OM129 Compound Laboratory Microscope&nbsp;</a>with
+            infinity plan optimics has the features - and the price - your lab needs.&nbsp;</p>
+
+          <p>You&rsquo;ll have superior images and premium Kohler illumination at an unbeatable price.</p>
+
+        </div>
+
+
+      </div>
+    </div>
+    <div class="text-box" style="text-align: center;">
+      <p><a class="button btn-blue" aria-describedby="tooltip248863" data-original-title=""
+          href="https://www.microscope.com" target="_blank">Get the tools to do good science</a>
+      </p>
+      <p>Sale ends July 7th</p>
+      <br />
+    </div>
+
+
+
+
+
+  </section>
+</body>
+
+</html>

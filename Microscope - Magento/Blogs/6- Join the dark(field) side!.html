@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+
+<head>
+  <style media="screen" type="text/css">
+    .main-container {
+      font-family: "Roboto", Helvetica, sans-serif;
+    }
+
+    .header-container {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.microscope.com/media/wysiwyg/blog/bg_2_.jpg') no-repeat center;
+      background-size: cover;
+      max-width: 100%;
+      height: 30rem;
+      display: flex !important;
+      text-transform: capitalize;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header {
+      color: white;
+      font-weight: 500;
+      font-size: 3.5rem;
+
+    }
+
+    .subheader {
+      color: white;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-align: center;
+
+    }
+
+    .body-container {
+      margin: auto;
+      padding-top: 1.5em;
+      width: 65%;
+      /* height: 400px;
+      background-color: gray; */
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .text-box,
+    .grid-system {
+      width: 100%;
+    }
+
+    .text-box {
+      margin-bottom: 1.5em;
+    }
+
+    .grid-system {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .grid-system-3 {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .text {
+      grid-column: span 3;
+    }
+
+    .grid-system img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 250px;
+      align-self: start;
+
+    }
+
+    .grid-system-3 img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 300px;
+      align-self: start;
+
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    #snap {
+      grid-column: span 2;
+
+    }
+
+    .custom-textprop {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 10px;
+    }
+
+    .text-align-vmiddle {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    @media screen and (max-width: 1200px) {
+
+      .image,
+      .text,
+      #snap {
+        grid-column: span 4;
+      }
+
+
+      .grid-system img {
+        object-fit: cover;
+        max-height: 350px;
+      }
+
+      .body-container {
+        width: 75%;
+      }
+
+      .custom-textprop {
+
+        justify-content: center;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="banner-container">
+
+    <div class="header-container banner-wrapper-general">
+      <div class="text">
+        <h1 class="header">Join the dark(field) side!</h1>
+        <h4 class="subheader">We’re examining the science of Star Wars</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="body-container">
+    <div class="text-box">
+      <h2><strong>How did those planets form? Could they really exist in our universe?&nbsp;</strong></h2>
+
+      <p>It&rsquo;s Star Wars Day, and we&rsquo;re taking a closer look at the science behind our favorite saga. We know
+        you&rsquo;ve been asking these questions for years. Now you know...</p>
+
+    </div>
+
+    <div class="grid-system">
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/blue-light-saber.png">
+      </div>
+      <div class="text">
+        <h3><strong>1. Could I own my own lightsaber one day?</strong></h3>
+
+        <p>The question on everyone&rsquo;s minds! These glowing, 4-foot blades contain a ton of energy that can cut
+          through flesh and melt metal, but don&rsquo;t run so hot that they burn the hand that holds them. Plus, they
+          look super cool. But could we actually create one? Here&rsquo;s what science tells us&hellip;</p>
+
+        <p>The lightsaber is the most iconic of all weapons in the galaxy far, far away.. But could they really
+          exist?&nbsp;</p>
+
+        <p>Scientists have (of course!) looked into it, and the short answer is&hellip; not quite (yet).&nbsp;</p>
+
+        <p>Here&rsquo;s what we know: Lightsabers are a fixed length, super hot (but not hot enough to burn the hand
+          that holds it), and can cut through all materials except other lightsabers.&nbsp;</p>
+
+        <p>Right now the only thing we have here on our planet that can (almost) cut as well as a lightsaber is plasma,
+          the fourth state of matter and ionized gas. Plasma cutters are used in welding, to cut medals.&nbsp;</p>
+
+
+      </div>
+      <br />
+    </div>
+
+
+    <div class="text-box">
+      <h2><strong>But there&rsquo;s a problem:</strong></h2>
+
+      <p><strong>Heat</strong>: In order to work, plasma cutters must be hot. Really hot. Like, 40,000 degrees
+        Fahrenheit hot...</p>
+
+      <p>The plasma coming out of welding tools is also really small (a few millimeters wide), not quite the 3-4 feet we
+        see Luke Skywalker using. Us earthlings also need to wear gloves and protective eyewear when using these tools.
+        A beam of plasma the size of a lightsaber blade would likely produce enough heat to fry the hand of anyone
+        holding it, making it a less-than-ideal weapon.&nbsp;</p>
+
+      <p><strong>Power</strong>: A lightsaber made of plasma would need a ton of power (and a very large power source)
+        to work. Plasma cutters we use are also connected to a car-battery sized source, which would kind of limit the
+        leaps and jumps during a lightsaber duel (and lead to a lot of tripping over power cords!).&nbsp;</p>
+
+      <p><strong>Fights</strong>: It would be tough to duel with two plasma beams, since they would pass right through
+        each other (making it a bit anticlimactic...).</p>
+
+      <p>In conclusion, your dreams of lightsaber showdowns may have to wait. Unless, of course, you&rsquo;re
+        comfortable being connected to a car-battery, tangled up in power cords, wearing fire-proof gear, and relying on
+        a millimeter-sized plasma beam (that can&rsquo;t block your opponent&#39;s beam&hellip;).&nbsp;</p>
+
+
+    </div>
+
+    <div class="grid-system">
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/sand-dunes.png">
+      </div>
+      <div class="text">
+        <h3><strong>2. Can a planet really have two suns?</strong></h3>
+
+        <p>In one of the most iconic scenes from the original movie, Luke Skywalker walks outside his uncle&rsquo;s farm
+          to gaze at two suns on the horizon of his home planet of Tatooine. But can a planet have two suns?</p>
+
+        <p>While our lightsaber battles may be on hold, it turns out that planets orbiting two or more stars is not pure
+          fiction.</p>
+
+        <p>In 2011, NASA&rsquo;s Kepler mission explored the Milky Way Galaxy, in search of other habitable planets.
+          &nbsp;As part of this mission, they discovered a cold planet, made of half rock and half gas, that they named
+          Kepler-16b.&nbsp;</p>
+
+        <p>They may not have found Jabba the Hutt, but they did find something interesting. Kepler-16b was a
+          circumbinary planet: a planet that orbits two stars, instead of one! This led to a series of other discoveries
+          of planets orbiting two suns! The team&rsquo;s studies showed that up to half of all the stars in our galaxy
+          are part of a binary star system!&nbsp;</p>
+
+      </div>
+      <br />
+    </div>
+
+    <div class="text-box">
+      <p>We&rsquo;ve always been a little partial to the power of the dark side! That&rsquo;s why we&rsquo;re putting
+        darkfield microscopes (and everything else) on sale right now. Obi-Wan never told you there could be deals like
+        this.&nbsp;&nbsp;</p>
+
+      <h3><strong>Between now and May 8th, use the force to get the microscopes your workplace needs at the best
+          price.&nbsp;</strong></h3>
+
+
+    </div>
+
+    <div class="grid-system">
+
+      <div class="image">
+        <img style=" max-height: 300px" src="https://www.microscope.com/media/wysiwyg/blog/Mask_Group_16.png">
+      </div>
+      <div class="text custom-textprop" style="grid-column: 2/4;">
+        <div>
+          <p><a
+              href="https://www.microscope.com/specialty-microscopes/darkfield-microscopes/meiji-techno-rzdt-brightfield-darkfield-cmo-stereo-microscope.html"
+              style="text-decoration: none;">The RZDT Brightfield Darkfield CMO Stereo Microscope</a>&nbsp;is the most
+            competitively-priced darkfield microscope today. It&rsquo;s the most affordable way to study marine
+            organisms with a high degree of accuracy.&nbsp;</p>
+
+        </div>
+
+
+      </div>
+      <br />
+    </div>
+    <div class="text-box" style="text-align: center;">
+      <p><a class="button btn-blue" aria-describedby="tooltip248863" data-original-title="" href="#"
+          target="_blank">Join the dark(field) side!</a>
+      </p>
+      <p>Sale ends May 8th</p>
+      <br />
+    </div>
+
+
+
+
+
+
+  </section>
+</body>
+
+</html>

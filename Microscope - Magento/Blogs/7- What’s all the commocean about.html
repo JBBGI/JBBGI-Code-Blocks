@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+
+<head>
+  <style media="screen" type="text/css">
+    .main-container {
+      font-family: "Roboto", Helvetica, sans-serif;
+    }
+
+    .header-container {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.microscope.com/media/wysiwyg/blog/bg_3_.jpg') no-repeat center;
+      background-size: cover;
+      max-width: 100%;
+      height: 30rem;
+      display: flex !important;
+      text-transform: capitalize;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header {
+      color: white;
+      font-weight: 500;
+      font-size: 3.5rem;
+
+    }
+
+    .subheader {
+      color: white;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-align: center;
+
+    }
+
+    .body-container {
+      margin: auto;
+      padding-top: 1.5em;
+      width: 65%;
+      /* height: 400px;
+      background-color: gray; */
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .text-box,
+    .grid-system {
+      width: 100%;
+    }
+
+    .text-box {
+      margin-bottom: 1.5em;
+    }
+
+    .grid-system {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .grid-system-3 {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .text {
+      grid-column: span 3;
+    }
+
+    .grid-system img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 250px;
+      align-self: start;
+
+    }
+
+    .grid-system-3 img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 300px;
+      align-self: start;
+
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    #snap {
+      grid-column: span 2;
+
+    }
+
+    .custom-textprop {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 10px;
+    }
+
+    .text-align-vmiddle {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    @media screen and (max-width: 1200px) {
+
+      .image,
+      .text,
+      #snap {
+        grid-column: span 4;
+      }
+
+
+      .grid-system img {
+        object-fit: cover;
+        max-height: 350px;
+      }
+
+      .body-container {
+        width: 75%;
+      }
+
+      .custom-textprop {
+
+        justify-content: center;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="banner-container">
+
+    <div class="header-container banner-wrapper-general">
+      <div class="text">
+        <h1 class="header">What’s all the commocean about?</h1>
+        <h4 class="subheader">Underwater microscopes are providing new views of the deep ocean</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="body-container">
+    <div class="text-box">
+      <p>Around 95% of our oceans remain unexplored! In fact, we know less about our deep seas than we do about space!
+      </p>
+
+      <p>Scientists are slowly trying to solve the ocean&rsquo;s many mysteries by studying specimens and fossils on the
+        ocean floor. With the invention of new microscopes, like the Benthic Underwater Microscope (BUM) developed at
+        the University of California, San Diego, may finally have the chance to find out what&rsquo;s lurking beneath
+        the waves.&nbsp;</p>
+
+    </div>
+
+    <div class="grid-system">
+      <div class="image">
+        <img src="https://www.microscope.com/media/wysiwyg/blog/underwater.png">
+      </div>
+      <div class="text">
+        <p>This camera can withstand the crushing pressure and combat the darkness of the deep ocean to take microscopic
+          images, videos, and time-lapse shots of organisms in their natural habitat, without removing or harming
+          them.&nbsp;</p>
+
+        <p>Want to know what these scopes are seeing? Check out the gallery&nbsp;<a
+            href="https://theconversation.com/underwater-microscope-provides-new-views-of-ocean-floor-sea-creatures-in-their-natural-setting-62265"
+            style="text-decoration:none;" target="_blank">here.</a></p>
+
+        <p>We&rsquo;ve got the perfect scopes for land-dwellers too. While you may not need an instrument as niche as
+          the BMU, you might need a darkfield microscope that can image marine organisms without sinking your
+          departmental budget.&nbsp;</p>
+
+      </div>
+      <br />
+    </div>
+
+
+    <div class="text-box">
+      <h2><strong>The instrument you need won&rsquo;t drown your department if you shop during the World Ocean Day Sale,
+          running now through June 8th.</strong></h2>
+
+
+    </div>
+
+    <div class="grid-system">
+
+      <div class="image">
+        <img style=" max-height: 300px" src="https://www.microscope.com/media/wysiwyg/blog/Mask_Group_18.png">
+      </div>
+      <div class="text custom-textprop">
+        <div style="width: 70%">
+          <p><a
+              href="https://www.microscope.com/specialty-microscopes/darkfield-microscopes/meiji-techno-rzdt-brightfield-darkfield-cmo-stereo-microscope.html"
+              style="text-decoration:none;" target="_blank">The RZDT Brightfield Darkfield CMO Stereo
+              Microscope</a>&nbsp;is the most competitively-priced darkfield microscope today. It&rsquo;s the most
+            affordable way to study marine organisms with a high degree of accuracy.</p>
+
+        </div>
+
+
+      </div>
+    </div>
+    <div class="text-box" style="text-align: center;">
+      <p><a class="button btn-blue" aria-describedby="tooltip248863" data-original-title=""
+          href="https://www.microscope.com/compound-microscopes" target="_blank">Show me more microscopes on sale</a>
+      </p>
+      <p>Sale ends June 8th</p>
+      <br />
+    </div>
+
+
+
+
+
+
+  </section>
+</body>
+
+</html>

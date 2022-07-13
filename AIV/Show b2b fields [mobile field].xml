@@ -1,0 +1,57 @@
+<!-- 
+Replace TIN/VAT with Mobile Phone 
+
+Created a model field to store the Mobile Phone data.
+Used automated action to copy x_mobile to mobile(in res.partner)
+
+Automated action configs:
+    Model: Contact
+    Trigger: On Creation & Update
+    Action to do: Update the record
+    Data to write:
+        Field: Mobile(res.partner)
+        Evaluation Type: Python Expression
+        Value: record.x_mobile
+
+-->
+
+<?xml version="1.0"?>
+<data inherit_id="address" name="Show b2b fields with mobile" customize_show="True">
+        <xpath expr="//div[@id='div_email']" position="replace">
+              <div t-attf-class="form-group #{error.get('email') and 'o_has_error' or ''} col-lg-4" id="div_email">
+                <!--<label t-attf-class="col-form-label #{mode[1] == 'shipping' and 'label-optional' or ''}" for="email">Email</label>-->
+                <label t-attf-class="col-form-label" for="email">Email</label>
+                <input type="email" name="email" t-attf-class="form-control #{error.get('email') and 'is-invalid' or ''}" t-att-value="'email' in checkout and checkout['email']"/>
+              </div>
+        </xpath>
+        <xpath expr="//div[@id='div_phone']" position="replace">
+              <div t-attf-class="form-group #{error.get('phone') and 'o_has_error' or ''} col-lg-4" id="div_phone">
+                <label class="col-form-label" for="phone">Phone</label>
+                <input type="tel" name="phone" t-attf-class="form-control #{error.get('phone') and 'is-invalid' or ''}" t-att-value="'phone' in checkout and checkout['phone']"/>
+              </div>
+        </xpath>
+        <xpath expr="//div[@id='div_phone']" position="after">
+              <div t-attf-class="form-group #{error.get('mobile') and 'o_has_error' or ''} col-lg-4" id="div_mobile">
+                <label class="col-form-label label-optional" for="x_mobile">Mobile Phone</label>
+                <input type="tel" name="x_mobile" t-attf-class="form-control #{error.get('mobile') and 'is-invalid' or ''}" t-att-value="'x_mobile' in checkout and checkout['x_mobile']"/>
+              </div>
+              <!--  <div t-attf-class="form-group #{error.get('mobile') and 'o_has_error' or ''} col-lg-4" id="div_mobile">-->
+              <!--  <label class="col-form-label label-optional" for="mobile">Mobile Phone</label>-->
+              <!--  <input type="tel" name="mobile" t-attf-class="form-control #{error.get('mobile') and 'is-invalid' or ''}" t-att-value="'mobile' in checkout and checkout['mobile']"/>-->
+              <!--</div>-->
+        </xpath>
+
+        <xpath expr="//div[@id='div_mobile']" position="after">
+            <t t-set="company_warning" t-value="'company_name' in checkout and checkout['company_name'] and not can_edit_company_name"/>
+            <t t-if="mode == ('new', 'billing') or (mode == ('edit', 'billing') and (can_edit_company_name or 'company_name' in checkout and checkout['company_name']))">
+                <div class="w-100"/>
+                <div t-attf-class="form-group #{error.get('company_name') and 'o_has_error' or ''} col-lg-12 mb-0 div_company">
+                    <label class="col-form-label font-weight-normal label-optional" for="company_name">Company Name</label>
+                    <input type="text" name="company_name" t-attf-class="form-control #{error.get('company_name') and 'is-invalid' or ''}" t-att-value="'commercial_company_name' in checkout and checkout['commercial_company_name'] or 'company_name' in checkout and checkout['company_name']" t-att-readonly="'1' if company_warning else None"/>
+                    <small t-if="company_warning" class="form-text text-muted d-block mt-1 mb-2">Changing company name is not allowed once document(s) have been issued for your account. Please contact us directly for this operation.</small>
+                    <div t-if="not company_warning" class="form-text text-muted d-block mb-3"></div>
+                </div>
+
+            </t>
+        </xpath>
+    </data>

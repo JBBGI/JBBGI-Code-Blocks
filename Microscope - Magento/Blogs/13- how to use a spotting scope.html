@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+
+<head>
+  <style media="screen" type="text/css">
+    .main-container {
+      font-family: "Roboto", Helvetica, sans-serif;
+    }
+
+    .header-container {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.microscope.com/media/wysiwyg/blog/woman-min.jpg') no-repeat 0 26%;
+      background-size: cover;
+      max-width: 100%;
+      height: 30rem;
+      display: flex !important;
+      text-transform: capitalize;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header {
+      color: white;
+      font-weight: 500;
+      font-size: 3.5rem;
+
+    }
+
+    .subheader {
+      color: white;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-align: center;
+
+    }
+
+    .body-container {
+      margin: auto;
+      padding-top: 1.5em;
+      width: 65%;
+      /* height: 400px;
+      background-color: gray; */
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .text-box,
+    .grid-system {
+      width: 100%;
+    }
+
+    .text-box {
+      margin-bottom: 1.5em;
+    }
+
+    .grid-system {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .grid-system-3 {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+
+
+    .text {
+      grid-column: span 3;
+    }
+
+    .grid-system img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 250px;
+      align-self: start;
+
+    }
+
+    .grid-system-3 img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 300px;
+      align-self: start;
+
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .image img {
+      border-radius: 20px;
+    }
+
+
+    #snap {
+      grid-column: span 2;
+
+    }
+
+    .custom-textprop {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 10px;
+    }
+
+    .text-align-vmiddle {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    @media screen and (max-width: 1200px) {
+
+      .image,
+      .text,
+      #snap {
+        grid-column: span 4;
+      }
+
+
+      .grid-system img {
+        object-fit: cover;
+        max-height: 350px;
+      }
+
+      .body-container {
+        width: 75%;
+      }
+
+      .custom-textprop {
+
+        justify-content: center;
+      }
+
+      .box {
+        grid-column: span 4;
+
+      }
+
+      .box p {
+        text-align: center;
+
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="banner-container">
+
+    <div class="header-container banner-wrapper-general">
+      <div class="text">
+        <h1 class="header">How to use a spotting scope like a pro!</h1>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="body-container">
+
+    <div class="text-box">
+      <p>Maybe you&rsquo;re in the market for a new spotting scope. Or maybe you just dug one up out of the back of your
+        closet.&nbsp;</p>
+
+      <p>Now what?</p>
+
+      <h3><strong>With these simple tips, you&rsquo;ll be using your spotting scope like a professional in no time. Once
+          you&rsquo;ve unboxed your new scope (or dusted off your old one), read this:</strong></h3><br />
+
+      <p><strong>Location</strong>:&nbsp;Whether you&rsquo;re watching birds, whales or deer, take the time to scope out
+        the area and set up in the right spot. Don&rsquo;t rush this step!</p>
+
+      <p><strong>Call in support</strong>:&nbsp;Powerful magnification is great! But it means that the smallest shake of
+        your hand can blur your view. Bring along the right tripod (with adjustable legs and a pan head for smooth
+        scanning).&nbsp;</p>
+
+      <p><strong>Prep for the elements</strong>:&nbsp;With the right scope, the elements don&rsquo;t have to stand in
+        your way. Opt for a water-proof, fog-proof model to take the worry out of your adventure. Just make sure you
+        dress the part, too!</p>
+
+      <p><strong>Take breaks</strong>:&nbsp;As exciting as your subject may be, it&rsquo;s important to rest your eyes
+        regularly.&nbsp;</p>
+
+      <p><strong>Invest in the best gear</strong>:&nbsp;Our &ldquo;Adventure at Any Age&rdquo; sale is on now to June
+        3rd. The best Smithsonian spotting scopes are available on sale, right now.</p>
+
+    </div>
+
+
+    <div class="grid-system-3">
+
+      <div class="image">
+        <img style=" max-height: 400px"
+          src="https://www.microscope.com/media/catalog/product/cache/2/image/1800x/040ec09b1e35df139433887a97daa66f/s/m/smithsonian-spotting-scope-set.png">
+      </div>
+      <div class="text custom-textprop" id="snap">
+        <div>
+          <h3><a
+              href="https://www.microscope.com/smithsonian/best-spotting-scope-for-birding-smithsonian-great-outdoors-spotting-scope-set.html"
+              style="text-decoration:none;" target="_blank">The Best Spotting Scope for Birding - Smithsonian Great
+              Outdoors Spotting Scope Set</a></h3>
+
+          <p>Whether you&rsquo;re bird watching in your backyard, doing fieldwork, or spotting wildlife on your next
+            outdoor adventure, these Smithsonian spotting scopes make for extreme close-up views.</p>
+
+          <p>Get closer to nature than ever before and see clear, crisp, fine details of birds and wildlife with the
+            20-60x 60mm objective lens, twist up eyepiece feature and adjustable views.</p>
+
+          <p>They are lightweight, waterproof, fog proof, all-weather durable, and up for any adventure you are!</p>
+
+
+        </div>
+
+
+      </div>
+      <br />
+    </div>
+    <div class="text-box">
+      <h3><strong>When you order yours, you also get:</strong></h3><br />
+
+      <p style="margin-left: 40px;"><strong>&bull; </strong>Tabletop tripod</p>
+      <p style="margin-left: 40px;"><strong>&bull; </strong>Spotting scope case with detachable shoulder strap</p>
+      <p style="margin-left: 40px;"><strong>&bull; </strong>Special phone adaptor, that allows you to take photos &amp;
+        videos of your binocular view</p>
+      <p style="margin-left: 40px;"><strong>&bull; </strong>The authorized Smithsonian Bird-Watching Guide, full of
+        birding tips and information</p>
+      <p style="margin-left: 40px;"><strong>&bull; </strong>Rainguard &amp; objective lens cover</p>
+      <p style="margin-left: 40px;"><strong>&bull; </strong>Step-by-step spotting scope instruction guide</p>
+
+    </div>
+
+    <div class="text-box" style="text-align: center;">
+
+
+
+      <p><a class="button btn-blue" aria-describedby="tooltip248863" data-original-title=""
+          href="https://www.microscope.com" target="_blank">SHOP NOW</a>
+      </p>
+      <br />
+    </div>
+
+  </section>
+
+
+</body>
+
+</html>

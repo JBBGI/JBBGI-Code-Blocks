@@ -1,0 +1,506 @@
+<!doctype html>
+<html>
+
+<head>
+  <style media="screen" type="text/css">
+    .main-container {
+      font-family: "Roboto", Helvetica, sans-serif;
+    }
+
+    .header-container {
+      background: no-repeat;
+      background-size: cover;
+      max-width: 100%;
+      height: 30rem;
+      display: flex !important;
+      text-transform: capitalize;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header {
+      color: white;
+      font-weight: 500;
+      font-size: 3.5rem;
+
+    }
+
+    .subheader {
+      color: white;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-align: center;
+
+    }
+
+    .body-container {
+      margin: auto;
+      padding-top: 1.5em;
+      width: 65%;
+      /* height: 400px;
+      background-color: gray; */
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .text-box,
+    .grid-system {
+      width: 100%;
+    }
+
+    .text-box {
+      margin-bottom: 1.5em;
+    }
+
+    .grid-system {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .grid-system-3 {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .grid-system-2 {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+
+    .text {
+      grid-column: span 3;
+    }
+
+    .grid-system img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 250px;
+      align-self: start;
+
+    }
+
+    .grid-system-3 img,
+    .grid-system-2 img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 300px;
+      align-self: start;
+
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .image img {
+      border-radius: 10px;
+      box-shadow: 10px 10px 6px -6px #777;
+
+    }
+
+    #snap {
+      grid-column: span 2;
+
+    }
+
+    .custom-textprop {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 10px;
+    }
+
+    .text-align-vmiddle {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    @media screen and (max-width: 1200px) {
+
+      .image,
+      .text,
+      #snap {
+        grid-column: span 4;
+      }
+
+
+      .grid-system img {
+        object-fit: cover;
+        max-height: 350px;
+      }
+
+      .body-container {
+        width: 75%;
+      }
+
+      .custom-textprop {
+
+        justify-content: center;
+      }
+
+      .box {
+        grid-column: span 4;
+
+      }
+
+      .box p {
+        text-align: center;
+
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="banner-container">
+
+    <div class="header-container banner-wrapper-general"
+      style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.microscope.com/media/wysiwyg/blog/Veterinarians_2__1.jpg'); background-position: 0% 70%;">
+      <div class="text">
+        <h1 class="header" style="width: 80%; margin:auto">The best microscopes for veterinarians</h1>
+        <h4 class="subheader">Veterinarians are getting more from their microscope</h4>
+
+      </div>
+    </div>
+    <br />
+  </section>
+
+
+  <section class="body-container">
+    <div class="text-box">
+
+      <p>&nbsp;</p>
+
+      <p>
+        For over two decades,
+        <a href="http://www.microscope.com">Microscope.com</a> has been working
+        with research institutions, labs, private businesses and universities
+        across the USA to push the boundaries of their research with value-priced,
+        packed-with-features microscopes and accessories.
+      </p>
+
+      <h3 style="text-align: center">
+        <a href="https://www.microscope.com/specialty-microscopes" style="text-decoration: none"
+          target="_blank">Veterinarians across the country are spending up to 90% less on microscopy equipment by ordering from Microscope.com.
+        </a>
+      </h3>
+      <br />
+
+      <p>Vets across the United States are already getting their microscopy tools from Microscope.com. Do they know
+        something you don&rsquo;t?</p>
+
+      <p>Omano microscopes are way better than the Amscope you&rsquo;re familiar with - better optics, sturdier
+        construction, better expertise poured into them.</p>
+
+
+      <h3>Every microscope comes with:</h3>
+
+      <p style="margin-left: 40px;"><strong>&bull;</strong>&nbsp;<strong>A Limited Lifetime Warranty</strong>. If
+        something goes wrong 10 weeks from now or 10 years from now, we&rsquo;ll fix it.</p>
+
+      <p style="margin-left: 40px;"><strong>&bull;</strong>&nbsp;<strong>A 30-day Satisfaction Guarantee</strong>. If
+        you don&rsquo;t love yours right away, just send it back. We&rsquo;ll take it, no questions asked.&nbsp;</p>
+
+      <p style="margin-left: 40px;"><strong>&bull;</strong>&nbsp;<strong>Built-in Confidence</strong>. More than 400
+        colleges across the country work with Microscope.com.</p>
+
+
+      <p>In every state, <strong>veterinarians and their students</strong> are pushing the boundaries of their work, and
+        saving money on digital and compound microscopes, without losing any of the features or quality.</p>
+
+
+    </div>
+
+    <div class="grid-system-3">
+      <div class="image">
+        <img
+          src="https://www.microscope.com/media/wysiwyg/blog/senior-woman-scientist-doing-investigation-using-m-2021-08-30-00-04-41-utc-min.jpg" />
+      </div>
+      <div class="text text-align-vmiddle" id="snap">
+        <div>
+          <h3>The best microscope for veterinarians:</h3>
+
+          <p>
+            More than 400 universities spanning every corner of the U.S. trust Microscope.com to deliver value to their
+            programs, so students can learn in hands-on, engaging ways.
+          </p>
+
+          <p>
+            After two decades, the best-rated option for students and professors
+            is the
+            <a href="https://www.microscope.com/compound-microscopes/omano-om36-compound-microscope.html"
+              style="text-decoration: none" target="_blank">OM36 40X-1000X Compound Student Microscope</a>. This
+            low-cost, rugged microscope stands up to hard use in the lab
+            or clinic (and hard use from inexperienced users&hellip; like your
+            enthusiastic veterinary students).&nbsp;
+          </p>
+
+        </div>
+      </div>
+
+      <div class="image">
+        <img style="border: 1px solid rgba(85, 85, 85, 0.2)"
+          src="https://www.microscope.com/media/wysiwyg/blog/dinolite.jpg" />
+      </div>
+      <div class="text text-align-vmiddle" id="snap">
+        <div>
+          <h3>For the veterinarians who likes the newest tech:</h3>
+
+          <p>
+            You can&#39;t top the newly introduced<a
+              href="https://www.microscope.com/edge-wf4915zt-20x-220x-1-3mp-amr-edof-wifi-handheld-digital-microscope-1.html"
+              style="text-decoration: none" target="_blank">
+              Dino-Lite Edge WF4915ZT 1.3MP Digital USB Microscope 20x~220x AMR EDOF WIFI</a>. Designed with a portable,
+            cordless option, this digital microscope goes wherever it’s needed.
+          </p>
+          <p>Capturing images, annotating them, and storing them properly has never been smoother and easier, with
+            integrated, user-friendly software (that even your less experienced colleagues will find intuitive to use).
+            And with application-specific lighting, you can highlight even a small area of your patient.</p>
+
+        </div>
+      </div>
+
+      <div class="image">
+        <img
+          src="https://www.microscope.com/media/wysiwyg/blog/scientist-in-data-laboratory-2021-09-24-03-57-12-utc-min.JPG" />
+      </div>
+      <div class="text text-align-vmiddle" id="snap">
+        <div>
+          <h3>The premium option for veterinarians:</h3>
+
+          <p>
+
+            <a href="https://www.microscope.com/meiji-techno-mt5200-dermatology-laboratory-microscope.html"
+              style="text-decoration: none" target="_blank"> MT5200 Dermatology Laboratory Microscope</a>
+            was designed for you and your patients in mind. This new instrument is the go-to choice for clinics,
+            hospitals, and health centers across the country, for good reason. With Infinity Corrected Optics, 5 Plan
+            Objective Lenses, cool white LED illumination, and ergonomic placement controls, this scope will take your
+            practice to new heights. You’ll see sharper, clearer, crisper images than ever before. And with a Limited
+            Lifetime Warranty, this tool is a long-term investment for your practice. If you run into issues 10 weeks or
+            10 years down the road, we’ll fix it.
+          </p>
+
+        </div>
+      </div>
+      <div class="image">
+        <img style="border: 1px solid rgba(85, 85, 85, 0.2)"
+          src="https://www.microscope.com/media/wysiwyg/blog/2314-AM4113ZT.jpg" />
+      </div>
+      <div class="text text-align-vmiddle" id="snap">
+        <div>
+          <h3>The reliable option for the budget-conscious veterinary clinic:</h3>
+
+          <p>
+            The pocket-sized
+            <a href="https://microscope.com/shop/dino-lite-am4113zt-digital-usb-microscope-1060?category=85#attr=1694,1696,1697,1698,1701,1699,1700,4080,4088,4387,4390,4079"
+              style="text-decoration: none" target="_blank">Dino-Lite AM4113ZT 1.3MP USB Digital Microscope Polarizing
+              10x-50x, 220x</a>
+            is ready to accompany you wherever your work takes you. The aluminium alloy casting stands up to just about
+            any test, so hard use and office spills don’t reduce its working life. Even in the hands of inexperienced
+            students and new users, this digital microscope is built to last!&nbsp;
+          </p>
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="text-box">
+        <h4>Join thousands of veterinarians from every State in making your next microscopy investment.</h4>
+    </div>
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style media="screen" type="text/css">
+    .main-container {
+      font-family: "Roboto", Helvetica, sans-serif;
+    }
+
+    .header-container {
+      background: no-repeat;
+      background-size: cover;
+      max-width: 100%;
+      height: 30rem;
+      display: flex !important;
+      text-transform: capitalize;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header {
+      color: white;
+      font-weight: 500;
+      font-size: 3.5rem;
+
+    }
+
+    .subheader {
+      color: white;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-align: center;
+
+    }
+
+    .body-container {
+      margin: auto;
+      padding-top: 1.5em;
+      width: 65%;
+      /* height: 400px;
+      background-color: gray; */
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .text-box,
+    .grid-system {
+      width: 100%;
+    }
+
+    .text-box {
+      margin-bottom: 1.5em;
+    }
+
+    .grid-system {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .grid-system-3 {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .grid-system-2 {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+
+    .text {
+      grid-column: span 3;
+    }
+
+    .grid-system img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 250px;
+      align-self: start;
+
+    }
+
+    .grid-system-3 img,
+    .grid-system-2 img {
+      object-fit: cover;
+      /* width: 100%; */
+      max-width: 300px;
+      align-self: start;
+
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .image img {
+      border-radius: 10px;
+      box-shadow: 10px 10px 6px -6px #777;
+
+    }
+
+    #snap {
+      grid-column: span 2;
+
+    }
+
+    .custom-textprop {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 10px;
+    }
+
+    .text-align-vmiddle {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    @media screen and (max-width: 1200px) {
+
+      .image,
+      .text,
+      #snap {
+        grid-column: span 4;
+      }
+
+
+      .grid-system img {
+        object-fit: cover;
+        max-height: 350px;
+      }
+
+      .body-container {
+        width: 75%;
+      }
+
+      .custom-textprop {
+
+        justify-content: center;
+      }
+
+      .box {
+        grid-column: span 4;
+
+      }
+
+      .box p {
+        text-align: center;
+
+      }
+
+    }
+  </style>
+

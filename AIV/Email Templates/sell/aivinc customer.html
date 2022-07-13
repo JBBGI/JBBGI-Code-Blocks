@@ -1,0 +1,80 @@
+
+        <div style="box-sizing:border-box;font-size:13px;background-color: #F1F1F1;"><br>
+            <table cellspacing="0" cellpadding="0" align="center" style="box-sizing:border-box;border-collapse:collapse;background-color: #fff;max-width: 700px; width:100%" width="100%">
+                <tbody><tr>
+                    <td>
+                        <div style="box-sizing:border-box;font-size:13px;width:80%; margin: auto; padding: 33.6px 0;" width="80%">
+                            <img t-attf-src="/web/image/website/{{object.company_id.id}}/logo/" style="border-style: none; box-sizing: border-box; vertical-align: middle; height: 5em; ">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 33.6px auto ;">
+                        <table width="100%" align="center" style="box-sizing:border-box;border-collapse:collapse;text-align: center;">
+                            <tbody><tr>
+                                <td>
+                                    <h2 align="left" style="box-sizing:border-box;caret-color:#37352f;position:relative;font-size:19.5px;color:#091124;line-height:1.2;font-weight:500;margin: 0 auto 18px;width:80%" t-out="Thank You for Contacting {{object.company_id.name}}!" width="80%"></h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4 align="left" style="box-sizing:border-box;font-size:15.6px;color:#091124;line-height:1.2;font-weight:500;margin: 0 auto;width:80%" width="80%">
+                                        AIV is an ISO 13485:2016 certified facility. AIV strives to
+                                        provide you cost effective options to service equipment and
+                                        flexible solutions to best suit your needs.
+                                    </h4>
+                                    <br>
+                                    <hr style="border-top-color:#00529f;border-top-style:dashed;border-top-width:1px;border-left-width:0px;border-bottom-width:0px;border-right-width:0px;overflow-y:visible;overflow-x:visible;height:0px;box-sizing:content-box;width:80%;border-width: 0;margin:24px auto 12px ;border-top: 1px dashed #00529f" width="80%">
+
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div style="box-sizing:border-box;font-size:13px;width:80%;margin: auto;padding-bottom: 33.6px;" width="80%">
+                            <p style="margin:0px;box-sizing:border-box;font-size:13px;">Hi
+                                <t t-esc="object.name and object.name.title().split()[0] or There" data-oe-t-inline="true"></t>,
+                            </p><br>
+                            <p style="margin:0px;box-sizing:border-box;font-size:13px;">We have received your request to sell your IV pump. Our sales
+                                representatives will contact you with a quote once your request has been reviewed.</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div style="box-sizing:border-box;font-size:13px;width:80%;margin: auto;padding-top:33.6px" width="80%">
+                            <p style="margin:0px;box-sizing:border-box;font-size:13px;">For more information, please contact us at:</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" style="padding: 12px;">
+                        <div style="box-sizing:border-box;font-size:13px;width: 80%;margin: auto;" width="80%">
+                            <img src="/web/image/9388/phone.png" width="20px" style="border-style:none;box-sizing:border-box;vertical-align:middle;width: 20px;" height="20">
+                            <a t-attf-href="tel:{{ object.company_id.phone }}" target="_blank" style="box-sizing:border-box;background-color:transparent;color: #1fa2d6; text-decoration: none; " t-esc="object.company_id.phone"></a>
+                            <br>
+                            <img src="/web/image/9387/mail.jpg" width="20px" "="" style="border-style:none;box-sizing:border-box;vertical-align:middle;width: 20px;" height="20">
+                                                    <a t-attf-href=" mailto:{{ object.company_id.email }}" target="_blank" style="box-sizing:border-box;background-color:transparent;color: #1fa2d6; text-decoration: none; " t-esc="object.company_id.email "></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; font-style: italic; color: #1D53A0;padding: 12px 0;">
+                        <p align="center" style="margin:0px;box-sizing:border-box;font-size:13px;">We thank you for your business and look forward to serving your needs in the
+                            future.</p>
+                    </td>
+                </tr>
+                <tr align="center" style="background-color: #444444;max-width: 700px;">
+                    <td style="width: 100%; color: #fff; text-align: center;">
+                        <p style="box-sizing:border-box;font-size:13px;margin-top: 12px; margin-bottom: 12px;">Copyright © 2022 <t t-out="object.company_id.name" data-oe-t-inline="true">
+                            </t>. All rights reserved.
+                        </p>
+                    </td>
+                </tr>
+            </tbody></table><br>
+        </div>
+

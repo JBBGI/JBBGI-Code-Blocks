@@ -1,0 +1,422 @@
+<t t-name="website.request-a-quote">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty">
+        <form action="/website_form/" method="post" class="s_website_form container-fluid mt32 o_fake_not_editable" enctype="multipart/form-data" data-name="Form Builder" data-model_name="crm.lead" data-success_page="/contactus-thank-you" _lpchecked="1">
+          <div class="container">
+            <h1 class="o_form_heading o_fake_editable" spellcheck="false">
+              <font style="background-color:#fff;font-size:36px" class="text-beta">Request a Quote</font>
+            </h1>
+            <div class="row form-group form-field d-none">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="team_id">
+  </label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="team_id" value="1" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"/>
+              </div>
+            </div>
+            <div class="row form-group form-field d-none">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="user_id">
+  </label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="user_id" value="75788"/>
+              </div>
+            </div>
+            <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="contact_name">Name</label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="contact_name" required=""/>
+              </div>
+            </div>
+            <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="name">Subject</label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="name" t-attf-value="Quote Request for #{request.env['product.product'].search([('default_code', '=', request.params.get('id'))]).name}" required=""/>
+              </div>
+            </div>
+            <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="partner_name">Company Name</label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="partner_name" required=""/>
+              </div>
+            </div>
+            <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="email_from">Email</label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="email_from" required=""/>
+              </div>
+            </div>
+            <div class="form-group row form-field o_fake_not_editable">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="phone">Phone Number</label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="phone"/>
+              </div>
+            </div>
+            
+            <div class="row form-group form-field">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label" for="state_id">
+                      State
+                  </label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <select class="form-control o_website_form_input" name="state_id" required="false">
+                    <option value="10">Alaska (US)</option>
+                    <option value="9">Alabama (US)</option>
+                    <option value="70">Armed Forces Pacific (US)</option>
+                    <option value="12">Arkansas (US)</option>
+                    <option value="60">American Samoa (US)</option>
+                    <option value="11">Arizona (US)</option>
+                    <option value="13">California (US)</option>
+                    <option value="14">Colorado (US)</option>
+                    <option value="15">Connecticut (US)</option>
+                    <option value="17">District of Columbia (US)</option>
+                    <option value="16">Delaware (US)</option>
+                    <option value="18">Florida (US)</option>
+                    <option value="61">Federated States of Micronesia (US)</option>
+                    <option value="19">Georgia (US)</option>
+                    <option value="62">Guam (US)</option>
+                    <option value="20">Hawaii (US)</option>
+                    <option value="24">Iowa (US)</option>
+                    <option value="21">Idaho (US)</option>
+                    <option value="22">Illinois (US)</option>
+                    <option value="23">Indiana (US)</option>
+                    <option value="25">Kansas (US)</option>
+                    <option value="26">Kentucky (US)</option>
+                    <option value="27">Louisiana (US)</option>
+                    <option value="42">Massachusetts (US)</option>
+                    <option value="41">Maryland (US)</option>
+                    <option value="28">Maine (US)</option>
+                    <option value="63">Marshall Islands (US)</option>
+                    <option value="43">Michigan (US)</option>
+                    <option value="44">Minnesota (US)</option>
+                    <option value="46">Missouri (US)</option>
+                    <option value="64">Northern Mariana Islands (US)</option>
+                    <option value="45">Mississippi (US)</option>
+                    <option value="29">Montana (US)</option>
+                    <option value="36">North Carolina (US)</option>
+                    <option value="37">North Dakota (US)</option>
+                    <option value="30">Nebraska (US)</option>
+                    <option value="32">New Hampshire (US)</option>
+                    <option value="33">New Jersey (US)</option>
+                    <option value="34">New Mexico (US)</option>
+                    <option value="31">Nevada (US)</option>
+                    <option value="35">New York (US)</option>
+                    <option value="38">Ohio (US)</option>
+                    <option value="39">Oklahoma (US)</option>
+                    <option value="40">Oregon (US)</option>
+                    <option value="47">Pennsylvania (US)</option>
+                    <option value="66">Puerto Rico (US)</option>
+                    <option value="65">Palau (US)</option>
+                    <option value="48">Rhode Island (US)</option>
+                    <option value="49">South Carolina (US)</option>
+                    <option value="50">South Dakota (US)</option>
+                    <option value="51">Tennessee (US)</option>
+                    <option value="52">Texas (US)</option>
+                    <option value="53">Utah (US)</option>
+                    <option value="55">Virginia (US)</option>
+                    <option value="67">Virgin Islands (US)</option>
+                    <option value="54">Vermont (US)</option>
+                    <option value="56">Washington (US)</option>
+                    <option value="58">Wisconsin (US)</option>
+                    <option value="57">West Virginia (US)</option>
+                    <option value="59">Wyoming (US)</option>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group form-field">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="country_id">
+                      Country
+                  </label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <select class="form-control o_website_form_input" name="country_id">
+                  <option value="233">United States</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row form-field o_website_form_required_custom o_fake_not_editable">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="description">Additional Info</label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <textarea class="form-control o_website_form_input" name="description" required=""/>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                <button class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text">Send</button>
+                <span id="o_website_form_result"/>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </t>
+  </t>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <data inherit_id="website_sale.product" priority="4">
+    <xpath expr="//div[@id='wrap']" position="replace">
+      <div itemscope="itemscope" itemtype="http://schema.org/Product" id="wrap" class="js_sale">
+        <section t-attf-class="container py-2 oe_website_sale #{'discount' if combination_info['has_discounted_price'] else ''}" id="product_detail" t-att-data-view-track="view_track and '1' or '0'">
+          <div class="row no-gutters">
+            <div class="col-12">
+              <t t-if="product.public_categ_ids" t-set="category" t-value="product.public_categ_ids[0]"/>
+              <t t-if="product.public_categ_ids" t-set="cat_breadcrumbs" t-value="category.get_category_heirarchy()"/>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="/">Home</a>
+                </li>
+                <t t-if="category">
+                  <t t-foreach="cat_breadcrumbs" t-as="cat">
+                    <li class="breadcrumb-item">
+                      <a t-attf-href="/{{cat[1]}}" t-esc="cat[0]"/>
+                    </li>
+                  </t>
+                </t>
+                <li class="breadcrumb-item active">
+                  <span t-field="product.name"/>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="d-flex flex-column flex-lg-row justify-content-lg-between position-relative">
+            <div class="product__image-box">
+              <t t-call="website_sale.shop_product_carousel"/>
+            </div>
+            <div class="col-12 col-lg-5 col-xl-6 px-0 px-lg-3 pt-3 pt-lg-0">
+              <h1 itemprop="name" t-field="product.name" class="pr-xl-5">Product Name</h1>
+              <span itemprop="url" style="display:none;" t-esc="product.website_url"/>
+              <div class="availability_messages o_not_editable"/>
+              <span t-if="product.type in ['consu','product'] and product.inventory_availability == 'never'" class="text-success mt16">In Stock</span>
+              <hr/>
+              <div>
+                <t t-if="product.x_warranty_period == 'new'">
+                  <img class="img img-fluid banner-pad mb-2" src="/web/image/33894"/>
+                </t>
+                <t t-if="product.x_warranty_period == 'new_12m'">
+                  <img class="img img-fluid banner-pad mb-2" src="/web/image/34056"/>
+                </t>
+                <t t-if="product.x_warranty_period == 'refurbished_90d'">
+                  <img class="img img-fluid banner-pad mb-2" src="/web/image/33895"/>
+                </t>
+                <t t-if="product.x_warranty_period == 'new_3year'">
+                  <img class="img img-fluid banner-pad mb-2" src="/web/image/51459"/>
+                </t>
+                <!--<t t-if="product.description_sale"><p><span t-field="product.description_sale"/></p></t>-->
+                <p t-if="product.description" t-field="product.description" class="pr-xl-5 text-orange" placeholder="A short description that will also appear on documents."/>
+              </div>
+              <p class="mb16" t-if="product.default_code">
+                <b>Product Code:</b>
+                <span t-field="product.default_code"/>
+              </p>
+              <meta itemprop="mpn" t-attf-content="{{product and product.default_code}}"/>
+              <div itemprop="brand" itemtype="http://schema.org/Brand" itemscope="">
+                <p class="mb0" t-if="product.product_brand_id">
+                  <b>Manufacturer:</b>
+                  <span t-field="product.product_brand_id"/>
+                </p>
+                <meta itemprop="name" t-att-content="product.product_brand_id.name"/>
+              </div>
+              <p t-if="product.x_shipping_info" class="mb0">
+                <b>Shipping Info:</b>
+                <span t-field="product.x_shipping_info"/>
+              </p>
+              <p t-if="product.weight" class="mb0"><b>Shipping Weight:</b><span t-field="product.weight"/>lbs
+                              <span t-esc="'({:.2f}kg)'.format(product.weight * 0.453592)"/></p>
+              <p t-if="product.x_shipping_dimensions" class="mb0">
+                <b>Shipping Dimensions:</b>
+                <span t-esc="product.x_shipping_dimensions"/>
+              </p>
+              <hr style="margin-bottom: 0"/>
+              <div class="detail-icons-1 oe_structure d-flex flex-row justify-content-start">
+                <t t-if="product.public_categ_ids" t-set="cat_group" t-value="' '.join(product.public_categ_ids.mapped('name'))"/>
+                <t t-set="low_price_products" t-value="['Reagent', 'Consumable', 'Essential', 'Solvent', 'Accessories']"/>
+                <!--USP BADGES-->
+                <t t-if="product.x_warranty_period == 'refurbished_90d'">
+                  <div class="row d-md-flex">
+                    <div class="col-3 col-md-3 pr-4 d-flex justify-content-center align-items-center">
+                      <img class="fill-blue svg-inject" data-src="/web/image/43888/refurbished-to-oem-specs-08.svg" alt="Refurbished to OEM Specs"/>
+                    </div>
+                    <div class="col-3 col-md-3 pr-4 d-flex justify-content-center align-items-center">
+                      <img class="fill-blue svg-inject" data-src="/web/image/43884/financing-04.svg" alt="Financing Available"/>
+                    </div>
+                    <div class="col-3 col-md-3 pr-4 d-flex justify-content-center align-items-center">
+                      <img class="fill-blue svg-inject" data-src="/web/image/43889/30day-01.svg" alt="30-day Satisfaction Guaraantee"/>
+                    </div>
+                    <div class="col-3 col-md-3 pr-4 d-flex justify-content-center align-items-center">
+                      <img class="fill-blue svg-inject" data-src="/web/image/43887/nationwide-06.svg" alt="Nationwide On-Site Service"/>
+                    </div>
+                  </div>
+                </t>
+                <t t-else="">
+                  <div class="row d-md-flex">
+                    <div class="col-3 col-md-3 pr-4 d-flex justify-content-center align-items-center">
+                      <img class="fill-blue svg-inject" data-src="/web/image/43886/1980.svg" alt="Serving Clinical Labs Since 1980"/>
+                    </div>
+                    <div class="col-3 col-md-3 pr-4 d-flex justify-content-center align-items-center">
+                      <img class="fill-blue svg-inject" data-src="/web/image/43889/30day-01.svg" alt="30-day Satisfaction Guarantee"/>
+                    </div>
+                    <div class="col-3 col-md-3 pr-4 d-flex justify-content-center align-items-center">
+                      <img class="fill-blue svg-inject" data-src="/web/image/43900/price-matching-07.svg" alt="Price Matching"/>
+                    </div>
+                    <div t-if="product.public_categ_ids and any(x in cat_group for x in low_price_products)" class="col-3 col-md-3 pr-4 d-flex justify-content-center align-items-center">
+                      <img class="fill-blue svg-inject" data-src="/web/image/43885/guaranteed-05.svg" alt="Guaranteed On-time"/>
+                    </div>
+                    <div t-elif="not product.public_categ_ids" class="col-3 col-md-3 pr-4 d-flex justify-content-center align-items-center">
+                      <img class="fill-blue svg-inject" data-src="/web/image/43885/guaranteed-05.svg" alt="Guaranteed On-time"/>
+                    </div>
+                    <div t-else="" class="col-3 col-md-3 pr-4 d-flex justify-content-center align-items-center">
+                      <img class="fill-blue svg-inject" data-src="/web/image/43884/financing-04.svg" alt="Financing Available"/>
+                    </div>
+                  </div>
+                </t>
+              </div>
+              <div>
+                <!--<p t-if="product.description_sale" t-field="product.description_sale" class="mt-3 text-orange" placeholder="A short description that will also appear on documents."/>-->
+                <div id="product_attributes_simple">
+                  <hr t-if="sum([(1 if len(l.value_ids)==1 else 0) for l in product.attribute_line_ids])"/>
+                  <p class="text-muted">
+                    <t t-set="single_value_attributes" t-value="product.valid_product_template_attribute_line_ids._prepare_single_value_for_display()"/>
+                    <t t-foreach="single_value_attributes" t-as="attribute"><span t-field="attribute.name"/>:
+                                          <t t-foreach="single_value_attributes[attribute]" t-as="ptal"><span t-field="ptal.product_template_value_ids._only_active().name"/><t t-if="not ptal_last">,</t></t><br/></t>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 col-xl-3 px-0 pt-3 pt-lg-0">
+              <div id="product_details" class="buy-box py-3">
+                <form t-if="product._is_add_to_cart_possible()" action="/shop/cart/update" method="POST">
+                  <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+    
+    <!--d none if product.list_price = 0 or more than 5000   or product.list_price &gt; 4999-->
+                
+                  <div t-att-class="'js_product js_main_product px-3 ' + ('d-none' if not product.list_price &gt; 0 or product.list_price &gt; 4999 else '')">
+                    <t t-placeholder="select">
+                      <input type="hidden" class="product_id" name="product_id" t-att-value="product_variant.id"/>
+                      <input type="hidden" class="product_template_id" name="product_template_id" t-att-value="product.id"/>
+                      <t t-if="combination" t-call="sale.variants">
+                        <t t-set="ul_class" t-value="'flex-column'"/>
+                        <t t-set="parent_combination" t-value="None"/>
+                      </t>
+                      <t t-else="">
+                        <ul class="d-none js_add_cart_variants" t-att-data-attribute_exclusions="{'exclusions: []'}"/>
+                      </t>
+                    </t>
+                    <t t-call="theme_block.product_price"/>
+                    <p t-if="True" class="css_not_available_msg alert alert-warning">This combination does not exist.</p>
+                    <a role="button" id="add_to_cart" class="btn btn-primary mt-4 js_check_product a-submit d-block d-lg-inline-block" href="#"><i class="fa fa-shopping-cart"/>
+                                          Add to Cart
+                                      </a>
+                    <div id="product_option_block"/>
+                  </div>
+                  
+    <!--if product.list_price = 0 or more than 5000 or product.list_price &gt; 4999-->
+                  
+                  <div class="px-3" t-if="not product.list_price or product.list_price &gt; 4999 ">
+                    <p class="text-light-green mb-0">Please Call For Details:</p>
+                    <p class="text-light-green mb-0">Local:
+                                          <a t-attf-href="tel:{{res_company.phone}}"><t t-esc="res_company.phone"/></a>
+                                      </p>
+                    <p class="text-light-green mb-0">Toll Free:
+                                          <a t-attf-href="tel:{{res_company.x_toll_free}}"><t t-esc="res_company.x_toll_free"/></a>
+                                      </p>
+                    <a role="button"  class="btn btn-primary mt-4 d-block d-lg-inline-block " style="margin:auto;" target="_blank" t-attf-href="/request-a-quote?id=#{product.default_code}">
+                      <i class="fa fa-file-text"/>Request a Quote</a>
+                  </div>
+                  <div class="px-3">
+                    <div class="line"/>
+                    <img class="img img-fluid mx-auto" src="/web/image/28858/cc-logo.png" alt="CC logo"/>
+                  </div>
+                </form>
+                <p t-elif="not product.active" class="alert alert-warning">This product is no longer available.</p>
+                <p t-else="" class="alert alert-warning">This product has no valid combination.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <t t-set="empty_content">&lt;p&gt;&lt;br&gt;&lt;/p&gt;</t>
+        <div id="product_full_description" class="container mt-4 pt-2">
+          <ul class="nav nav-tabs">
+            <li class="nav-item" t-if="product.website_description">
+              <a data-toggle="tab" class="nav-link" href="#description" data-original-title="" title="">Description</a>
+            </li>
+            <li class="nav-item" t-if="product.x_feature_description and product.x_feature_description != empty_content">
+              <a data-toggle="tab" class="nav-link" href="#feature" t-if="product.x_feature_description != empty_content">Features</a>
+            </li>
+            <li class="nav-item" t-if="product.x_techspec_description and product.x_techspec_description != empty_content">
+              <a data-toggle="tab" class="nav-link" href="#techspec" t-if="product.x_techspec_description != empty_content">Technical Specs</a>
+            </li>
+            <li class="nav-item" t-if="product.x_ext_description and product.x_ext_description != empty_content">
+              <a data-toggle="tab" class="nav-link" href="#extended" t-if="product.x_ext_description != empty_content">Other Information</a>
+            </li>
+          </ul>
+          <div class="tab-content px-4 py-3 position-relative">
+            <t t-call="theme_block.theme_pvi.attachment_modal"/>
+            <div class="tab-pane active" id="description" t-if="product.website_description">
+              <span itemprop="description" t-field="product.website_description" class="oe_structure d-block mt16"/>
+            </div>
+            <div class="tab-pane" id="feature" t-if="product.x_feature_description and product.x_feature_description != empty_content">
+              <span t-field="product.x_feature_description" class="oe_structure d-block mt16"/>
+            </div>
+            <div class="tab-pane" id="techspec" t-if="product.x_techspec_description and product.x_techspec_description != empty_content">
+              <span t-field="product.x_techspec_description" class="oe_structure d-block mt16"/>
+            </div>
+            <div class="tab-pane" id="extended" t-if="product.x_ext_description and product.x_ext_description != empty_content">
+              <span t-field="product.x_ext_description" class="oe_structure d-block mt16"/>
+            </div>
+          </div>
+          <!--<hr class="container" style="border-color: #1D3C6E;"/>-->
+        </div>
+        <div t-if="false" itemprop="description" t-field="product.website_description" class="oe_structure mt16" id="product_full_description"/>
+        <!-- MANUFACTURERS -->
+        <!--<section class="container s_references  pt24 pb-5" data-name="References">-->
+        <!--    <t t-call="theme_block.manufacturers"/>-->
+        <!--</section>-->
+      </div>
+    </xpath>
+  </data>
+  
