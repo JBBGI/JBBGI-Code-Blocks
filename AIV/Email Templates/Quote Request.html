@@ -1,0 +1,60 @@
+<div style="background-color: #F1F1F1;"><br>
+    <table width="100%" cellpadding="0" cellspacing="0" align="center" style="background-color: #ffffff;box-sizing:border-box;border-collapse:collapse;max-width: 700px;">
+    <tbody>
+    <tr>
+        <td>
+            <div style="width:80%; margin: auto; padding: 2rem 0; text-align: center !important;">
+                <img t-attf-src="/web/image/website/{{object.company_id.id}}/logo/" style="border-style:none;box-sizing:border-box;vertical-align:middle;height: 4rem;">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <div style="width:80%; margin: auto; padding: 2rem 0; text-align: center !important;">
+                <h2 style="margin:0px 0 6px 0;box-sizing:border-box;font-size:19.5px;color:#091124;line-height:1.2;font-weight:500;">Thank You for Choosing <t t-out="object.company_id.name"></t>!</h2>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+                <div style="margin: 1.5em auto; width: 80%;">
+                <p style="margin:0px 0 12px 0;box-sizing:border-box;">Hi <t t-out="object.name" data-oe-t-inline="true" contenteditable="false" oe-keep-contenteditable=""></t>,
+                </p>
+                <p style="margin:0px 0 12px 0;box-sizing:border-box;">Thank you for your interest in AIV and our products!</p>
+                <p style="margin:0px 0 12px 0;box-sizing:border-box;">We will be contacting you shortly with the requested information. If you have any immediate concerns, feel free to get in touch with us at <t t-out="object.company_id.phone"></t>.</p>
+                </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style="margin: 1.5em auto; width: 80%;">
+            <table style="width:100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>Quote Request for the following products:</p>
+                        </td>
+                    </tr>
+                    <t t-set="products" t-value="object.x_wishlist_products.split(', ')" data-oe-t-inline="true" contenteditable="false" oe-keep-contenteditable=""></t>
+                    <t t-foreach="products" t-as="product">
+                    <tr style="margin-left:1rem;">
+                        <td t-out="product"></td>
+                    </tr>
+                </t>
+                </tbody>
+            </table>
+
+
+            </div>
+
+
+        </td>
+        
+    </tr>
+  
+    
+
+</tbody>
+    </table>
+    <br>
+</div>
